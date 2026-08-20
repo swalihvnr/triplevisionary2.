@@ -6,11 +6,11 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
   if (!isOpen) return null;
 
   const isMp4 = videoUrl && (
-    videoUrl.endsWith('.mp4') || 
-    videoUrl.includes('mp4') || 
+    videoUrl.endsWith('.mp4') ||
+    videoUrl.includes('mp4') ||
     (!videoUrl.includes('youtube.com') && !videoUrl.includes('youtu.be') && !videoUrl.includes('vimeo.com'))
   );
-  
+
   const getEmbedUrl = (url) => {
     if (!url) return '';
     const ytMatch = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i);
@@ -31,7 +31,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           exit={{ opacity: 0 }}
           onClick={onClose}
           className="absolute inset-0 backdrop-blur-md"
-          style={{ background: 'rgba(20,35,65,0.75)' }}
+          style={{ background: 'rgba(0,0,0,0.75)' }}
         />
 
         <motion.div
@@ -41,16 +41,16 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
           className="relative w-full max-w-4xl glossy-card overflow-hidden shadow-2xl z-10"
         >
-          {/* Top bar — Win7 Aero titlebar */}
+          {/* Top bar — titlebar */}
           <div className="flex items-center justify-between px-4 py-3 backdrop-blur-sm"
             style={{
-              background: 'linear-gradient(180deg, rgba(233,245,252,0.9), rgba(245,251,254,0.85))',
-              borderBottom: '1px solid rgba(167,217,245,0.4)',
+              background: 'linear-gradient(180deg, #4772b3, #3a5f99)',
+              borderBottom: '1px solid rgba(71,114,179,0.5)',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: '#1a1a1a' }}>{videoTitle || 'Video'}</span>
+            <span className="text-xs font-display font-bold" style={{ color: '#ffffff' }}>{videoTitle || 'Video'}</span>
             <button onClick={onClose} className="p-1 rounded-full transition-colors cursor-pointer"
-              style={{ color: '#555' }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(242,242,242,0.8)'; }}
+              style={{ color: '#ffffff' }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}>
               <X size={18} />
             </button>
@@ -70,13 +70,13 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
               />
             )}
           </div>
-          
+
           <div className="flex items-center justify-between px-4 py-2"
             style={{
-              background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
-              borderTop: '1px solid rgba(186,186,190,0.4)',
+              background: 'linear-gradient(180deg, #363636, #303030)',
+              borderTop: '1px solid #4d4d4d',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: '#555' }}>TripleVisionary</span>
+            <span className="text-xs font-display font-bold" style={{ color: '#aaaaaa' }}>TripleVisionary</span>
           </div>
         </motion.div>
       </div>

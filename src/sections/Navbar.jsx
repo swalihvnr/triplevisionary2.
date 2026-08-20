@@ -31,20 +31,20 @@ export default function Navbar({ currentPath, onPageChange }) {
         transition={{ duration: 0.5 }}
         className="w-full max-w-6xl h-12 rounded-xl overflow-hidden relative"
         style={{
-          background: 'linear-gradient(180deg, rgba(233,245,252,0.9) 0%, rgba(245,251,254,0.85) 30%, rgba(250,253,254,0.8) 100%)',
+          background: 'linear-gradient(180deg, #181818 0%, #2d2f3c 100%)',
           backdropFilter: 'blur(20px) saturate(1.4)',
           WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
-          border: '1px solid rgba(167,217,245,0.5)',
+          border: '1px solid #4d4d4d',
           boxShadow: scrolled
-            ? '0 10px 40px rgba(51,153,255,0.12), 0 2px 8px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9)'
-            : '0 4px 16px rgba(51,153,255,0.08), inset 0 1px 0 rgba(255,255,255,0.9)',
+            ? '0 10px 40px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
+            : '0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)',
           transform: scrolled ? 'scale(0.98)' : 'scale(1)',
           transition: 'all 0.3s ease',
         }}
       >
-        {/* Win7 Aero top highlight strip */}
+        {/* Aero top highlight strip */}
         <div className="absolute top-0 left-0 right-0 h-[45%] pointer-events-none rounded-t-xl z-10"
-          style={{ background: 'linear-gradient(180deg, rgba(233,245,252,0.6) 0%, rgba(245,251,254,0.2) 40%, transparent 100%)' }} />
+          style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 40%, transparent 100%)' }} />
 
         <div className="flex items-center h-12 relative z-20">
           {/* Logo */}
@@ -53,15 +53,15 @@ export default function Navbar({ currentPath, onPageChange }) {
             onClick={(e) => handleNavClick(e, "/home")}
             className="flex-shrink-0 w-16 h-full flex items-center justify-center border-r"
             style={{
-              borderColor: 'rgba(167,217,245,0.3)',
-              background: 'linear-gradient(180deg, rgba(167,217,245,0.15), rgba(255,255,255,0.3))'
+              borderColor: '#4d4d4d',
+              background: 'linear-gradient(180deg, rgba(71,114,179,0.15), rgba(255,255,255,0.03))'
             }}
           >
             <img
               src={Logo}
               alt="Logo"
               className="w-7 h-9 object-contain"
-              style={{ filter: 'drop-shadow(0 1px 3px rgba(51,153,255,0.3))' }}
+              style={{ filter: 'drop-shadow(0 1px 3px rgba(71,114,179,0.3))' }}
             />
           </a>
 
@@ -77,15 +77,15 @@ export default function Navbar({ currentPath, onPageChange }) {
                   className={`relative flex-1 h-12 flex items-center justify-center text-[13px] font-semibold tracking-wide border-r last:border-r-0 transition-all duration-300 ${
                     active
                       ? "text-white"
-                      : "hover:text-[#1a1a1a]"
+                      : "hover:text-white"
                   }`}
                   style={{
-                    borderColor: 'rgba(167,217,245,0.3)',
-                    color: active ? 'white' : '#444',
+                    borderColor: '#4d4d4d',
+                    color: active ? 'white' : '#aaaaaa',
                     ...(active ? {
-                      background: 'linear-gradient(180deg, #60b0ff 0%, #3399ff 50%, #2080e0 100%)',
-                      boxShadow: 'inset 0 -2px 0 rgba(0,0,0,0.15), 0 2px 6px rgba(51,153,255,0.25)',
-                      textShadow: '0 1px 1px rgba(0,0,0,0.2)',
+                      background: 'linear-gradient(180deg, #4772b3 0%, #4772b3 50%, #3a5f99 100%)',
+                      boxShadow: 'inset 0 -2px 0 rgba(0,0,0,0.2), 0 2px 6px rgba(71,114,179,0.25)',
+                      textShadow: '0 1px 1px rgba(0,0,0,0.3)',
                     } : {}),
                   }}
                 >
@@ -107,10 +107,10 @@ export default function Navbar({ currentPath, onPageChange }) {
                     onClick={(e) => handleNavClick(e, item.path)}
                     className="relative flex-shrink-0 px-5 h-12 flex items-center justify-center text-sm font-semibold border-r"
                     style={{
-                      borderColor: 'rgba(167,217,245,0.3)',
-                      color: active ? 'white' : '#444',
+                      borderColor: '#4d4d4d',
+                      color: active ? 'white' : '#aaaaaa',
                       ...(active ? {
-                        background: 'linear-gradient(180deg, #60b0ff 0%, #3399ff 50%, #2080e0 100%)',
+                        background: 'linear-gradient(180deg, #4772b3 0%, #4772b3 50%, #3a5f99 100%)',
                       } : {}),
                     }}
                   >

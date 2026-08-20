@@ -24,14 +24,14 @@ export default function Footer() {
     <footer
       className="relative pt-16 pb-12 overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, rgba(233,245,252,0.5) 0%, rgba(245,251,254,0.6) 50%, rgba(244,244,246,0.8) 100%)',
-        borderTop: '1px solid rgba(167,217,245,0.4)',
+        background: 'linear-gradient(180deg, #181818 0%, #1d1d1d 50%, #181818 100%)',
+        borderTop: '1px solid #4d4d4d',
       }}
     >
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Top Section: Brand */}
         <div className="flex flex-col items-center text-center mb-12 border-b pb-10"
-          style={{ borderColor: 'rgba(167,217,245,0.3)' }}>
+          style={{ borderColor: '#4d4d4d' }}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-aero">
             TripleVisionary
           </h2>
@@ -39,9 +39,9 @@ export default function Footer() {
 
         {/* Services & Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b pb-10"
-          style={{ borderColor: 'rgba(167,217,245,0.3)' }}>
+          style={{ borderColor: '#4d4d4d' }}>
           <div>
-            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#3399ff] mb-4">
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: '#4772b3' }}>
               Services
             </h4>
             <div className="grid grid-cols-2 gap-2">
@@ -50,8 +50,8 @@ export default function Footer() {
                   key={service.name}
                   href={service.href}
                   onClick={(e) => handleLinkClick(e, service.href)}
-                  className="text-xs hover:text-[#3399ff] transition-colors font-medium py-1"
-                  style={{ color: '#555' }}
+                  className="text-xs hover:text-[#71a8ff] transition-colors font-medium py-1"
+                  style={{ color: '#cccccc' }}
                 >
                   {service.name}
                 </a>
@@ -60,10 +60,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#3399ff] mb-4">
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: '#4772b3' }}>
               Contact
             </h4>
-            <span className="text-sm" style={{ color: '#555' }}>
+            <span className="text-sm" style={{ color: '#cccccc' }}>
               triplevisionary@protonmail.com
             </span>
           </div>
@@ -71,8 +71,8 @@ export default function Footer() {
 
         {/* Social Media */}
         <div className="flex flex-col items-center gap-6 mb-12 border-b pb-10"
-          style={{ borderColor: 'rgba(167,217,245,0.3)' }}>
-          <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#3399ff]">
+          style={{ borderColor: '#4d4d4d' }}>
+          <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em]" style={{ color: '#4772b3' }}>
             Follow Us
           </h4>
           <div className="flex items-center gap-8">
@@ -86,18 +86,18 @@ export default function Footer() {
                 href={href}
                 className="w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                 style={{
-                  background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
-                  border: '1px solid rgba(186,186,190,0.5)',
-                  color: '#555',
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)',
+                  background: 'linear-gradient(180deg, #3d3d3d, #363636)',
+                  border: '1px solid #4d4d4d',
+                  color: '#aaaaaa',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#3399ff';
-                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(51,153,255,0.2), inset 0 1px 0 rgba(255,255,255,0.8)';
+                  e.currentTarget.style.color = '#4772b3';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(71,114,179,0.2), inset 0 1px 0 rgba(255,255,255,0.05)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#555';
-                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)';
+                  e.currentTarget.style.color = '#aaaaaa';
+                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)';
                 }}
                 aria-label={label}
                 target="_blank"
@@ -109,7 +109,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs" style={{ color: '#888' }}>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs" style={{ color: '#aaaaaa' }}>
           <span>&copy; {new Date().getFullYear()} TripleVisionary. All rights reserved.</span>
         </div>
       </div>

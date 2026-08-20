@@ -36,18 +36,18 @@ export default function Hero({ onPageChange }) {
           <img
             src="/assets/banner.png"
             alt="TripleVisionary Banner"
-            className="w-full max-h-[650px] object-cover rounded-b-3xl shadow-[0_8px_40px_rgba(51,153,255,0.15)]"
+            className="w-full max-h-[650px] object-cover rounded-b-3xl shadow-[0_8px_40px_rgba(71,114,179,0.15)]"
           />
         </motion.div>
       </div>
 
       {/* Hero Content with Background */}
       <div
-        className="relative w-full bg-cover bg-center bg-no-repeat rounded-3xl mx-auto max-w-6xl mt-12 overflow-hidden shadow-[0_8px_40px_rgba(51,153,255,0.12)]"
+        className="relative w-full bg-cover bg-center bg-no-repeat rounded-3xl mx-auto max-w-6xl mt-12 overflow-hidden shadow-[0_8px_40px_rgba(71,114,179,0.12)]"
         style={{ backgroundImage: `url('/assets/Hero.jpg')` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#142341]/60 via-[#1E3264]/50 to-[#0a1628]/40 backdrop-blur-[1px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(51,153,255,0.12), transparent)' }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50 backdrop-blur-[1px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(71,114,179,0.12), transparent)' }} />
 
         <div className="container mx-auto px-6 max-w-6xl relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-16">
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
@@ -73,7 +73,7 @@ export default function Hero({ onPageChange }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-xl font-light drop-shadow"
+              className="text-base md:text-lg text-white/80 leading-relaxed mb-8 max-w-xl font-light drop-shadow"
             >
               Ideas into visual masterpieces — video production, motion graphics, vfx and 3D animation
             </motion.p>
@@ -83,14 +83,14 @@ export default function Hero({ onPageChange }) {
 
       {/* Marquee Section */}
       <div
-        className="relative w-full overflow-hidden border-y border-white/20 bg-cover bg-center bg-no-repeat mt-8"
+        className="relative w-full overflow-hidden border-y border-white/10 bg-cover bg-center bg-no-repeat mt-8"
         style={{ backgroundImage: "url('/assets/Hero.jpg')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#142341]/50 via-[#1E3264]/40 to-[#0a1628]/30 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/50 backdrop-blur-[1px]" />
 
         {/* Left & Right Fade */}
-        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-l from-white/40 via-white/20 to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-r from-[#1d1d1d] via-[#1d1d1d]/60 to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-l from-[#1d1d1d] via-[#1d1d1d]/60 to-transparent" />
 
         <div className="relative z-10 py-5">
           <div className="marquee">
@@ -101,7 +101,7 @@ export default function Hero({ onPageChange }) {
                   onClick={() => {
                     if (onPageChange) onPageChange("/show");
                   }}
-                  className="group flex-shrink-0 overflow-hidden rounded-2xl border-2 border-white/40 bg-white/20 backdrop-blur-md cursor-pointer shadow-[0_4px_20px_rgba(51,153,255,0.1)] hover:shadow-[0_8px_30px_rgba(51,153,255,0.2)] transition-shadow duration-300"
+                  className="group flex-shrink-0 overflow-hidden rounded-2xl border-2 border-white/10 bg-white/5 backdrop-blur-md cursor-pointer shadow-[0_4px_20px_rgba(71,114,179,0.1)] hover:shadow-[0_8px_30px_rgba(71,114,179,0.2)] transition-shadow duration-300"
                 >
                   <img
                     src={image}
@@ -122,8 +122,8 @@ export default function Hero({ onPageChange }) {
           viewport={{ once: true }}
           className="fixed bottom-4 right-4 z-50 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8"
         >
-          <div className="flex items-center gap-2 md:gap-3 rounded-full px-3 py-2 md:px-4 md:py-2.5 border-2 shadow-[0_4px_20px_rgba(126,217,87,0.15)]"
-            style={{ background: 'linear-gradient(180deg, rgba(233,245,252,0.9), rgba(245,251,254,0.85))', borderColor: 'rgba(126,217,87,0.4)' }}
+          <div className="flex items-center gap-2 md:gap-3 rounded-full px-3 py-2 md:px-4 md:py-2.5 border-2 shadow-[0_4px_20px_rgba(94,173,92,0.15)]"
+            style={{ background: 'linear-gradient(180deg, #303030, #363636)', borderColor: 'rgba(94,173,92,0.4)' }}
           >
             <div className="relative flex-shrink-0">
               <div className="absolute inset-0.5 rounded-full bg-green-400/30 blur-sm" />
