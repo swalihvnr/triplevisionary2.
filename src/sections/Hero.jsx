@@ -36,14 +36,14 @@ export default function Hero({ onPageChange }) {
           <img
             src="/assets/banner.png"
             alt="TripleVisionary Banner"
-            className="w-full max-h-[650px] object-cover rounded-b-3xl shadow-[0_8px_40px_rgba(93,200,232,0.2)]"
+            className="w-full max-h-[650px] object-cover rounded-b-3xl shadow-[0_8px_40px_rgba(0,168,232,0.2)]"
           />
         </motion.div>
       </div>
 
       {/* Hero Content with Background */}
       <div
-        className="relative w-full bg-cover bg-center bg-no-repeat rounded-3xl mx-auto max-w-6xl mt-12 overflow-hidden shadow-[0_8px_40px_rgba(93,200,232,0.15)]"
+        className="relative w-full bg-cover bg-center bg-no-repeat rounded-3xl mx-auto max-w-6xl mt-12 overflow-hidden shadow-[0_8px_40px_rgba(0,168,232,0.15)]"
         style={{ backgroundImage: `url('/assets/Hero.jpg')` }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-sky-900/60 via-sky-800/50 to-green-900/40 backdrop-blur-[1px]" />
@@ -101,7 +101,7 @@ export default function Hero({ onPageChange }) {
                   onClick={() => {
                     if (onPageChange) onPageChange("/show");
                   }}
-                  className="group flex-shrink-0 overflow-hidden rounded-2xl border-2 border-white/40 bg-white/20 backdrop-blur-md cursor-pointer shadow-[0_4px_20px_rgba(93,200,232,0.15)] hover:shadow-[0_8px_30px_rgba(93,200,232,0.25)] transition-shadow duration-300"
+                  className="group flex-shrink-0 overflow-hidden rounded-2xl border-2 border-white/40 bg-white/20 backdrop-blur-md cursor-pointer shadow-[0_4px_20px_rgba(0,168,232,0.15)] hover:shadow-[0_8px_30px_rgba(0,168,232,0.25)] transition-shadow duration-300"
                 >
                   <img
                     src={image}
@@ -122,7 +122,7 @@ export default function Hero({ onPageChange }) {
           viewport={{ once: true }}
           className="fixed bottom-4 right-4 z-50 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8"
         >
-          <div className="flex items-center gap-2 md:gap-3 bg-white/80 backdrop-blur-xl rounded-full px-3 py-2 md:px-4 md:py-2.5 border-2 border-green-400/60 shadow-[0_4px_20px_rgba(124,194,66,0.25)]">
+          <div className="flex items-center gap-2 md:gap-3 bg-white/80 backdrop-blur-xl rounded-full px-3 py-2 md:px-4 md:py-2.5 border-2 border-green-400/60 shadow-[0_4px_20px_rgba(126,217,87,0.25)]">
             <div className="relative flex-shrink-0">
               <div className="absolute inset-0.5 rounded-full bg-green-400/30 blur-sm" />
               <img

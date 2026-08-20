@@ -60,23 +60,23 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 bg-white/20 border-y border-white/30 overflow-hidden backdrop-blur-sm">
-      <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#5DC8E8]/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-[#7CC242]/8 rounded-full blur-[80px] pointer-events-none" />
+    <section id="services" className="relative py-24 border-y border-white/30 overflow-hidden backdrop-blur-sm" style={{ background: 'linear-gradient(135deg, rgba(212,238,255,0.3), rgba(232,248,255,0.4), rgba(200,230,200,0.2))' }}>
+      <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#00A8E8]/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-[#00D4AA]/8 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#7CC242] animate-pulse shadow-[0_0_8px_rgba(124,194,66,0.5)]" />
-            <span className="text-[10px] font-display tracking-[0.2em] uppercase text-[#5CB836] font-bold">
+            <span className="w-2 h-2 rounded-full bg-[#7ED957] animate-pulse shadow-[0_0_8px_rgba(126,217,87,0.5)]" />
+            <span className="text-[10px] font-display tracking-[0.2em] uppercase text-[#7ED957] font-bold">
               What We Do
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4 text-[#2B3A4E]">
             Our Production Services
           </h2>
-          <p className="text-sm md:text-base text-[#5A7089] max-w-xl font-light">
+          <p className="text-sm md:text-base text-[#555577] max-w-xl font-light">
             Elite execution across all facets of post-production, animation, and CGI media workflows.
           </p>
         </div>
@@ -94,19 +94,19 @@ export default function Services() {
             return (
               <motion.div key={service.title} variants={cardVariants} className="group">
                 <GlassCard
-                  className="relative overflow-hidden rounded-2xl h-full p-6 bg-white/50 border border-white/60 hover:border-[#5DC8E8]/40 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+                  className="relative overflow-hidden rounded-2xl h-full p-6 bg-white/50 border border-white/60 hover:border-[#00A8E8]/40 transition-all duration-500 cursor-pointer flex flex-col justify-between"
                   glowColor="rgba(93, 200, 232, 0.15)"
                 >
                   <div className="relative z-10">
                     {/* Icon */}
                     <div className="mb-4">
-                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#5DC8E8]/20 to-[#7CC242]/15 border border-white/60 flex items-center justify-center text-[#5DC8E8] mb-4 group-hover:scale-110 group-hover:shadow-[0_4px_16px_rgba(93,200,232,0.2)] transition-all duration-300">
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#00A8E8]/20 to-[#7ED957]/15 border border-white/60 flex items-center justify-center text-[#00A8E8] mb-4 group-hover:scale-110 group-hover:shadow-[0_4px_16px_rgba(0,168,232,0.2)] transition-all duration-300">
                         <IconComponent size={22} />
                       </div>
                       <h3 className="text-lg font-bold font-display text-[#2B3A4E] mb-2">
                         {service.title}
                       </h3>
-                      <p className="text-xs text-[#5A7089] leading-relaxed font-light">
+                      <p className="text-xs text-[#555577] leading-relaxed font-light">
                         {service.desc}
                       </p>
                     </div>

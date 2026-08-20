@@ -46,25 +46,25 @@ const Asset = () => {
         {/* Page Title */}
         <div className="mb-8">
           <h1 className="text-4xl font-light tracking-wider text-[#2B3A4E]">
-            ASSET <span className="text-[#5DC8E8] font-bold">LIBRARY</span>
+            ASSET <span className="text-[#00A8E8] font-bold">LIBRARY</span>
           </h1>
-          <p className="text-[#5A7089] text-sm mt-1">
+          <p className="text-[#555577] text-sm mt-1">
             Browse and download production-ready assets by software.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8 border-b border-sky-200/30 pb-4">
+        <div className="flex flex-wrap gap-2 mb-8 border-b border-white/30 pb-4">
           {softwareList.map((software) => (
             <button
               key={software}
               onClick={() => setActiveFilter(software)}
               className="px-5 py-2 text-sm font-semibold rounded-full transition-all duration-200 border"
               style={{
-                background: activeFilter === software ? 'linear-gradient(180deg, #72D3F0, #5DC8E8)' : 'rgba(255,255,255,0.5)',
-                borderColor: activeFilter === software ? '#5DC8E8' : 'rgba(255,255,255,0.6)',
-                color: activeFilter === software ? '#fff' : '#5A7089',
-                boxShadow: activeFilter === software ? '0 2px 10px rgba(93,200,232,0.3)' : 'none',
+                background: activeFilter === software ? 'linear-gradient(180deg, #7FC8F8, #00A8E8)' : 'rgba(255,255,255,0.5)',
+                borderColor: activeFilter === software ? '#00A8E8' : 'rgba(255,255,255,0.6)',
+                color: activeFilter === software ? '#fff' : '#555577',
+                boxShadow: activeFilter === software ? '0 2px 10px rgba(0,168,232,0.3)' : 'none',
               }}
             >
               {software}
@@ -83,26 +83,26 @@ const Asset = () => {
                   ref={(el) => (assetRefs.current[asset.id] = el)}
                   className="glossy-card p-5 transition-all duration-300 hover:-translate-y-1"
                   style={{
-                    borderColor: isSelected ? '#5DC8E8' : undefined,
-                    boxShadow: isSelected ? '0 0 0 2px #5DC8E8, 0 8px 30px rgba(93,200,232,0.2)' : undefined,
+                    borderColor: isSelected ? '#00A8E8' : undefined,
+                    boxShadow: isSelected ? '0 0 0 2px #00A8E8, 0 8px 30px rgba(0,168,232,0.2)' : undefined,
                   }}
                 >
                   <div className="relative z-10">
                     <div className="flex justify-between items-start mb-2">
-                      <h2 className="text-lg font-bold text-[#5DC8E8] truncate pr-2">{asset.software}</h2>
-                      <span className="text-xs bg-white/60 border border-white/50 px-2 py-0.5 rounded-full text-[#5A7089] whitespace-nowrap font-bold">
+                      <h2 className="text-lg font-bold text-[#00A8E8] truncate pr-2">{asset.software}</h2>
+                      <span className="text-xs bg-white/60 border border-white/50 px-2 py-0.5 rounded-full text-[#555577] whitespace-nowrap font-bold">
                         {asset.year}
                       </span>
                     </div>
 
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-xl font-mono text-[#2B3A4E] truncate">{asset.name}</span>
-                      <span className="text-sm font-mono text-[#5DC8E8] bg-white/50 border border-white/60 px-2 py-0.5 rounded-full font-bold">
+                      <span className="text-sm font-mono text-[#00A8E8] bg-white/50 border border-white/60 px-2 py-0.5 rounded-full font-bold">
                         {asset.extension}
                       </span>
                     </div>
 
-                    <div className="flex justify-between items-center mt-4 pt-3 border-t border-sky-200/20">
+                    <div className="flex justify-between items-center mt-4 pt-3 border-t border-white/20">
                       <div />
                       <a
                         href={asset.downloadLink}
@@ -121,8 +121,8 @@ const Asset = () => {
               );
             })
           ) : (
-            <div className="col-span-full text-center py-12 text-[#5A7089]">
-              No assets found for <span className="text-[#5DC8E8] font-bold">{activeFilter}</span>
+            <div className="col-span-full text-center py-12 text-[#555577]">
+              No assets found for <span className="text-[#00A8E8] font-bold">{activeFilter}</span>
             </div>
           )}
         </div>

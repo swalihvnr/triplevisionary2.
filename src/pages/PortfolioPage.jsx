@@ -60,14 +60,14 @@ export default function PortfolioPage({ onPageChange }) {
 
   return (
     <div className="relative min-h-screen md:pt-10">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-[#5DC8E8]/[0.08] blur-[140px]" />
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-[#00A8E8]/[0.08] blur-[140px]" />
 
       <section>
         {/* Filter Bar */}
-        <div className="sticky top-[60px] z-30 mb-4 w-full rounded-2xl bg-white/70 shadow-[0_4px_24px_rgba(93,200,232,0.1)] backdrop-blur-xl border border-white/50">
+        <div className="sticky top-[60px] z-30 mb-4 w-full rounded-2xl bg-white/70 shadow-[0_4px_24px_rgba(0,168,232,0.1)] backdrop-blur-xl border border-white/50">
           <div className="flex flex-col gap-3 p-3 lg:flex-row lg:items-center lg:p-4">
             <div className="relative flex flex-1 items-center">
-              <button onClick={() => scroll("left")} className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 border border-white/60 text-[#5A7089] hover:bg-white hover:shadow-md transition-all">
+              <button onClick={() => scroll("left")} className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 border border-white/60 text-[#555577] hover:bg-white hover:shadow-md transition-all">
                 <ChevronLeft size={16} />
               </button>
               <div ref={scrollRef} className="scrollbar-hide mx-9 flex gap-2 overflow-x-auto scroll-smooth">
@@ -79,10 +79,10 @@ export default function PortfolioPage({ onPageChange }) {
                       onClick={() => setActiveCategory(name)}
                       className="flex flex-shrink-0 cursor-pointer items-center gap-2 rounded-full px-3.5 py-2.5 text-[11px] font-semibold transition-all border"
                       style={{
-                        background: isActive ? 'linear-gradient(180deg, #72D3F0, #5DC8E8)' : 'rgba(255,255,255,0.5)',
-                        borderColor: isActive ? '#5DC8E8' : 'rgba(255,255,255,0.6)',
-                        color: isActive ? '#fff' : '#5A7089',
-                        boxShadow: isActive ? '0 2px 10px rgba(93,200,232,0.3)' : 'none',
+                        background: isActive ? 'linear-gradient(180deg, #7FC8F8, #00A8E8)' : 'rgba(255,255,255,0.5)',
+                        borderColor: isActive ? '#00A8E8' : 'rgba(255,255,255,0.6)',
+                        color: isActive ? '#fff' : '#555577',
+                        boxShadow: isActive ? '0 2px 10px rgba(0,168,232,0.3)' : 'none',
                       }}
                     >
                       <Icon size={13} strokeWidth={isActive ? 2.5 : 1.8} />
@@ -91,20 +91,20 @@ export default function PortfolioPage({ onPageChange }) {
                   );
                 })}
               </div>
-              <button onClick={() => scroll("right")} className="absolute right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 border border-white/60 text-[#5A7089] hover:bg-white hover:shadow-md transition-all">
+              <button onClick={() => scroll("right")} className="absolute right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 border border-white/60 text-[#555577] hover:bg-white hover:shadow-md transition-all">
                 <ChevronRight size={16} />
               </button>
             </div>
 
-            <div className="flex w-full flex-col items-center gap-2 border-t border-sky-200/30 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0">
+            <div className="flex w-full flex-col items-center gap-2 border-t border-white/30 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0">
               <div className="flex w-full items-center lg:w-auto">
-                <label className="flex w-full max-w-[320px] items-center gap-2 rounded-full bg-white/50 border border-white/60 px-3 text-[#5A7089] lg:w-[260px]">
+                <label className="flex w-full max-w-[320px] items-center gap-2 rounded-full bg-white/50 border border-white/60 px-3 text-[#555577] lg:w-[260px]">
                   <Search size={14} className="flex-shrink-0" />
                   <input
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                     placeholder="Search projects"
-                    className="h-10 w-full bg-transparent text-xs text-[#2B3A4E] outline-none placeholder:text-[#5A7089]/40"
+                    className="h-10 w-full bg-transparent text-xs text-[#2B3A4E] outline-none placeholder:text-[#555577]/40"
                   />
                 </label>
               </div>
@@ -113,7 +113,7 @@ export default function PortfolioPage({ onPageChange }) {
                   value={sortOrder}
                   onChange={(event) => setSortOrder(event.target.value)}
                   aria-label="Sort projects"
-                  className="w-full max-w-[320px] cursor-pointer rounded-full bg-white/50 border border-white/60 px-4 py-2.5 text-[11px] text-[#5A7089] outline-none lg:w-auto"
+                  className="w-full max-w-[320px] cursor-pointer rounded-full bg-white/50 border border-white/60 px-4 py-2.5 text-[11px] text-[#555577] outline-none lg:w-auto"
                 >
                   <option value="Newest">Newest</option>
                   <option value="Oldest">Oldest</option>
@@ -139,7 +139,7 @@ export default function PortfolioPage({ onPageChange }) {
                 className={`group mb-0 inline-block w-full break-inside-avoid overflow-hidden rounded-2xl ${project.type === "video" ? "cursor-pointer" : "cursor-default"}`}
                 style={{
                   border: '2px solid rgba(255,255,255,0.5)',
-                  boxShadow: '0 4px 20px rgba(93,200,232,0.08)',
+                  boxShadow: '0 4px 20px rgba(0,168,232,0.08)',
                 }}
               >
                 <div className="relative w-full overflow-hidden rounded-2xl">
@@ -161,13 +161,13 @@ export default function PortfolioPage({ onPageChange }) {
 
                   <div className="absolute right-2 top-2 z-30 sm:right-3 sm:top-3">
                     <button onClick={(e) => handleAddonClick(e, project)} className="transition-all duration-300 hover:scale-110">
-                      <PackageOpen size={22} className={project.addon?.available ? "text-[#7CC242]" : "text-white/70"} />
+                      <PackageOpen size={22} className={project.addon?.available ? "text-[#7ED957]" : "text-white/70"} />
                     </button>
                   </div>
 
                   {project.type === "video" && (
                     <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                      <div className="flex h-14 w-14 scale-90 items-center justify-center rounded-full bg-white/90 text-[#5DC8E8] opacity-90 backdrop-blur-md transition-transform duration-[400ms] group-hover:scale-100 shadow-[0_4px_20px_rgba(93,200,232,0.3)]">
+                      <div className="flex h-14 w-14 scale-90 items-center justify-center rounded-full bg-white/90 text-[#00A8E8] opacity-90 backdrop-blur-md transition-transform duration-[400ms] group-hover:scale-100 shadow-[0_4px_20px_rgba(0,168,232,0.3)]">
                         <Play size={18} fill="currentColor" className="ml-0.5" />
                       </div>
                     </div>
@@ -186,26 +186,26 @@ export default function PortfolioPage({ onPageChange }) {
         </motion.div>
 
         <div className="mt-12 flex justify-center">
-          <p className="text-center text-sm font-light tracking-wider text-[#5A7089] leading-relaxed max-w-3xl">
+          <p className="text-center text-sm font-light tracking-wider text-[#555577] leading-relaxed max-w-3xl">
             *This content is not available for AI training. All rights reserved*
           </p>
         </div>
 
         {visibleProjects.length === 0 && (
           <div className="rounded-3xl border-2 border-dashed border-sky-200/50 py-24 text-center bg-white/30">
-            <p className="text-sm text-[#5A7089]">No projects match that filter.</p>
+            <p className="text-sm text-[#555577]">No projects match that filter.</p>
             <button
               onClick={() => { setActiveCategory("All"); setSearchQuery(""); }}
-              className="mt-4 cursor-pointer text-xs font-bold uppercase tracking-widest text-[#5DC8E8] hover:text-[#3BA4D4] transition-colors"
+              className="mt-4 cursor-pointer text-xs font-bold uppercase tracking-widest text-[#00A8E8] hover:text-[#3BA4D4] transition-colors"
             >
               Clear filters
             </button>
           </div>
         )}
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-8 rounded-3xl border border-white/50 bg-white/40 backdrop-blur-sm p-7 md:flex-row md:items-center md:p-10 shadow-[0_8px_32px_rgba(93,200,232,0.08)]">
+        <div className="mt-20 flex flex-col items-start justify-between gap-8 rounded-3xl border border-white/50 bg-white/40 backdrop-blur-sm p-7 md:flex-row md:items-center md:p-10 shadow-[0_8px_32px_rgba(0,168,232,0.08)]">
           <div>
-            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] text-[#5DC8E8] font-bold">
+            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] text-[#00A8E8] font-bold">
               Have something in mind?
             </p>
             <h2 className="max-w-xl font-display text-3xl font-semibold tracking-[-0.02em] md:text-4xl text-[#2B3A4E]">

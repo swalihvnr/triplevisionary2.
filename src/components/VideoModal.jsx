@@ -43,7 +43,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           {/* Top bar */}
           <div className="flex items-center justify-between px-4 py-3 bg-white/70 backdrop-blur-sm border-b border-white/40">
             <span className="text-xs font-display font-bold text-[#2B3A4E]">{videoTitle || 'Video'}</span>
-            <button onClick={onClose} className="p-1 hover:bg-white/60 rounded-full transition-colors text-[#5A7089] cursor-pointer">
+            <button onClick={onClose} className="p-1 hover:bg-white/60 rounded-full transition-colors text-[#555577] cursor-pointer">
               <X size={18} />
             </button>
           </div>
@@ -64,7 +64,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           </div>
           
           <div className="flex items-center justify-between px-4 py-2 bg-white/50 border-t border-white/40">
-            <span className="text-xs font-display font-bold text-[#5A7089]">TripleVisionary</span>
+            <span className="text-xs font-display font-bold text-[#555577]">TripleVisionary</span>
           </div>
         </motion.div>
       </div>

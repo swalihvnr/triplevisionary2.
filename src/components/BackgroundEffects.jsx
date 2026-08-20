@@ -18,30 +18,41 @@ const bubbles = [
 export default function BackgroundEffects() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Sky gradient base */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#C9E8FF] via-[#E8F4ED]/40 to-transparent" />
-
-      {/* Soft aurora / light ray */}
+      {/* Floating Orbs - Frutiger Aero signature (from your Telegram client) */}
       <div
-        className="absolute -top-[200px] left-1/2 -translate-x-1/2 w-[1200px] h-[600px] rounded-full opacity-30 blur-[100px] pointer-events-none"
+        className="orb"
         style={{
-          background: 'radial-gradient(ellipse, #5DC8E8 0%, #A8E0F3 40%, transparent 70%)',
+          width: 500, height: 500,
+          background: 'radial-gradient(circle, #00A8E8, #7FC8F8)',
+          top: -150, right: -100,
+          animation: 'floatOrb 20s ease-in-out infinite',
         }}
       />
-
-      {/* Green accent glow bottom-right */}
       <div
-        className="absolute bottom-0 right-0 w-[700px] h-[500px] rounded-full opacity-20 blur-[120px] pointer-events-none"
+        className="orb"
         style={{
-          background: 'radial-gradient(circle, #7CC242 0%, transparent 70%)',
+          width: 400, height: 400,
+          background: 'radial-gradient(circle, #00D4AA, #7ED957)',
+          bottom: -100, left: -100,
+          animation: 'floatOrb 25s ease-in-out infinite reverse',
         }}
       />
-
-      {/* Top-left soft blue glow */}
       <div
-        className="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full opacity-25 blur-[80px] pointer-events-none"
+        className="orb"
         style={{
-          background: 'radial-gradient(circle, #A8E0F3 0%, transparent 70%)',
+          width: 300, height: 300,
+          background: 'radial-gradient(circle, #7FC8F8, transparent)',
+          top: '40%', left: '20%',
+          animation: 'floatOrb 15s ease-in-out infinite',
+        }}
+      />
+      <div
+        className="orb"
+        style={{
+          width: 350, height: 350,
+          background: 'radial-gradient(circle, #7ED957, transparent)',
+          bottom: '10%', right: '30%',
+          animation: 'floatOrb 18s ease-in-out infinite reverse',
         }}
       />
 
@@ -55,9 +66,9 @@ export default function BackgroundEffects() {
             height: b.size,
             left: `${b.left}%`,
             top: `${b.top}%`,
-            background: 'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(93,200,232,0.2) 60%, rgba(93,200,232,0.05))',
+            background: 'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(0,168,232,0.2) 60%, rgba(0,168,232,0.05))',
             border: '1px solid rgba(255,255,255,0.6)',
-            boxShadow: 'inset 0 -2px 4px rgba(93,200,232,0.15), 0 2px 8px rgba(93,200,232,0.1)',
+            boxShadow: 'inset 0 -2px 4px rgba(0,168,232,0.15), 0 2px 8px rgba(0,168,232,0.1)',
           }}
           animate={{
             y: [0, -20, 0],
@@ -72,15 +83,6 @@ export default function BackgroundEffects() {
           }}
         />
       ))}
-
-      {/* Soft leaf/nature accent shapes */}
-      <div
-        className="absolute top-[20%] right-[10%] w-[300px] h-[300px] opacity-10 blur-[60px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, #7CC242 0%, transparent 70%)',
-          borderRadius: '60% 40% 50% 50%',
-        }}
-      />
     </div>
   );
 }
