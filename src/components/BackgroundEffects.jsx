@@ -18,12 +18,12 @@ const bubbles = [
 export default function BackgroundEffects() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Floating Orbs — Dark Aero signature */}
+      {/* Floating Orbs — Se7enAero Blue Glass signature */}
       <div
         className="orb"
         style={{
           width: 500, height: 500,
-          background: 'radial-gradient(circle, rgba(71,114,179,0.15), rgba(101,164,245,0.05) 60%, transparent)',
+          background: 'radial-gradient(circle, rgba(42,175,242,0.15), rgba(3,82,174,0.05) 60%, transparent)',
           top: -150, right: -100,
           animation: 'floatOrb 20s ease-in-out infinite',
         }}
@@ -32,7 +32,7 @@ export default function BackgroundEffects() {
         className="orb"
         style={{
           width: 400, height: 400,
-          background: 'radial-gradient(circle, rgba(94,173,92,0.1), rgba(150,215,136,0.03) 60%, transparent)',
+          background: 'radial-gradient(circle, rgba(49,177,238,0.1), rgba(10,92,176,0.03) 60%, transparent)',
           bottom: -100, left: -100,
           animation: 'floatOrb 25s ease-in-out infinite reverse',
         }}
@@ -41,7 +41,7 @@ export default function BackgroundEffects() {
         className="orb"
         style={{
           width: 300, height: 300,
-          background: 'radial-gradient(circle, rgba(113,168,255,0.08), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(42,175,242,0.08), transparent 70%)',
           top: '40%', left: '20%',
           animation: 'floatOrb 15s ease-in-out infinite',
         }}
@@ -50,7 +50,7 @@ export default function BackgroundEffects() {
         className="orb"
         style={{
           width: 350, height: 350,
-          background: 'radial-gradient(circle, rgba(80,200,255,0.06), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(49,177,238,0.06), transparent 70%)',
           bottom: '10%', right: '30%',
           animation: 'floatOrb 18s ease-in-out infinite reverse',
         }}
@@ -66,9 +66,9 @@ export default function BackgroundEffects() {
             height: b.size,
             left: `${b.left}%`,
             top: `${b.top}%`,
-            background: `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), rgba(71,114,179,0.08) 50%, transparent)`,
+            background: `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), rgba(42,175,242,0.08) 50%, transparent)`,
             border: '1px solid rgba(255,255,255,0.06)',
-            boxShadow: `inset 0 -2px 4px rgba(71,114,179,0.05)`,
+            boxShadow: `inset 0 -2px 4px rgba(42,175,242,0.05)`,
           }}
           animate={{
             y: [0, -20, 0],

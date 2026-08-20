@@ -8,182 +8,121 @@
 }
 
 :root {
-  --aero-bg-deep: #1d1d1d;
-  --aero-bg-mid: #303030;
-  --aero-bg-light: #3d3d3d;
-  --aero-bg-panel: #363636;
-  --aero-surface: #252525;
-  --aero-blue: #4772b3;
-  --aero-blue-light: #65a4f5;
-  --aero-blue-bright: #71a8ff;
-  --aero-green: #5ead5c;
-  --aero-green-light: #96d788;
-  --aero-teal: #50c8ff;
-  --aero-header: #2d2f3c;
+  --aero-deep: #0352ae;
+  --aero-mid: #0a5cb0;
+  --aero-bright: #2aaff2;
+  --aero-sky: #31b1ee;
+  --aero-dark: #054696;
+  --aero-navy: #063875;
+  --aero-teal: #113650;
+  --aero-panel: #0d2a4a;
   --aero-text: #ffffff;
-  --aero-text-muted: #cccccc;
-  --aero-text-dim: #aaaaaa;
-  --aero-border: #4d4d4d;
-  --aero-border-light: #5a5a5a;
-  --glass-bg: rgba(30,30,30,0.85);
-  --glass-border: rgba(77,77,77,0.5);
-  --glass-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --aero-text-muted: #b0d4f1;
+  --aero-border: rgba(42,175,242,0.25);
+  --glass-bg: rgba(6,56,117,0.55);
+  --glass-border: rgba(42,175,242,0.3);
+  --glass-shadow: 0 8px 32px rgba(0,0,0,0.35);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: linear-gradient(135deg, #000000 0%, #353535 100%);
+  background: linear-gradient(160deg, #063875 0%, #0352ae 30%, #0a5cb0 60%, #113650 100%);
   min-height: 100vh;
   color: var(--aero-text);
   font-family: var(--font-sans);
   overflow-x: hidden;
-  position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  color: var(--aero-text);
-}
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--aero-text); }
 
-::selection {
-  background: var(--aero-blue);
-  color: white;
-}
+::selection { background: #2aaff2; color: #fff; }
 
-/* ===== Glass Panel — Dark Aero ===== */
+/* ===== Glass Panel ===== */
 .glass-panel {
-  background: linear-gradient(180deg, rgba(61,61,61,0.9) 0%, rgba(48,48,48,0.85) 50%, rgba(36,36,36,0.8) 100%);
+  background: linear-gradient(180deg, rgba(13,42,74,0.75) 0%, rgba(6,56,117,0.65) 100%);
   backdrop-filter: blur(20px) saturate(1.4);
   -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  border: 1px solid var(--aero-border);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
-  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,0.05);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
-/* ===== Glossy Buttons — Win7 Dark Aero ===== */
+/* ===== Buttons ===== */
 .glossy-button {
-  background: linear-gradient(180deg, #5a5a5a 0%, #4a4a4a 50%, #3a3a3a 50%, #2a2a2a 100%);
-  color: #ffffff;
-  border: 1px solid #5a5a5a;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  background: linear-gradient(180deg, rgba(13,42,74,0.8) 0%, rgba(6,56,117,0.7) 100%);
+  color: #fff;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
   border-radius: 6px;
   transition: all 0.15s ease;
 }
-
 .glossy-button:hover {
-  background: linear-gradient(180deg, #6a6a6a 0%, #5a5a5a 50%, #4a4a4a 50%, #3a3a3a 100%);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
-}
-
-.glossy-button:active {
-  background: linear-gradient(180deg, #404040 0%, #353535 50%, #303030 50%, #252525 100%);
+  background: linear-gradient(180deg, rgba(18,60,110,0.85) 0%, rgba(10,75,160,0.75) 100%);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
 }
 
 /* ===== Aero Blue Button ===== */
 .glossy-button-sky {
-  background: linear-gradient(180deg, #5a90d0 0%, #4772b3 50%, #3a5f8f 100%);
+  background: linear-gradient(180deg, #2aaff2 0%, #1890d0 50%, #0a70b0 100%);
   color: white;
-  border: 1px solid #3a5f8f;
-  box-shadow: 0 2px 8px rgba(71,114,179,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+  border: 1px solid #0a6aa5;
+  box-shadow: 0 2px 10px rgba(42,175,242,0.4), inset 0 1px 0 rgba(255,255,255,0.25);
   border-radius: 6px;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
   transition: all 0.15s ease;
 }
-
 .glossy-button-sky:hover {
-  background: linear-gradient(180deg, #6aa0e0 0%, #5580c0 50%, #4a70a0 100%);
-  box-shadow: 0 4px 16px rgba(71,114,179,0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+  background: linear-gradient(180deg, #3ebaff 0%, #28a0e0 50%, #1880c0 100%);
+  box-shadow: 0 4px 18px rgba(42,175,242,0.55), inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
-/* ===== Glossy Card — Dark Aero ===== */
+/* ===== Glossy Card ===== */
 .glossy-card {
-  background: linear-gradient(180deg, rgba(54,54,54,0.92) 0%, rgba(48,48,48,0.88) 50%, rgba(36,36,36,0.85) 100%);
+  background: linear-gradient(180deg, rgba(13,42,74,0.7) 0%, rgba(6,56,117,0.6) 50%, rgba(3,40,80,0.55) 100%);
   backdrop-filter: blur(20px) saturate(1.4);
   -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  border: 1px solid rgba(77,77,77,0.6);
+  border: 1px solid rgba(42,175,242,0.2);
   border-radius: 12px;
-  box-shadow:
-    0 8px 32px rgba(0,0,0,0.3),
-    0 1px 4px rgba(0,0,0,0.2),
-    inset 0 1px 0 rgba(255,255,255,0.06);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 1px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08);
   position: relative;
   overflow: hidden;
 }
-
 .glossy-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 50%;
-  background: linear-gradient(180deg,
-    rgba(255,255,255,0.04) 0%,
-    rgba(255,255,255,0.01) 40%,
-    transparent 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 40%, transparent 100%);
   border-radius: 12px 12px 0 0;
   pointer-events: none;
   z-index: 1;
 }
 
-/* ===== Scrollbar — Dark Aero ===== */
-::-webkit-scrollbar {
-  width: 14px;
-}
-::-webkit-scrollbar-track {
-  background: #1d1d1d;
-  border-left: 1px solid #3d3d3d;
-}
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #052a50; }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #4a4a4a, #555555 30%, #4a4a4a 70%, #3a3a3a);
-  border: 2px solid #1d1d1d;
+  background: linear-gradient(180deg, rgba(42,175,242,0.3), rgba(10,92,176,0.4));
+  border: 2px solid #052a50;
+  border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #5a5a5a, #656565 30%, #5a5a5a 70%, #4a4a4a);
+  background: linear-gradient(180deg, rgba(42,175,242,0.5), rgba(10,92,176,0.6));
 }
 
-.scrollbar-hide {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-  width: 0;
-  height: 0;
-}
+.scrollbar-hide { scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
 
 /* ===== Marquee ===== */
-@keyframes marquee {
-  from { transform: translateX(0%); }
-  to { transform: translateX(-50%); }
-}
+@keyframes marquee { from { transform: translateX(0%); } to { transform: translateX(-50%); } }
+.animate-marquee { animation: marquee 20s linear infinite; }
+.animate-marquee:hover { animation-play-state: paused; }
+.marquee { overflow: hidden; width: 100%; }
+.marquee-content { display: flex; width: max-content; gap: 28px; animation: marquee 35s linear infinite; }
+.marquee:hover .marquee-content { animation-play-state: paused; }
 
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-}
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
-.marquee {
-  overflow: hidden;
-  width: 100%;
-}
-.marquee-content {
-  display: flex;
-  width: max-content;
-  gap: 28px;
-  animation: marquee 35s linear infinite;
-}
-.marquee:hover .marquee-content {
-  animation-play-state: paused;
-}
-
-/* ===== Float animation — Dark Aero bubbles ===== */
+/* ===== Float ===== */
 @keyframes floatOrb {
   0%, 100% { transform: translate(0, 0) scale(1); }
   25% { transform: translate(30px, -40px) scale(1.05); }
@@ -191,13 +130,8 @@ h1, h2, h3, h4, h5, h6 {
   75% { transform: translate(40px, 30px) scale(1.02); }
 }
 
-@keyframes shimmer {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) rotate(45deg); }
-}
-
 .text-gradient-aero {
-  background: linear-gradient(135deg, #71a8ff, #4772b3);
+  background: linear-gradient(135deg, #31b1ee, #2aaff2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

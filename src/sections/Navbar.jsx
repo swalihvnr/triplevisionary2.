@@ -31,10 +31,10 @@ export default function Navbar({ currentPath, onPageChange }) {
         transition={{ duration: 0.5 }}
         className="w-full max-w-6xl h-12 rounded-xl overflow-hidden relative"
         style={{
-          background: 'linear-gradient(180deg, #181818 0%, #2d2f3c 100%)',
+          background: 'linear-gradient(180deg, #063875 0%, #2d2f3c 100%)',
           backdropFilter: 'blur(20px) saturate(1.4)',
           WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
-          border: '1px solid #4d4d4d',
+          border: '1px solid rgba(42,175,242,0.25)',
           boxShadow: scrolled
             ? '0 10px 40px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
             : '0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)',
@@ -53,15 +53,15 @@ export default function Navbar({ currentPath, onPageChange }) {
             onClick={(e) => handleNavClick(e, "/home")}
             className="flex-shrink-0 w-16 h-full flex items-center justify-center border-r"
             style={{
-              borderColor: '#4d4d4d',
-              background: 'linear-gradient(180deg, rgba(71,114,179,0.15), rgba(255,255,255,0.03))'
+              borderColor: 'rgba(42,175,242,0.25)',
+              background: 'linear-gradient(180deg, rgba(42,175,242,0.15), rgba(255,255,255,0.03))'
             }}
           >
             <img
               src={Logo}
               alt="Logo"
               className="w-7 h-9 object-contain"
-              style={{ filter: 'drop-shadow(0 1px 3px rgba(71,114,179,0.3))' }}
+              style={{ filter: 'drop-shadow(0 1px 3px rgba(42,175,242,0.3))' }}
             />
           </a>
 
@@ -80,11 +80,11 @@ export default function Navbar({ currentPath, onPageChange }) {
                       : "hover:text-white"
                   }`}
                   style={{
-                    borderColor: '#4d4d4d',
-                    color: active ? 'white' : '#aaaaaa',
+                    borderColor: 'rgba(42,175,242,0.25)',
+                    color: active ? 'white' : '#b0d4f1',
                     ...(active ? {
-                      background: 'linear-gradient(180deg, #4772b3 0%, #4772b3 50%, #3a5f99 100%)',
-                      boxShadow: 'inset 0 -2px 0 rgba(0,0,0,0.2), 0 2px 6px rgba(71,114,179,0.25)',
+                      background: 'linear-gradient(180deg, #2aaff2 0%, #2aaff2 50%, #0352ae 100%)',
+                      boxShadow: 'inset 0 -2px 0 rgba(0,0,0,0.2), 0 2px 6px rgba(42,175,242,0.25)',
                       textShadow: '0 1px 1px rgba(0,0,0,0.3)',
                     } : {}),
                   }}
@@ -107,10 +107,10 @@ export default function Navbar({ currentPath, onPageChange }) {
                     onClick={(e) => handleNavClick(e, item.path)}
                     className="relative flex-shrink-0 px-5 h-12 flex items-center justify-center text-sm font-semibold border-r"
                     style={{
-                      borderColor: '#4d4d4d',
-                      color: active ? 'white' : '#aaaaaa',
+                      borderColor: 'rgba(42,175,242,0.25)',
+                      color: active ? 'white' : '#b0d4f1',
                       ...(active ? {
-                        background: 'linear-gradient(180deg, #4772b3 0%, #4772b3 50%, #3a5f99 100%)',
+                        background: 'linear-gradient(180deg, #2aaff2 0%, #2aaff2 50%, #0352ae 100%)',
                       } : {}),
                     }}
                   >
