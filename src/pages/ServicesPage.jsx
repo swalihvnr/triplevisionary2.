@@ -13,16 +13,16 @@ export default function ServicesPage({ onPageChange }) {
       <Services />
 
       <div className="container mx-auto px-6 max-w-3xl mt-16 relative z-10 text-center">
-        <GlassCard className="p-8 text-center" glowColor="rgba(42,175,242,0.15)">
+        <GlassCard className="p-8 text-center" glowColor="rgba(60,184,245,0.15)">
           <h3 className="font-display font-bold text-xl md:text-2xl mb-3" style={{ color: '#ffffff' }}>
             Need a tailored post-production package?
           </h3>
-          <p className="text-xs max-w-md mx-auto mb-6 font-light" style={{ color: '#b0d4f1' }}>
+          <p className="text-xs max-w-md mx-auto mb-6 font-light" style={{ color: 'rgba(170,200,240,0.7)' }}>
             Deploy our processing nodes for your specific commercial ad, social video, or 3D asset pipeline.
           </p>
           <button
             onClick={() => onPageChange('/contact')}
-            className="px-6 py-3 rounded-full glossy-button-sky font-bold text-xs tracking-widest uppercase flex items-center gap-2 mx-auto hover:brightness-110 transition-all cursor-pointer"
+            className="aero-button-primary px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase flex items-center gap-2 mx-auto transition-all cursor-pointer"
           >
             Get in Touch
             <ArrowRight size={14} />

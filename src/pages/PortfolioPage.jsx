@@ -58,23 +58,17 @@ export default function PortfolioPage({ onPageChange }) {
     setModal({ isOpen: true, url: project.videoUrl, title: project.title });
   };
 
-  const filterBarStyle = {
-    background: 'linear-gradient(180deg, rgba(6,56,117,0.95) 0%, rgba(13,42,74,0.9) 50%, rgba(17,54,80,0.85) 100%)',
-    border: '1px solid rgba(42,175,242,0.25)',
-    boxShadow: '0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)',
-  };
-
   return (
     <div className="relative min-h-screen md:pt-10">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'radial-gradient(circle, rgba(42,175,242,0.06), transparent)' }} />
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'radial-gradient(circle, rgba(60,184,245,0.06), transparent)' }} />
 
       <section>
         {/* Filter Bar */}
-        <div className="sticky top-[60px] z-30 mb-4 w-full rounded-2xl backdrop-blur-xl" style={filterBarStyle}>
+        <div className="sticky top-[60px] z-30 mb-4 w-full rounded-2xl aero-glass">
           <div className="flex flex-col gap-3 p-3 lg:flex-row lg:items-center lg:p-4">
             <div className="relative flex flex-1 items-center">
-              <button onClick={() => scroll("left")} className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-all"
-                style={{ background: 'rgba(13,42,74,0.7)', border: '1px solid rgba(42,175,242,0.25)', color: '#b0d4f1', boxShadow: '0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)' }}>
+              <button onClick={() => scroll("left")} className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-all aero-button"
+                style={{ padding: 0 }}>
                 <ChevronLeft size={16} />
               </button>
               <div ref={scrollRef} className="scrollbar-hide mx-9 flex gap-2 overflow-x-auto scroll-smooth">
@@ -86,10 +80,12 @@ export default function PortfolioPage({ onPageChange }) {
                       onClick={() => setActiveCategory(name)}
                       className="flex flex-shrink-0 cursor-pointer items-center gap-2 rounded-full px-3.5 py-2.5 text-[11px] font-semibold transition-all border"
                       style={{
-                        background: isActive ? '#2aaff2' : 'rgba(13,42,74,0.5)',
-                        borderColor: isActive ? '#2aaff2' : 'rgba(42,175,242,0.25)',
-                        color: isActive ? '#fff' : '#b0d4f1',
-                        boxShadow: isActive ? '0 2px 10px rgba(42,175,242,0.3), inset 0 1px 0 rgba(255,255,255,0.1)' : 'none',
+                        background: isActive
+                          ? 'linear-gradient(180deg, #5ec4f8 0%, #1d8fd4 50%, #0858a0 100%)'
+                          : 'rgba(10,30,60,0.5)',
+                        borderColor: isActive ? 'rgba(8,60,140,0.8)' : 'rgba(120,180,240,0.25)',
+                        color: isActive ? '#fff' : 'rgba(170,200,240,0.7)',
+                        boxShadow: isActive ? '0 2px 10px rgba(60,184,245,0.3), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
                         textShadow: isActive ? '0 1px 1px rgba(0,0,0,0.3)' : 'none',
                       }}
                     >
@@ -99,16 +95,16 @@ export default function PortfolioPage({ onPageChange }) {
                   );
                 })}
               </div>
-              <button onClick={() => scroll("right")} className="absolute right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-all"
-                style={{ background: 'rgba(13,42,74,0.7)', border: '1px solid rgba(42,175,242,0.25)', color: '#b0d4f1', boxShadow: '0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)' }}>
+              <button onClick={() => scroll("right")} className="absolute right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-all aero-button"
+                style={{ padding: 0 }}>
                 <ChevronRight size={16} />
               </button>
             </div>
 
-            <div className="flex w-full flex-col items-center gap-2 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0" style={{ borderTop: '1px solid rgba(42,175,242,0.15)' }}>
+            <div className="flex w-full flex-col items-center gap-2 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0" style={{ borderTop: '1px solid rgba(120,180,240,0.15)' }}>
               <div className="flex w-full items-center lg:w-auto">
                 <label className="flex w-full max-w-[320px] items-center gap-2 rounded-full px-3 lg:w-[260px]"
-                  style={{ background: 'rgba(13,42,74,0.5)', border: '1px solid rgba(42,175,242,0.25)', color: '#b0d4f1' }}>
+                  style={{ background: 'rgba(10,30,60,0.5)', border: '1px solid rgba(120,180,240,0.25)', color: 'rgba(170,200,240,0.7)' }}>
                   <Search size={14} className="flex-shrink-0" />
                   <input
                     value={searchQuery}
@@ -125,7 +121,7 @@ export default function PortfolioPage({ onPageChange }) {
                   onChange={(event) => setSortOrder(event.target.value)}
                   aria-label="Sort projects"
                   className="w-full max-w-[320px] cursor-pointer rounded-full px-4 py-2.5 text-[11px] outline-none lg:w-auto"
-                  style={{ background: 'rgba(13,42,74,0.5)', border: '1px solid rgba(42,175,242,0.25)', color: '#b0d4f1' }}
+                  style={{ background: 'rgba(10,30,60,0.5)', border: '1px solid rgba(120,180,240,0.25)', color: 'rgba(170,200,240,0.7)' }}
                 >
                   <option value="Newest">Newest</option>
                   <option value="Oldest">Oldest</option>
@@ -150,7 +146,7 @@ export default function PortfolioPage({ onPageChange }) {
                 onClick={() => openProject(project)}
                 className={`group mb-0 inline-block w-full break-inside-avoid overflow-hidden rounded-2xl ${project.type === "video" ? "cursor-pointer" : "cursor-default"}`}
                 style={{
-                  border: '2px solid rgba(42,175,242,0.2)',
+                  border: '2px solid rgba(120,180,240,0.2)',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
                 }}
               >
@@ -167,14 +163,14 @@ export default function PortfolioPage({ onPageChange }) {
 
                   <div className="absolute left-2 top-2 z-20 sm:left-3 sm:top-3">
                     <span className="inline-flex max-w-[calc(100vw-110px)] rounded-full backdrop-blur-md px-2 py-1 text-[8px] font-bold uppercase tracking-[0.12em] sm:px-3 sm:py-1.5 sm:text-[9px]"
-                      style={{ background: 'rgba(6,56,117,0.85)', border: '1px solid rgba(42,175,242,0.25)', color: '#ffffff', boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                      style={{ background: 'rgba(3,15,35,0.85)', border: '1px solid rgba(120,180,240,0.25)', color: '#ffffff', boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
                       {project.category}
                     </span>
                   </div>
 
                   <div className="absolute right-2 top-2 z-30 sm:right-3 sm:top-3">
                     <button onClick={(e) => handleAddonClick(e, project)} className="transition-all duration-300 hover:scale-110">
-                      <PackageOpen size={22} className={project.addon?.available ? "text-[#2aaff2]" : "text-white/70"} />
+                      <PackageOpen size={22} className={project.addon?.available ? "text-[#3cb8f5]" : "text-white/70"} />
                     </button>
                   </div>
 
@@ -183,10 +179,10 @@ export default function PortfolioPage({ onPageChange }) {
                       <div
                         className="flex h-14 w-14 scale-90 items-center justify-center rounded-full opacity-90 backdrop-blur-md transition-transform duration-[400ms] group-hover:scale-100"
                         style={{
-                          background: 'rgba(6,56,117,0.9)',
-                          color: '#2aaff2',
-                          boxShadow: '0 4px 20px rgba(42,175,242,0.25), inset 0 1px 0 rgba(255,255,255,0.05)',
-                          border: '1px solid rgba(42,175,242,0.25)',
+                          background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
+                          color: '#3cb8f5',
+                          boxShadow: '0 4px 20px rgba(60,184,245,0.25), inset 0 1px 0 rgba(255,255,255,0.05)',
+                          border: '1px solid rgba(120,180,240,0.3)',
                         }}>
                         <Play size={18} fill="currentColor" className="ml-0.5" />
                       </div>
@@ -206,32 +202,27 @@ export default function PortfolioPage({ onPageChange }) {
         </motion.div>
 
         <div className="mt-12 flex justify-center">
-          <p className="text-center text-sm font-light tracking-wider leading-relaxed max-w-3xl" style={{ color: '#b0d4f1' }}>
+          <p className="text-center text-sm font-light tracking-wider leading-relaxed max-w-3xl" style={{ color: 'rgba(170,200,240,0.7)' }}>
             *This content is not available for AI training. All rights reserved*
           </p>
         </div>
 
         {visibleProjects.length === 0 && (
-          <div className="rounded-3xl border-2 border-dashed py-24 text-center" style={{ borderColor: 'rgba(42,175,242,0.25)', background: 'rgba(13,42,74,0.2)' }}>
-            <p className="text-sm" style={{ color: '#b0d4f1' }}>No projects match that filter.</p>
+          <div className="glossy-card rounded-3xl border-2 border-dashed py-24 text-center" style={{ borderColor: 'rgba(120,180,240,0.25)' }}>
+            <p className="text-sm" style={{ color: 'rgba(170,200,240,0.7)' }}>No projects match that filter.</p>
             <button
               onClick={() => { setActiveCategory("All"); setSearchQuery(""); }}
               className="mt-4 cursor-pointer text-xs font-bold uppercase tracking-widest transition-colors"
-              style={{ color: '#2aaff2' }}
+              style={{ color: '#3cb8f5' }}
             >
               Clear filters
             </button>
           </div>
         )}
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-8 rounded-3xl backdrop-blur-sm p-7 md:flex-row md:items-center md:p-10"
-          style={{
-            background: 'linear-gradient(180deg, rgba(13,42,74,0.7), rgba(6,56,117,0.6))',
-            border: '1px solid rgba(42,175,242,0.25)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)',
-          }}>
+        <div className="glossy-card mt-20 flex flex-col items-start justify-between gap-8 rounded-3xl p-7 md:flex-row md:items-center md:p-10">
           <div>
-            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] font-bold" style={{ color: '#2aaff2' }}>
+            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] font-bold" style={{ color: '#3cb8f5' }}>
               Have something in mind?
             </p>
             <h2 className="max-w-xl font-display text-3xl font-semibold tracking-[-0.02em] md:text-4xl" style={{ color: '#ffffff' }}>
@@ -240,7 +231,7 @@ export default function PortfolioPage({ onPageChange }) {
           </div>
           <button
             onClick={() => onPageChange("/contact")}
-            className="flex cursor-pointer items-center gap-3 rounded-full glossy-button-sky px-6 py-3.5 text-xs font-bold uppercase tracking-[0.14em] transition-transform hover:scale-[1.03]"
+            className="aero-button-primary flex cursor-pointer items-center gap-3 rounded-full px-6 py-3.5 text-xs font-bold uppercase tracking-[0.14em] transition-transform hover:scale-[1.03]"
           >
             Work with us
             <ArrowUpRight size={16} />

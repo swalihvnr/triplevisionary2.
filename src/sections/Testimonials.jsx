@@ -36,25 +36,24 @@ export default function Testimonials() {
       id="testimonials"
       className="relative py-24 overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #063875 0%, rgba(6,56,117,0.2) 50%, #063875 100%)',
-        borderTop: '1px solid rgba(42,175,242,0.25)',
-        borderBottom: '1px solid rgba(42,175,242,0.25)',
+        borderTop: '1px solid rgba(120,180,240,0.2)',
+        borderBottom: '1px solid rgba(120,180,240,0.2)',
       }}
     >
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(42,175,242,0.06), transparent)' }} />
+      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(60,184,245,0.06), transparent)' }} />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#2aaff2', boxShadow: '0 0 8px rgba(42,175,242,0.5)' }} />
-            <span className="text-[10px] font-display tracking-[0.2em] uppercase font-bold" style={{ color: '#2aaff2' }}>
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#3cb8f5', boxShadow: '0 0 8px rgba(60,184,245,0.5)' }} />
+            <span className="text-[10px] font-display tracking-[0.2em] uppercase font-bold" style={{ color: '#3cb8f5' }}>
               Client Feedback
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4" style={{ color: '#ffffff' }}>
             Testimonials
           </h2>
-          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: '#b0d4f1' }}>
+          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: 'rgba(170,200,240,0.7)' }}>
             Read reviews from our international brand partners and product developers.
           </p>
         </div>
@@ -69,16 +68,16 @@ export default function Testimonials() {
             >
               <GlassCard
                 className="p-6 transition-all cursor-pointer"
-                glowColor="rgba(42,175,242,0.15)"
+                glowColor="rgba(60,184,245,0.15)"
               >
-                <div className="flex items-center justify-between pb-4 mb-4" style={{ borderBottom: '1px solid rgba(42,175,242,0.25)' }}>
+                <div className="flex items-center justify-between pb-4 mb-4" style={{ borderBottom: '1px solid rgba(120,180,240,0.2)' }}>
                   <div className="flex items-center gap-3">
                     <div
                       className="w-10 h-10 rounded-full flex items-center justify-center font-display text-[10px] font-bold"
                       style={{
-                        background: 'linear-gradient(180deg, rgba(13,42,74,0.7), rgba(6,56,117,0.6))',
-                        border: '1px solid rgba(42,175,242,0.25)',
-                        color: '#2aaff2',
+                        background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
+                        border: '1px solid rgba(120,180,240,0.3)',
+                        color: '#3cb8f5',
                         boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
                       }}
                     >
@@ -86,25 +85,25 @@ export default function Testimonials() {
                     </div>
                     <div>
                       <h4 className="font-display font-bold text-xs leading-tight" style={{ color: '#ffffff' }}>{item.name}</h4>
-                      <span className="text-[9px] block" style={{ color: '#b0d4f1' }}>{item.role}</span>
+                      <span className="text-[9px] block" style={{ color: 'rgba(170,200,240,0.7)' }}>{item.role}</span>
                     </div>
                   </div>
-                  <Quote size={16} style={{ color: 'rgba(42,175,242,0.3)' }} />
+                  <Quote size={16} style={{ color: 'rgba(120,180,240,0.3)' }} />
                 </div>
 
-                <div className="flex gap-1 mb-4" style={{ color: '#f59e0b' }}>
+                <div className="flex gap-1 mb-4" style={{ color: '#3cb8f5' }}>
                   {Array.from({ length: item.rating }).map((_, sIdx) => (
                     <Star key={sIdx} size={12} fill="currentColor" />
                   ))}
                 </div>
 
-                <p className="text-xs leading-relaxed font-light italic" style={{ color: '#b0d4f1' }}>
+                <p className="text-xs leading-relaxed font-light italic" style={{ color: 'rgba(170,200,240,0.7)' }}>
                   "{item.review}"
                 </p>
 
-                <div className="mt-6 pt-3 flex items-center justify-between text-[9px] font-display" style={{ borderTop: '1px solid rgba(42,175,242,0.15)', color: '#b0d4f1' }}>
+                <div className="mt-6 pt-3 flex items-center justify-between text-[9px] font-display" style={{ borderTop: '1px solid rgba(120,180,240,0.15)', color: 'rgba(170,200,240,0.7)' }}>
                   <span className="font-bold">Verified Review</span>
-                  <span className="font-bold" style={{ color: '#2aaff2' }}>{item.company}</span>
+                  <span className="font-bold" style={{ color: '#3cb8f5' }}>{item.company}</span>
                 </div>
               </GlassCard>
             </motion.div>
