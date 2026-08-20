@@ -1,30 +1,30 @@
 import { useState } from 'react';
 
-export default function GlassCard({ children, className = '', hoverGlow = true, glowColor = 'rgba(0, 212, 255, 0.12)', ...props }) {
+export default function GlassCard({ children, className = '', hoverGlow = true, glowColor = 'rgba(93, 200, 232, 0.15)', ...props }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative glass-panel rounded-2xl overflow-hidden transition-all duration-300 ${className}`}
+      className={`relative glossy-card transition-all duration-300 ${className}`}
+      style={{
+        transform: isHovered ? 'translateY(-2px)' : 'translateY(0)',
+        boxShadow: isHovered
+          ? `0 12px 40px rgba(93, 200, 232, 0.15), 0 4px 12px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1)`
+          : undefined,
+      }}
       {...props}
     >
       {/* Radial Hover Glow */}
       {hoverGlow && isHovered && (
         <div
-          className="pointer-events-none absolute -inset-px transition-opacity duration-300"
+          className="pointer-events-none absolute -inset-px transition-opacity duration-300 z-0"
           style={{
             background: `radial-gradient(350px circle at 50% 50%, ${glowColor}, transparent 40%)`,
           }}
         />
       )}
-      
-      {/* Corner Apple-style HUD markers */}
-      <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/15 rounded-tl" />
-      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/15 rounded-tr" />
-      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/15 rounded-bl" />
-      <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/15 rounded-br" />
 
       {/* Content wrapper */}
       <div className="relative z-10 h-full w-full">

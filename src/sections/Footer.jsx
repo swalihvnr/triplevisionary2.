@@ -1,6 +1,4 @@
 import React from "react";
-import { Cpu, Copyright, Mail, MapPin, Phone } from "lucide-react";
-
 import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
@@ -23,23 +21,19 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#0B0F14] border-t border-white/5 pt-16 pb-12 overflow-hidden">
-      <div className="absolute inset-0 grid-bg opacity-[0.02] pointer-events-none" />
-
+    <footer className="relative bg-gradient-to-b from-white/50 via-sky-50/60 to-green-50/40 border-t border-white/40 pt-16 pb-12 overflow-hidden backdrop-blur-sm">
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        {/* Top Section: TripleVisionary Brand */}
-        <div className="flex flex-col items-center text-center mb-12 border-b border-white/5 pb-10">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#2b682a] via-[#58de55] to-[#3ae33a] bg-clip-text text-transparent mb-4">
+        {/* Top Section: Brand */}
+        <div className="flex flex-col items-center text-center mb-12 border-b border-sky-200/30 pb-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient-aero mb-4">
             TripleVisionary
           </h2>
-          
         </div>
 
-        {/* Services & Contact Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b border-white/5 pb-10">
-          {/* Services */}
+        {/* Services & Contact */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b border-sky-200/30 pb-10">
           <div>
-            <h4 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#58de55] font-bold mb-4">
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#5DC8E8] mb-4">
               Services
             </h4>
             <div className="grid grid-cols-2 gap-2">
@@ -48,7 +42,7 @@ export default function Footer() {
                   key={service.name}
                   href={service.href}
                   onClick={(e) => handleLinkClick(e, service.href)}
-                  className="text-xs text-[#C6D3E1]/70 hover:text-white transition-colors font-light py-1"
+                  className="text-xs text-[#5A7089] hover:text-[#2B3A4E] transition-colors font-medium py-1"
                 >
                   {service.name}
                 </a>
@@ -56,71 +50,52 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact with Image */}
           <div>
-            <h4 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#58de55] font-bold mb-4">
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#5DC8E8] mb-4">
               Contact
             </h4>
-             <div>
-          
-                    <span className="text-sm  ">
-                      triplevisionary@protonmail.com
-                    </span>
-            
-                  </div>
+            <span className="text-sm text-[#5A7089]">
+              triplevisionary@protonmail.com
+            </span>
           </div>
         </div>
 
         {/* Social Media */}
-        <div className="flex flex-col items-center gap-6 mb-12 border-b border-white/5 pb-10">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#58de55] font-bold">
+        <div className="flex flex-col items-center gap-6 mb-12 border-b border-sky-200/30 pb-10">
+          <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#5DC8E8]">
             Follow Us
           </h4>
           <div className="flex items-center gap-8">
             <a
               href="https://wa.me/+91 9388121465"
-              className="text-[#C6D3E1]/40 hover:text-[#00D4FF] transition-all duration-300 hover:scale-110"
+              className="w-11 h-11 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-[#5A7089] hover:text-[#5DC8E8] hover:bg-white hover:shadow-[0_4px_16px_rgba(93,200,232,0.25)] transition-all duration-300 hover:scale-110"
               aria-label="WhatsApp"
               target="_blank"
             >
-              <FaWhatsapp size={24} />
+              <FaWhatsapp size={20} />
             </a>
             <a
               href="https://www.instagram.com/triplevisionary?igsh=MWF1c21zaWdnd2Vpbg=="
-              className="text-[#C6D3E1]/40 hover:text-[#00D4FF] transition-all duration-300 hover:scale-110"
+              className="w-11 h-11 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-[#5A7089] hover:text-[#5DC8E8] hover:bg-white hover:shadow-[0_4px_16px_rgba(93,200,232,0.25)] transition-all duration-300 hover:scale-110"
               aria-label="Instagram"
               target="_blank"
             >
-              <FaInstagram size={24} />{" "}
+              <FaInstagram size={20} />
             </a>
             <a
               href="https://www.youtube.com/@triplevisionary"
-              className="text-[#C6D3E1]/40 hover:text-[#00D4FF] transition-all duration-300 hover:scale-110"
+              className="w-11 h-11 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-[#5A7089] hover:text-[#5DC8E8] hover:bg-white hover:shadow-[0_4px_16px_rgba(93,200,232,0.25)] transition-all duration-300 hover:scale-110"
               aria-label="YouTube"
               target="_blank"
             >
-              <FaYoutube size={24} />{" "}
+              <FaYoutube size={20} />
             </a>
           </div>
         </div>
 
-        {/* Bottom Section: Copyright & Diagnostics */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] font-mono text-[#C6D3E1]/40">
-          {/* <div className="flex items-center gap-2">
-            <Cpu size={14} className="text-[#00D4FF]" />
-            <span>TRIPLEVISIONARY // SYSTEM CORE 2.0</span>
-          </div> */}
-
-          {/* <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            <div className="flex items-center gap-1">
-              <Copyright size={10} />
-              <span>
-                {new Date().getFullYear()} TRIPLEVISIONARY. ALL RIGHTS RESERVED.
-              </span>
-            </div>
-            <span className="hidden md:inline text-white/10">|</span>
-            <span>SYS_LOC: CREATIVE_NODE_01</span>
-          </div> */}
+        {/* Copyright */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs text-[#5A7089]">
+          <span>&copy; {new Date().getFullYear()} TripleVisionary. All rights reserved.</span>
         </div>
       </div>
     </footer>

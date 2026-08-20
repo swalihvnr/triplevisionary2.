@@ -1,11 +1,10 @@
 import React from 'react';
-import { X, Cpu } from 'lucide-react';
+import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
   if (!isOpen) return null;
 
-  // Simple heuristic to check if it's direct MP4 or external iframe
   const isMp4 = videoUrl && (
     videoUrl.endsWith('.mp4') || 
     videoUrl.includes('mp4') || 
@@ -14,16 +13,10 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
   
   const getEmbedUrl = (url) => {
     if (!url) return '';
-    // YouTube
     const ytMatch = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i);
-    if (ytMatch) {
-      return `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&rel=0`;
-    }
-    // Vimeo
+    if (ytMatch) return `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&rel=0`;
     const vimeoMatch = url.match(/(?:vimeo\.com\/|player\.vimeo\.com\/video\/)([0-9]+)/i);
-    if (vimeoMatch) {
-      return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`;
-    }
+    if (vimeoMatch) return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`;
     return url;
   };
 
@@ -32,46 +25,32 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-        {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="absolute inset-0 bg-black/85 backdrop-blur-md"
+          className="absolute inset-0 bg-[#2B3A4E]/80 backdrop-blur-md"
         />
 
-        {/* Modal Window */}
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-         className="relative w-full max-w-4xl glass-panel rounded-2xl overflow-hidden shadow-2xl border border-white/10 z-10"
+          className="relative w-full max-w-4xl glossy-card overflow-hidden shadow-2xl z-10"
         >
-          {/* Top HUD bar */}
-          <div className="flex items-center justify-between px-4 py-3 bg-[#10151C]/90">
-          
-            
-            <div className="flex items-center gap-4">
-              <button 
-                onClick={onClose}
-                className="p-1 hover:bg-white/10 rounded-md transition-colors text-white cursor-pointer"
-              >
-                <X size={16} />
-              </button>
-            </div>
+          {/* Top bar */}
+          <div className="flex items-center justify-between px-4 py-3 bg-white/70 backdrop-blur-sm border-b border-white/40">
+            <span className="text-xs font-display font-bold text-[#2B3A4E]">{videoTitle || 'Video'}</span>
+            <button onClick={onClose} className="p-1 hover:bg-white/60 rounded-full transition-colors text-[#5A7089] cursor-pointer">
+              <X size={18} />
+            </button>
           </div>
 
-          {/* Embedded Content */}
           <div className="aspect-video bg-black relative">
             {isMp4 ? (
-              <video 
-                src={videoUrl} 
-                controls 
-                autoPlay 
-                className="w-full h-full"
-              />
+              <video src={videoUrl} controls autoPlay className="w-full h-full" />
             ) : (
               <iframe
                 src={embedUrl}
@@ -84,9 +63,8 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
             )}
           </div>
           
-          {/* Bottom HUD metadata */}
-          <div className="flex items-center justify-between px-4 py-2 bg-[#10151C]/90">
-            <span>TripleVisionary</span>
+          <div className="flex items-center justify-between px-4 py-2 bg-white/50 border-t border-white/40">
+            <span className="text-xs font-display font-bold text-[#5A7089]">TripleVisionary</span>
           </div>
         </motion.div>
       </div>

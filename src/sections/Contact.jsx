@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, PhoneCall, Mail, MessageSquare, ExternalLink,Briefcase } from "lucide-react";
+import { Send, PhoneCall, Mail, MessageSquare, ExternalLink } from "lucide-react";
 import GlassCard from "../components/GlassCard";
 
 export default function Contact() {
@@ -16,19 +16,10 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true);
-
-    // Simulate cyber-transmission delay
     setTimeout(() => {
       setIsSending(false);
       setIsSuccess(true);
-      setFormData({
-        name: "",
-        email: "",
-        projectType: "Commercial Ads",
-        message: "",
-      });
-
-      // Auto close success panel
+      setFormData({ name: "", email: "", projectType: "Commercial Ads", message: "" });
       setTimeout(() => setIsSuccess(false), 5000);
     }, 2500);
   };
@@ -39,47 +30,29 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative py-24 bg-[#0B0F14] overflow-hidden"
-    >
-      <div className="absolute inset-0 grid-bg opacity-5 pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-[#00D4FF]/5 rounded-full blur-[140px] pointer-events-none" />
+    <section id="contact" className="relative py-24 overflow-hidden">
+      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-[#5DC8E8]/8 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#7CC242]/6 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
-          <div className="flex items-center gap-2 mb-3">
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4 text-[#2B3A4E]">
             Start Your Project
           </h2>
-          <p className="text-sm md:text-base text-[#C6D3E1]/70 max-w-xl font-light">
-            Initialize transmission. Connect with our producers to establish
-            timeline targets.
+          <p className="text-sm md:text-base text-[#5A7089] max-w-xl font-light">
+            Connect with our producers to establish timeline targets.
           </p>
         </div>
 
-        {/* Command center layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* LEFT: Contact Form Command Console */}
+          {/* Contact Form */}
           <div className="lg:col-span-7 relative">
-            <GlassCard className="p-6 md:p-8 bg-[#10151C]/90 border border-white/10 scanlines">
-              <div className="flex items-center justify-between border-b border-white/5 pb-3 mb-6 font-mono text-[9px] text-[#C6D3E1]/50">
-                <div className="flex items-center gap-1.5">
-                 
-                </div>
-              </div>
-
-              {/* Form Element */}
+            <GlassCard className="p-6 md:p-8 bg-white/50 border border-white/60">
               <form onSubmit={handleSubmit} className="space-y-5">
-                {/* Name */}
                 <div className="flex flex-col gap-1.5">
-                  <label
-                    htmlFor="name"
-                    className="font-mono text-[9px] uppercase tracking-wider text-[#C6D3E1]/60"
-                  >
-                    Sender Name
+                  <label htmlFor="name" className="font-display text-xs font-bold uppercase tracking-wider text-[#5A7089]">
+                    Your Name
                   </label>
                   <input
                     type="text"
@@ -88,18 +61,14 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="e.g. JOHN DOE"
-                    className="w-full bg-black/45 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-white/20 focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF]/30 transition-all font-mono"
+                    placeholder="Enter your name"
+                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#2B3A4E] placeholder-[#5A7089]/40 focus:outline-none focus:border-[#5DC8E8] focus:ring-2 focus:ring-[#5DC8E8]/20 transition-all font-sans shadow-inner"
                   />
                 </div>
 
-                {/* Email */}
                 <div className="flex flex-col gap-1.5">
-                  <label
-                    htmlFor="email"
-                    className="font-mono text-[9px] uppercase tracking-wider text-[#C6D3E1]/60"
-                  >
-                    Routing Email Address
+                  <label htmlFor="email" className="font-display text-xs font-bold uppercase tracking-wider text-[#5A7089]">
+                    Email Address
                   </label>
                   <input
                     type="email"
@@ -108,49 +77,33 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="e.g. CONTACT@YOURCOMPANY.COM"
-                    className="w-full bg-black/45 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-white/20 focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF]/30 transition-all font-mono"
+                    placeholder="Enter your email"
+                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#2B3A4E] placeholder-[#5A7089]/40 focus:outline-none focus:border-[#5DC8E8] focus:ring-2 focus:ring-[#5DC8E8]/20 transition-all font-sans shadow-inner"
                   />
                 </div>
 
-                {/* Project Pipeline Selection */}
                 <div className="flex flex-col gap-1.5">
-                  <label
-                    htmlFor="projectType"
-                    className="font-mono text-[9px] uppercase tracking-wider text-[#C6D3E1]/60"
-                  >
-                    Core Pipeline Segment
+                  <label htmlFor="projectType" className="font-display text-xs font-bold uppercase tracking-wider text-[#5A7089]">
+                    Project Type
                   </label>
                   <select
                     id="projectType"
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleInputChange}
-                    className="w-full bg-[#10151C] border border-white/10 rounded-xl px-4 py-3 text-xs text-[#C6D3E1] focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF]/30 transition-all font-mono"
+                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#5A7089] focus:outline-none focus:border-[#5DC8E8] focus:ring-2 focus:ring-[#5DC8E8]/20 transition-all font-sans"
                   >
-                    <option value="Commercial Ads">
-                      COMMERCIAL ADVERTISEMENTS
-                    </option>
-                    <option value="Motion Graphics">
-                      MOTION GRAPHICS / HUD
-                    </option>
-                    <option value="3D CGI Animation">3D CGI & ANIMATION</option>
-                    <option value="VFX Compositing">
-                      VFX COMPOSITING & EDITS
-                    </option>
-                    <option value="YouTube Content">
-                      YOUTUBE CONTENT EDITING
-                    </option>
+                    <option value="Commercial Ads">Commercial Advertisements</option>
+                    <option value="Motion Graphics">Motion Graphics / HUD</option>
+                    <option value="3D CGI Animation">3D CGI & Animation</option>
+                    <option value="VFX Compositing">VFX Compositing & Edits</option>
+                    <option value="YouTube Content">YouTube Content Editing</option>
                   </select>
                 </div>
 
-                {/* Message */}
                 <div className="flex flex-col gap-1.5">
-                  <label
-                    htmlFor="message"
-                    className="font-mono text-[9px] uppercase tracking-wider text-[#C6D3E1]/60"
-                  >
-                    Project Specifications // Details
+                  <label htmlFor="message" className="font-display text-xs font-bold uppercase tracking-wider text-[#5A7089]">
+                    Project Details
                   </label>
                   <textarea
                     id="message"
@@ -159,57 +112,47 @@ export default function Contact() {
                     rows="4"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="PROVIDE TIMELINE TARGETS, REFERENCE LINKS..."
-                    className="w-full bg-black/45 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-white/20 focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF]/30 transition-all font-mono resize-none"
+                    placeholder="Describe your project, timeline, and any references..."
+                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#2B3A4E] placeholder-[#5A7089]/40 focus:outline-none focus:border-[#5DC8E8] focus:ring-2 focus:ring-[#5DC8E8]/20 transition-all font-sans resize-none shadow-inner"
                   />
                 </div>
 
-                {/* Submit button */}
                 <button
                   type="submit"
                   disabled={isSending}
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00D4FF] to-[#6BB8FF] text-[#0B0F14] font-mono text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,212,255,0.2)] hover:brightness-110 active:scale-95 disabled:opacity-50 transition-all cursor-pointer"
+                  className="w-full py-3.5 rounded-2xl glossy-button font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-2 hover:brightness-110 active:scale-[0.98] disabled:opacity-50 transition-all cursor-pointer"
                 >
-                  <Send size={14} />
-                  SEND TRANSMISSION
+                  <Send size={16} />
+                  Send Message
                 </button>
               </form>
 
-              {/* Loader / Success animations overlay */}
+              {/* Loading / Success overlay */}
               <AnimatePresence>
                 {isSending && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-[#10151C]/90 rounded-2xl flex flex-col items-center justify-center p-6 text-center z-20 font-mono text-xs text-[#00D4FF]"
+                    className="absolute inset-0 bg-white/90 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
                   >
-                    <div className="w-12 h-12 border-2 border-[#00D4FF]/30 border-t-[#00D4FF] rounded-full animate-spin mb-4" />
-                    <span className="animate-pulse">
-                      ENCRYPTING DATA PACKETS //
-                    </span>
-                    <span className="text-[10px] text-[#C6D3E1]/50 mt-1">
-                      ESTABLISHING SECURED NODE CONNECTION...
-                    </span>
+                    <div className="w-12 h-12 border-3 border-[#5DC8E8]/30 border-t-[#5DC8E8] rounded-full animate-spin mb-4" />
+                    <span className="font-bold text-sm text-[#5DC8E8] animate-pulse">Sending your message...</span>
                   </motion.div>
                 )}
-
                 {isSuccess && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-[#10151C]/95 rounded-2xl flex flex-col items-center justify-center p-6 text-center z-20 font-mono text-xs text-[#6BB8FF]"
+                    className="absolute inset-0 bg-white/95 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
                   >
-                    <div className="w-12 h-12 rounded-full bg-[#6BB8FF]/10 flex items-center justify-center border border-[#6BB8FF]/30 text-[#6BB8FF] mb-4">
+                    <div className="w-12 h-12 rounded-full bg-[#7CC242]/15 flex items-center justify-center border border-[#7CC242]/30 text-[#7CC242] mb-4">
                       <span className="text-xl">✓</span>
                     </div>
-                    <span className="font-bold uppercase tracking-wider text-white">
-                      TRANSMISSION SENT SUCCESSFULLY
-                    </span>
-                    <span className="text-[10px] text-[#C6D3E1]/60 mt-1.5 max-w-xs">
-                      Our system logs have captured your specifications. A
-                      producer will ping your coordinates within 12 hours.
+                    <span className="font-bold uppercase tracking-wider text-[#2B3A4E] text-sm">Message Sent!</span>
+                    <span className="text-xs text-[#5A7089] mt-1.5 max-w-xs">
+                      A producer will get back to you within 12 hours.
                     </span>
                   </motion.div>
                 )}
@@ -217,106 +160,63 @@ export default function Contact() {
             </GlassCard>
           </div>
 
-          {/* RIGHT: Quick Action Widgets Panel */}
+          {/* Quick Links */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Widget 1: WhatsApp */}
-            <a
-              href="https://wa.me/+91 9388121465"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group cursor-pointer"
-            >
-              <GlassCard className="p-5 bg-[#151D26]/60 border border-white/5 group-hover:border-green-500/30 transition-all">
+            <a href="https://wa.me/+91 9388121465" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
+              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-green-400/40 transition-all" glowColor="rgba(124,194,66,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 flex items-center justify-center group-hover:bg-green-500 group-hover:text-black group-hover:border-green-500 transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl bg-green-100/80 border border-green-200/60 text-green-500 flex items-center justify-center group-hover:bg-green-500 group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(124,194,66,0.3)] transition-all duration-300">
                     <MessageSquare size={20} />
                   </div>
                   <div>
-                    <span className="block text-[8px] font-mono text-[#C6D3E1]/40 uppercase">
-                      DIRECT DISPATCH
-                    </span>
-                    <h4 className="font-display font-bold text-sm text-white group-hover:text-green-400 transition-colors">
-                      Ping via WhatsApp
-                    </h4>
-                    <p className="text-[10px] text-[#C6D3E1]/70 mt-1 font-light">
-                      Start an instant dialogue regarding budget scoping and
-                      timelines.
-                    </p>
+                    <span className="block text-[9px] font-display text-[#5A7089] uppercase font-bold">Direct Dispatch</span>
+                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-green-600 transition-colors">Ping via WhatsApp</h4>
+                    <p className="text-[11px] text-[#5A7089] mt-1 font-light">Start an instant dialogue regarding budget and timelines.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
-            {/* Widget 2: Email */}
-            <a
-              href="mailto:triplevisionary@protonmail.com"
-              className="block group cursor-pointer"
-            >
-              <GlassCard className="p-5 bg-[#151D26]/60 border border-white/5 group-hover:border-[#00D4FF]/30 transition-all">
+            <a href="mailto:triplevisionary@protonmail.com" className="block group cursor-pointer">
+              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-[#5DC8E8]/40 transition-all" glowColor="rgba(93,200,232,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#00D4FF]/10 border border-[#00D4FF]/20 text-[#00D4FF] flex items-center justify-center group-hover:bg-[#00D4FF] group-hover:text-black group-hover:border-[#00D4FF] transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl bg-sky-100/80 border border-sky-200/60 text-[#5DC8E8] flex items-center justify-center group-hover:bg-[#5DC8E8] group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(93,200,232,0.3)] transition-all duration-300">
                     <Mail size={20} />
                   </div>
                   <div>
-                    <span className="block text-[8px] font-mono text-[#C6D3E1]/40 uppercase">
-                      E-MAIL DIRECTORY
-                    </span>
-                    <h4 className="font-display font-bold text-sm text-white group-hover:text-[#00D4FF] transition-colors">
-                      triplevisionary@protonmail.com
-                    </h4>
-                    <p className="text-[10px] text-[#C6D3E1]/70 mt-1 font-light">
-                      Send raw story briefs, video assets, or RFP dossiers
-                      directly.
-                    </p>
+                    <span className="block text-[9px] font-display text-[#5A7089] uppercase font-bold">E-Mail</span>
+                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-[#5DC8E8] transition-colors">triplevisionary@protonmail.com</h4>
+                    <p className="text-[11px] text-[#5A7089] mt-1 font-light">Send story briefs or video assets directly.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
-            {/* Widget 3: Book a Call */}
             <a href="tel:+919388121465" className="block group cursor-pointer">
-              <GlassCard className="p-5 bg-[#151D26]/60 border border-white/5 group-hover:border-[#6BB8FF]/30 transition-all">
+              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-[#5DC8E8]/40 transition-all" glowColor="rgba(93,200,232,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#6BB8FF]/10 border border-[#6BB8FF]/20 text-[#6BB8FF] flex items-center justify-center group-hover:bg-[#6BB8FF] group-hover:text-black group-hover:border-[#6BB8FF] transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl bg-sky-100/80 border border-sky-200/60 text-[#5DC8E8] flex items-center justify-center group-hover:bg-[#5DC8E8] group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(93,200,232,0.3)] transition-all duration-300">
                     <PhoneCall size={20} />
                   </div>
-
                   <div>
-                    <span className="block text-[8px] font-mono text-[#C6D3E1]/40 uppercase">
-                      PHONE_CONTACT
-                    </span>
-
-                    <h4 className="font-display font-bold text-sm text-white group-hover:text-[#6BB8FF] transition-colors">
-                      +91 93881 21465
-                    </h4>
-
-                    <p className="text-[10px] text-[#C6D3E1]/70 mt-1 font-light">
-                      Tap to call us directly.
-                    </p>
+                    <span className="block text-[9px] font-display text-[#5A7089] uppercase font-bold">Phone</span>
+                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-[#5DC8E8] transition-colors">+91 93881 21465</h4>
+                    <p className="text-[11px] text-[#5A7089] mt-1 font-light">Tap to call us directly.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
-                {/* Upscrolled */}
-             <a href="https://share.upscrolled.com/en/user/dd096cdb-b9f6-4897-a1c0-546f3b7ce20e/" target="_blank" className="block group cursor-pointer">
-              <GlassCard className="p-5 bg-[#151D26]/60 border border-white/5 group-hover:border-[#6BB8FF]/30 transition-all">
+
+            <a href="https://share.upscrolled.com/en/user/dd096cdb-b9f6-4897-a1c0-546f3b7ce20e/" target="_blank" className="block group cursor-pointer">
+              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-[#5DC8E8]/40 transition-all" glowColor="rgba(93,200,232,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#6BB8FF]/10 border border-[#6BB8FF]/20 text-[#6BB8FF] flex items-center justify-center group-hover:bg-[#6BB8FF] group-hover:text-black group-hover:border-[#6BB8FF] transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl bg-sky-100/80 border border-sky-200/60 text-[#5DC8E8] flex items-center justify-center group-hover:bg-[#5DC8E8] group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(93,200,232,0.3)] transition-all duration-300">
                     <ExternalLink size={20} />
                   </div>
-
                   <div>
-                    <span className="block text-[8px] font-mono text-[#C6D3E1]/40 uppercase">
-                     
-                    </span>
-
-                    <h4 className="font-display font-bold text-sm text-white group-hover:text-[#6BB8FF] transition-colors">
-                     UPSCROLLED
-                    </h4>
-
-                    <p className="text-[10px] text-[#C6D3E1]/70 mt-1 font-light">
-                     Connect Us
-                    </p>
+                    <span className="block text-[9px] font-display text-[#5A7089] uppercase font-bold">Connect</span>
+                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-[#5DC8E8] transition-colors">UPSCROLLED</h4>
+                    <p className="text-[11px] text-[#5A7089] mt-1 font-light">Connect with us.</p>
                   </div>
                 </div>
               </GlassCard>

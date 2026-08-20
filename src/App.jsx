@@ -65,7 +65,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen select-none overflow-hidden bg-[#0B0F14]">
+    <div className="relative min-h-screen select-none overflow-hidden">
       <BackgroundEffects />
       <Navbar currentPath={currentPath} onPageChange={handlePageChange} />
 

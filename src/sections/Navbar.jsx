@@ -16,9 +16,7 @@ export default function Navbar({ currentPath, onPageChange }) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -34,142 +32,84 @@ export default function Navbar({ currentPath, onPageChange }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className={`
-          w-full
-max-w-6xl
-h-10
-overflow-hidden
-rounded-[8px]
-border
-border-[#585858]
-bg-gradient-to-b
-from-[#4f4f4f]
-via-[#292929]
-to-[#111]
-shadow-[0_8px_20px_rgba(0,0,0,.55)]
-relative
-          ${
-            scrolled
-              ? "shadow-[0_10px_35px_rgba(0,0,0,.55)] scale-[0.98]"
-              : "shadow-[0_6px_25px_rgba(0,0,0,.45)]"
+          w-full max-w-6xl h-12
+          rounded-2xl
+          border border-white/60
+          bg-gradient-to-b from-white/70 via-white/50 to-white/40
+          backdrop-blur-xl
+          shadow-[0_4px_24px_rgba(93,200,232,0.12),0_1px_4px_rgba(0,0,0,0.04)]
+          relative overflow-hidden
+          ${scrolled
+            ? "shadow-[0_8px_32px_rgba(93,200,232,0.18)] scale-[0.98]"
+            : "shadow-[0_4px_24px_rgba(93,200,232,0.12)]"
           }
         `}
       >
-        <div className="flex items-center h-10">
-          {/* Logo */}
+        {/* Glossy highlight strip */}
+        <div className="absolute top-0 left-0 right-0 h-[45%] bg-gradient-to-b from-white/60 to-transparent pointer-events-none rounded-t-2xl z-10" />
 
+        <div className="flex items-center h-12 relative z-20">
+          {/* Logo */}
           <a
             href="/show"
-            onClick={(e) => handleNavClick(e, "/portfolio")}
-            className="
-              flex-shrink-0
-              w-16
-              h-full
-              flex
-              items-center
-              justify-center
-              border-r
-              border-[#444]
-              bg-gradient-to-b
-              from-[#446c6a]
-              via-[#333]
-              to-[#1b1b1b]
-            "
+            onClick={(e) => handleNavClick(e, "/home")}
+            className="flex-shrink-0 w-16 h-full flex items-center justify-center border-r border-white/40 bg-gradient-to-b from-sky-100/60 to-white/30"
           >
-           <img 
-  src={Logo} 
-  alt="Logo" 
-  className="w-7 h-9 object-contain"
-  style={{
-    filter: 'drop-shadow(0 0 6px #00D4FF) drop-shadow(0 0 12px #6BB8FF)',
-  }}
-/>
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-7 h-9 object-contain"
+              style={{
+                filter: 'drop-shadow(0 1px 3px rgba(93,200,232,0.4))',
+              }}
+            />
           </a>
 
-          {/* Desktop */}
-
+          {/* Desktop Nav */}
           <div className="hidden md:flex flex-1">
             {navItems.map((item) => {
               const active = currentPath === item.path;
-
               return (
                 <a
                   key={item.name}
                   href={item.path}
-                  // ref={active ? activeRef : null}
                   onClick={(e) => handleNavClick(e, item.path)}
                   className={`
-                    relative
-                    flex-1
-                    h-10
-                    flex
-                    items-center
-                    justify-center
-                    text-[13px]
-                    font-medium
-                    tracking-wide
-                    border-r
-                    last:border-r-0
-                    border-[#444]
-                    transition-all
-                    duration-300
-     ${
-       active
-         ? "text-black bg-[#4599e7]"
-         : "text-gray-300 bg-gradient-to-b from-[#446c6a] via-[#2b2b2b] to-[#171717] hover:from-[#616161] hover:to-[#222] hover:text-white"
-     }       `}
+                    relative flex-1 h-12 flex items-center justify-center
+                    text-[13px] font-semibold tracking-wide
+                    border-r border-white/30 last:border-r-0
+                    transition-all duration-300
+                    ${active
+                      ? "bg-gradient-to-b from-[#5DC8E8]/30 to-[#5DC8E8]/15 text-[#2B6E8A] shadow-[inset_0_-2px_0_#5DC8E8]"
+                      : "text-[#5A7089] hover:bg-white/40 hover:text-[#2B3A4E]"
+                    }
+                  `}
                 >
                   {item.name}
-                  {active && (
-                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-white/40 pointer-events-none" />
-                  )}
                 </a>
               );
             })}
           </div>
 
-          {/* Mobile */}
-
-          <div className="md:hidden flex-1 h-10 overflow-hidden">
-            <div
-              className="
-      flex
-      overflow-x-auto
-     pb-5
-      overflow-y-hidden
-      scrollbar-hide
-      touch-pan-x
-      whitespace-nowrap
-      w-full
-    "
-            >
+          {/* Mobile Nav */}
+          <div className="md:hidden flex-1 h-12 overflow-hidden">
+            <div className="flex overflow-x-auto pb-5 overflow-y-hidden scrollbar-hide touch-pan-x whitespace-nowrap w-full">
               {navItems.map((item) => {
                 const active = currentPath === item.path;
-
                 return (
                   <a
                     key={item.name}
                     href={item.path}
                     onClick={(e) => handleNavClick(e, item.path)}
                     className={`
-            relative
-            flex-shrink-0
-            px-5
-            py-5  
-            h-12
-            flex
-            items-center
-            justify-center
-            text-sm
-            font-medium
-            border-r
-            border-[#444]
-
-            ${
-              active
-                ? "text-white bg-gradient-to-b from-[#72c4ff] via-[#418bd3] to-[#1f4f88]"
-                : "text-gray-300 bg-gradient-to-b from-[#4b4b4b] via-[#2b2b2b] to-[#171717]"
-            }
-          `}
+                      relative flex-shrink-0 px-5 h-12
+                      flex items-center justify-center
+                      text-sm font-semibold border-r border-white/30
+                      ${active
+                        ? "bg-gradient-to-b from-[#5DC8E8]/30 to-[#5DC8E8]/15 text-[#2B6E8A]"
+                        : "text-[#5A7089] bg-white/20"
+                      }
+                    `}
                   >
                     {item.name}
                   </a>
