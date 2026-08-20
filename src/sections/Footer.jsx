@@ -21,19 +21,27 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative border-t border-white/40 pt-16 pb-12 overflow-hidden backdrop-blur-sm" style={{ background: 'linear-gradient(180deg, rgba(212,238,255,0.5), rgba(232,248,255,0.6), rgba(200,230,200,0.3))' }}>
+    <footer
+      className="relative pt-16 pb-12 overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, rgba(233,245,252,0.5) 0%, rgba(245,251,254,0.6) 50%, rgba(244,244,246,0.8) 100%)',
+        borderTop: '1px solid rgba(167,217,245,0.4)',
+      }}
+    >
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Top Section: Brand */}
-        <div className="flex flex-col items-center text-center mb-12 border-b border-white/30 pb-10">
+        <div className="flex flex-col items-center text-center mb-12 border-b pb-10"
+          style={{ borderColor: 'rgba(167,217,245,0.3)' }}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-aero">
             TripleVisionary
           </h2>
         </div>
 
         {/* Services & Contact */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b border-white/30 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b pb-10"
+          style={{ borderColor: 'rgba(167,217,245,0.3)' }}>
           <div>
-            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#00A8E8] mb-4">
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#3399ff] mb-4">
               Services
             </h4>
             <div className="grid grid-cols-2 gap-2">
@@ -42,7 +50,8 @@ export default function Footer() {
                   key={service.name}
                   href={service.href}
                   onClick={(e) => handleLinkClick(e, service.href)}
-                  className="text-xs text-[#555577] hover:text-[#2B3A4E] transition-colors font-medium py-1"
+                  className="text-xs hover:text-[#3399ff] transition-colors font-medium py-1"
+                  style={{ color: '#555' }}
                 >
                   {service.name}
                 </a>
@@ -51,50 +60,56 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#00A8E8] mb-4">
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#3399ff] mb-4">
               Contact
             </h4>
-            <span className="text-sm text-[#555577]">
+            <span className="text-sm" style={{ color: '#555' }}>
               triplevisionary@protonmail.com
             </span>
           </div>
         </div>
 
         {/* Social Media */}
-        <div className="flex flex-col items-center gap-6 mb-12 border-b border-white/30 pb-10">
-          <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#00A8E8]">
+        <div className="flex flex-col items-center gap-6 mb-12 border-b pb-10"
+          style={{ borderColor: 'rgba(167,217,245,0.3)' }}>
+          <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] text-[#3399ff]">
             Follow Us
           </h4>
           <div className="flex items-center gap-8">
-            <a
-              href="https://wa.me/+91 9388121465"
-              className="w-11 h-11 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-[#555577] hover:text-[#00A8E8] hover:bg-white hover:shadow-[0_4px_16px_rgba(0,168,232,0.25)] transition-all duration-300 hover:scale-110"
-              aria-label="WhatsApp"
-              target="_blank"
-            >
-              <FaWhatsapp size={20} />
-            </a>
-            <a
-              href="https://www.instagram.com/triplevisionary?igsh=MWF1c21zaWdnd2Vpbg=="
-              className="w-11 h-11 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-[#555577] hover:text-[#00A8E8] hover:bg-white hover:shadow-[0_4px_16px_rgba(0,168,232,0.25)] transition-all duration-300 hover:scale-110"
-              aria-label="Instagram"
-              target="_blank"
-            >
-              <FaInstagram size={20} />
-            </a>
-            <a
-              href="https://www.youtube.com/@triplevisionary"
-              className="w-11 h-11 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-[#555577] hover:text-[#00A8E8] hover:bg-white hover:shadow-[0_4px_16px_rgba(0,168,232,0.25)] transition-all duration-300 hover:scale-110"
-              aria-label="YouTube"
-              target="_blank"
-            >
-              <FaYoutube size={20} />
-            </a>
+            {[
+              { icon: FaWhatsapp, href: "https://wa.me/+91 9388121465", label: "WhatsApp" },
+              { icon: FaInstagram, href: "https://www.instagram.com/triplevisionary?igsh=MWF1c21zaWdnd2Vpbg==", label: "Instagram" },
+              { icon: FaYoutube, href: "https://www.youtube.com/@triplevisionary", label: "YouTube" },
+            ].map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                className="w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                style={{
+                  background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
+                  border: '1px solid rgba(186,186,190,0.5)',
+                  color: '#555',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#3399ff';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(51,153,255,0.2), inset 0 1px 0 rgba(255,255,255,0.8)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#555';
+                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)';
+                }}
+                aria-label={label}
+                target="_blank"
+              >
+                <Icon size={20} />
+              </a>
+            ))}
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs text-[#555577]">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs" style={{ color: '#888' }}>
           <span>&copy; {new Date().getFullYear()} TripleVisionary. All rights reserved.</span>
         </div>
       </div>

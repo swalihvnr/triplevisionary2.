@@ -30,7 +30,8 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="absolute inset-0 bg-[#2B3A4E]/80 backdrop-blur-md"
+          className="absolute inset-0 backdrop-blur-md"
+          style={{ background: 'rgba(20,35,65,0.75)' }}
         />
 
         <motion.div
@@ -40,10 +41,17 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
           className="relative w-full max-w-4xl glossy-card overflow-hidden shadow-2xl z-10"
         >
-          {/* Top bar */}
-          <div className="flex items-center justify-between px-4 py-3 bg-white/70 backdrop-blur-sm border-b border-white/40">
-            <span className="text-xs font-display font-bold text-[#2B3A4E]">{videoTitle || 'Video'}</span>
-            <button onClick={onClose} className="p-1 hover:bg-white/60 rounded-full transition-colors text-[#555577] cursor-pointer">
+          {/* Top bar — Win7 Aero titlebar */}
+          <div className="flex items-center justify-between px-4 py-3 backdrop-blur-sm"
+            style={{
+              background: 'linear-gradient(180deg, rgba(233,245,252,0.9), rgba(245,251,254,0.85))',
+              borderBottom: '1px solid rgba(167,217,245,0.4)',
+            }}>
+            <span className="text-xs font-display font-bold" style={{ color: '#1a1a1a' }}>{videoTitle || 'Video'}</span>
+            <button onClick={onClose} className="p-1 rounded-full transition-colors cursor-pointer"
+              style={{ color: '#555' }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(242,242,242,0.8)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}>
               <X size={18} />
             </button>
           </div>
@@ -63,8 +71,12 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
             )}
           </div>
           
-          <div className="flex items-center justify-between px-4 py-2 bg-white/50 border-t border-white/40">
-            <span className="text-xs font-display font-bold text-[#555577]">TripleVisionary</span>
+          <div className="flex items-center justify-between px-4 py-2"
+            style={{
+              background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
+              borderTop: '1px solid rgba(186,186,190,0.4)',
+            }}>
+            <span className="text-xs font-display font-bold" style={{ color: '#555' }}>TripleVisionary</span>
           </div>
         </motion.div>
       </div>

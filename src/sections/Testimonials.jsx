@@ -32,21 +32,29 @@ const feedback = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-24 bg-white/15 border-y border-white/30 overflow-hidden backdrop-blur-sm">
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-[#00A8E8]/8 rounded-full blur-[100px] pointer-events-none" />
+    <section
+      id="testimonials"
+      className="relative py-24 overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, rgba(244,244,246,0.3) 0%, rgba(233,245,252,0.25) 50%, rgba(244,244,246,0.3) 100%)',
+        borderTop: '1px solid rgba(167,217,245,0.3)',
+        borderBottom: '1px solid rgba(167,217,245,0.3)',
+      }}
+    >
+      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(51,153,255,0.06), transparent)' }} />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#00A8E8] animate-pulse shadow-[0_0_8px_rgba(0,168,232,0.5)]" />
-            <span className="text-[10px] font-display tracking-[0.2em] uppercase text-[#00A8E8] font-bold">
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#3399ff', boxShadow: '0 0 8px rgba(51,153,255,0.5)' }} />
+            <span className="text-[10px] font-display tracking-[0.2em] uppercase font-bold" style={{ color: '#3399ff' }}>
               Client Feedback
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4 text-[#2B3A4E]">
+          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4" style={{ color: '#1a1a1a' }}>
             Testimonials
           </h2>
-          <p className="text-sm md:text-base text-[#555577] max-w-xl font-light">
+          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: '#555' }}>
             Read reviews from our international brand partners and product developers.
           </p>
         </div>
@@ -60,35 +68,43 @@ export default function Testimonials() {
               className="w-full"
             >
               <GlassCard
-                className="p-6 bg-white/50 border border-white/60 hover:border-[#00A8E8]/30 transition-all cursor-pointer"
-                glowColor="rgba(93, 200, 232, 0.1)"
+                className="p-6 transition-all cursor-pointer"
+                glowColor="rgba(51,153,255,0.1)"
               >
-                <div className="flex items-center justify-between border-b border-white/30 pb-4 mb-4">
+                <div className="flex items-center justify-between pb-4 mb-4" style={{ borderBottom: '1px solid rgba(167,217,245,0.3)' }}>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00A8E8]/20 to-[#7ED957]/15 border border-white/60 flex items-center justify-center font-display text-[10px] text-[#00A8E8] font-bold">
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center font-display text-[10px] font-bold"
+                      style={{
+                        background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
+                        border: '1px solid rgba(167,217,245,0.4)',
+                        color: '#3399ff',
+                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.8)',
+                      }}
+                    >
                       {item.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-xs text-[#2B3A4E] leading-tight">{item.name}</h4>
-                      <span className="text-[9px] text-[#555577] block">{item.role}</span>
+                      <h4 className="font-display font-bold text-xs leading-tight" style={{ color: '#1a1a1a' }}>{item.name}</h4>
+                      <span className="text-[9px] block" style={{ color: '#555' }}>{item.role}</span>
                     </div>
                   </div>
-                  <Quote size={16} className="text-[#00A8E8]/30" />
+                  <Quote size={16} style={{ color: 'rgba(51,153,255,0.3)' }} />
                 </div>
 
-                <div className="flex gap-1 mb-4 text-[#7ED957]">
+                <div className="flex gap-1 mb-4" style={{ color: '#f59e0b' }}>
                   {Array.from({ length: item.rating }).map((_, sIdx) => (
                     <Star key={sIdx} size={12} fill="currentColor" />
                   ))}
                 </div>
 
-                <p className="text-xs text-[#555577] leading-relaxed font-light italic">
+                <p className="text-xs leading-relaxed font-light italic" style={{ color: '#555' }}>
                   "{item.review}"
                 </p>
 
-                <div className="mt-6 pt-3 border-t border-white/20 flex items-center justify-between text-[9px] text-[#555577]/60 font-display">
+                <div className="mt-6 pt-3 flex items-center justify-between text-[9px] font-display" style={{ borderTop: '1px solid rgba(167,217,245,0.2)', color: '#999' }}>
                   <span className="font-bold">Verified Review</span>
-                  <span className="text-[#00A8E8] font-bold">{item.company}</span>
+                  <span className="font-bold" style={{ color: '#3399ff' }}>{item.company}</span>
                 </div>
               </GlassCard>
             </motion.div>

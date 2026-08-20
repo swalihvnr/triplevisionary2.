@@ -29,18 +29,27 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const inputStyle = {
+    background: 'linear-gradient(180deg, rgba(255,255,255,0.9), rgba(244,244,246,0.6))',
+    border: '1px solid rgba(186,186,190,0.5)',
+    color: '#1a1a1a',
+    boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.06), 0 1px 0 rgba(255,255,255,0.8)',
+  };
+
+  const inputFocusClass = "focus:outline-none focus:border-[#3399ff] focus:ring-2 focus:ring-[#3399ff]/20 transition-all font-sans";
+
   return (
     <section id="contact" className="relative py-24 overflow-hidden">
-      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-[#00A8E8]/8 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#7ED957]/6 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-[140px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(51,153,255,0.06), transparent)' }} />
+      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[120px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(167,217,245,0.08), transparent)' }} />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4 text-[#2B3A4E]">
+          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4" style={{ color: '#1a1a1a' }}>
             Start Your Project
           </h2>
-          <p className="text-sm md:text-base text-[#555577] max-w-xl font-light">
+          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: '#555' }}>
             Connect with our producers to establish timeline targets.
           </p>
         </div>
@@ -48,10 +57,10 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Contact Form */}
           <div className="lg:col-span-7 relative">
-            <GlassCard className="p-6 md:p-8 bg-white/50 border border-white/60">
+            <GlassCard className="p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="name" className="font-display text-xs font-bold uppercase tracking-wider text-[#555577]">
+                  <label htmlFor="name" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#555' }}>
                     Your Name
                   </label>
                   <input
@@ -62,12 +71,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Enter your name"
-                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#2B3A4E] placeholder-[#555577]/40 focus:outline-none focus:border-[#00A8E8] focus:ring-2 focus:ring-[#00A8E8]/20 transition-all font-sans shadow-inner"
+                    className={`w-full rounded-lg px-4 py-3 text-sm placeholder-gray-400 ${inputFocusClass}`}
+                    style={inputStyle}
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="email" className="font-display text-xs font-bold uppercase tracking-wider text-[#555577]">
+                  <label htmlFor="email" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#555' }}>
                     Email Address
                   </label>
                   <input
@@ -78,12 +88,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Enter your email"
-                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#2B3A4E] placeholder-[#555577]/40 focus:outline-none focus:border-[#00A8E8] focus:ring-2 focus:ring-[#00A8E8]/20 transition-all font-sans shadow-inner"
+                    className={`w-full rounded-lg px-4 py-3 text-sm placeholder-gray-400 ${inputFocusClass}`}
+                    style={inputStyle}
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="projectType" className="font-display text-xs font-bold uppercase tracking-wider text-[#555577]">
+                  <label htmlFor="projectType" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#555' }}>
                     Project Type
                   </label>
                   <select
@@ -91,7 +102,8 @@ export default function Contact() {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleInputChange}
-                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#555577] focus:outline-none focus:border-[#00A8E8] focus:ring-2 focus:ring-[#00A8E8]/20 transition-all font-sans"
+                    className={`w-full rounded-lg px-4 py-3 text-sm ${inputFocusClass}`}
+                    style={{ ...inputStyle, color: '#555' }}
                   >
                     <option value="Commercial Ads">Commercial Advertisements</option>
                     <option value="Motion Graphics">Motion Graphics / HUD</option>
@@ -102,7 +114,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="message" className="font-display text-xs font-bold uppercase tracking-wider text-[#555577]">
+                  <label htmlFor="message" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#555' }}>
                     Project Details
                   </label>
                   <textarea
@@ -113,14 +125,15 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Describe your project, timeline, and any references..."
-                    className="w-full bg-white/60 border border-white/80 rounded-2xl px-4 py-3 text-sm text-[#2B3A4E] placeholder-[#555577]/40 focus:outline-none focus:border-[#00A8E8] focus:ring-2 focus:ring-[#00A8E8]/20 transition-all font-sans resize-none shadow-inner"
+                    className={`w-full rounded-lg px-4 py-3 text-sm placeholder-gray-400 ${inputFocusClass} resize-none`}
+                    style={inputStyle}
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSending}
-                  className="w-full py-3.5 rounded-2xl glossy-button font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-2 hover:brightness-110 active:scale-[0.98] disabled:opacity-50 transition-all cursor-pointer"
+                  className="w-full py-3.5 rounded-lg glossy-button-sky font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-2 active:scale-[0.98] disabled:opacity-50 transition-all cursor-pointer"
                 >
                   <Send size={16} />
                   Send Message
@@ -134,10 +147,11 @@ export default function Contact() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-white/90 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
+                    className="absolute inset-0 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
+                    style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.95), rgba(233,245,252,0.9))' }}
                   >
-                    <div className="w-12 h-12 border-3 border-[#00A8E8]/30 border-t-[#00A8E8] rounded-full animate-spin mb-4" />
-                    <span className="font-bold text-sm text-[#00A8E8] animate-pulse">Sending your message...</span>
+                    <div className="w-12 h-12 border-3 rounded-full animate-spin mb-4" style={{ borderColor: 'rgba(51,153,255,0.2)', borderTopColor: '#3399ff' }} />
+                    <span className="font-bold text-sm animate-pulse" style={{ color: '#3399ff' }}>Sending your message...</span>
                   </motion.div>
                 )}
                 {isSuccess && (
@@ -145,13 +159,14 @@ export default function Contact() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-white/95 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
+                    className="absolute inset-0 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
+                    style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.97), rgba(244,244,246,0.95))' }}
                   >
-                    <div className="w-12 h-12 rounded-full bg-[#7ED957]/15 flex items-center justify-center border border-[#7ED957]/30 text-[#7ED957] mb-4">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: 'rgba(126,217,87,0.1)', border: '1px solid rgba(126,217,87,0.3)', color: '#5cb836' }}>
                       <span className="text-xl">✓</span>
                     </div>
-                    <span className="font-bold uppercase tracking-wider text-[#2B3A4E] text-sm">Message Sent!</span>
-                    <span className="text-xs text-[#555577] mt-1.5 max-w-xs">
+                    <span className="font-bold uppercase tracking-wider text-sm" style={{ color: '#1a1a1a' }}>Message Sent!</span>
+                    <span className="text-xs mt-1.5 max-w-xs" style={{ color: '#555' }}>
                       A producer will get back to you within 12 hours.
                     </span>
                   </motion.div>
@@ -163,60 +178,83 @@ export default function Contact() {
           {/* Quick Links */}
           <div className="lg:col-span-5 space-y-6">
             <a href="https://wa.me/+91 9388121465" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
-              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-green-400/40 transition-all" glowColor="rgba(126,217,87,0.12)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(126,217,87,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-green-100/80 border border-green-200/60 text-green-500 flex items-center justify-center group-hover:bg-green-500 group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(126,217,87,0.3)] transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(180deg, rgba(220,252,231,0.8), rgba(187,247,208,0.6))',
+                      border: '1px solid rgba(134,239,172,0.5)',
+                      color: '#16a34a',
+                    }}>
                     <MessageSquare size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display text-[#555577] uppercase font-bold">Direct Dispatch</span>
-                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-green-600 transition-colors">Ping via WhatsApp</h4>
-                    <p className="text-[11px] text-[#555577] mt-1 font-light">Start an instant dialogue regarding budget and timelines.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#555' }}>Direct Dispatch</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-green-600 transition-colors" style={{ color: '#1a1a1a' }}>Ping via WhatsApp</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#555' }}>Start an instant dialogue regarding budget and timelines.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
             <a href="mailto:triplevisionary@protonmail.com" className="block group cursor-pointer">
-              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-[#00A8E8]/40 transition-all" glowColor="rgba(0,168,232,0.12)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(51,153,255,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white/60 border border-white/50 text-[#00A8E8] flex items-center justify-center group-hover:bg-[#00A8E8] group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(0,168,232,0.3)] transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
+                      border: '1px solid rgba(186,186,190,0.5)',
+                      color: '#3399ff',
+                      boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.8)',
+                    }}>
                     <Mail size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display text-[#555577] uppercase font-bold">E-Mail</span>
-                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-[#00A8E8] transition-colors">triplevisionary@protonmail.com</h4>
-                    <p className="text-[11px] text-[#555577] mt-1 font-light">Send story briefs or video assets directly.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#555' }}>E-Mail</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-[#3399ff] transition-colors" style={{ color: '#1a1a1a' }}>triplevisionary@protonmail.com</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#555' }}>Send story briefs or video assets directly.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
             <a href="tel:+919388121465" className="block group cursor-pointer">
-              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-[#00A8E8]/40 transition-all" glowColor="rgba(0,168,232,0.12)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(51,153,255,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white/60 border border-white/50 text-[#00A8E8] flex items-center justify-center group-hover:bg-[#00A8E8] group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(0,168,232,0.3)] transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
+                      border: '1px solid rgba(186,186,190,0.5)',
+                      color: '#3399ff',
+                      boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.8)',
+                    }}>
                     <PhoneCall size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display text-[#555577] uppercase font-bold">Phone</span>
-                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-[#00A8E8] transition-colors">+91 93881 21465</h4>
-                    <p className="text-[11px] text-[#555577] mt-1 font-light">Tap to call us directly.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#555' }}>Phone</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-[#3399ff] transition-colors" style={{ color: '#1a1a1a' }}>+91 93881 21465</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#555' }}>Tap to call us directly.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
             <a href="https://share.upscrolled.com/en/user/dd096cdb-b9f6-4897-a1c0-546f3b7ce20e/" target="_blank" className="block group cursor-pointer">
-              <GlassCard className="p-5 bg-white/50 border border-white/60 group-hover:border-[#00A8E8]/40 transition-all" glowColor="rgba(0,168,232,0.12)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(51,153,255,0.12)">
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white/60 border border-white/50 text-[#00A8E8] flex items-center justify-center group-hover:bg-[#00A8E8] group-hover:text-white group-hover:shadow-[0_4px_16px_rgba(0,168,232,0.3)] transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(180deg, rgba(242,242,242,0.8), rgba(235,235,235,0.8))',
+                      border: '1px solid rgba(186,186,190,0.5)',
+                      color: '#3399ff',
+                      boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.8)',
+                    }}>
                     <ExternalLink size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display text-[#555577] uppercase font-bold">Connect</span>
-                    <h4 className="font-display font-bold text-sm text-[#2B3A4E] group-hover:text-[#00A8E8] transition-colors">UPSCROLLED</h4>
-                    <p className="text-[11px] text-[#555577] mt-1 font-light">Connect with us.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#555' }}>Connect</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-[#3399ff] transition-colors" style={{ color: '#1a1a1a' }}>UPSCROLLED</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#555' }}>Connect with us.</p>
                   </div>
                 </div>
               </GlassCard>
