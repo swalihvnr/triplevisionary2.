@@ -60,7 +60,7 @@ export default function PortfolioPage({ onPageChange }) {
 
   return (
     <div className="relative min-h-screen pt-20">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.04), transparent)' }} />
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'radial-gradient(circle, rgba(18,153,202,0.06), transparent)' }} />
 
       <section>
         {/* Filter Bar */}
@@ -81,12 +81,12 @@ export default function PortfolioPage({ onPageChange }) {
                       className="flex flex-shrink-0 cursor-pointer items-center gap-2 rounded-full px-3.5 py-2.5 text-[11px] font-semibold transition-all border"
                       style={{
                         background: isActive
-                          ? 'rgba(255,255,255,0.12)'
-                          : 'rgba(2,8,20,0.15)',
-                        borderColor: isActive ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.06)',
-                        color: isActive ? '#fff' : 'rgba(255,255,255,0.75)',
-                        boxShadow: isActive ? '0 2px 10px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
-                        textShadow: isActive ? '0 1px 1px rgba(0,0,0,0.3)' : 'none',
+                          ? 'linear-gradient(180deg, #1299CA, #1088B8)'
+                          : 'rgba(255,255,255,0.40)',
+                        borderColor: isActive ? 'rgba(18,153,202,0.30)' : 'rgba(26,51,68,0.08)',
+                        color: isActive ? '#ffffff' : '#4A7080',
+                        boxShadow: isActive ? 'inset 0 1px 0 rgba(255,255,255,0.30), 0 2px 10px rgba(18,153,202,0.25)' : 'none',
+                        textShadow: isActive ? '0 1px 1px rgba(0,0,0,0.2)' : 'none',
                       }}
                     >
                       <Icon size={13} strokeWidth={isActive ? 2.5 : 1.8} />
@@ -101,17 +101,17 @@ export default function PortfolioPage({ onPageChange }) {
               </button>
             </div>
 
-            <div className="flex w-full flex-col items-center gap-2 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+            <div className="flex w-full flex-col items-center gap-2 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0" style={{ borderTop: '1px solid rgba(26,51,68,0.06)' }}>
               <div className="flex w-full items-center lg:w-auto">
                 <label className="flex w-full max-w-[320px] items-center gap-2 rounded-full px-3 lg:w-[260px]"
-                  style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.75)' }}>
+                  style={{ background: 'rgba(255,255,255,0.40)', border: '1px solid rgba(26,51,68,0.08)', color: '#4A7080' }}>
                   <Search size={14} className="flex-shrink-0" />
                   <input
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                     placeholder="Search projects"
                     className="h-10 w-full bg-transparent text-xs outline-none placeholder:text-gray-500"
-                    style={{ color: '#ffffff' }}
+                    style={{ color: '#1A3344' }}
                   />
                 </label>
               </div>
@@ -121,7 +121,7 @@ export default function PortfolioPage({ onPageChange }) {
                   onChange={(event) => setSortOrder(event.target.value)}
                   aria-label="Sort projects"
                   className="w-full max-w-[320px] cursor-pointer rounded-full px-4 py-2.5 text-[11px] outline-none lg:w-auto"
-                  style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.75)' }}
+                  style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: '#6A8A9A' }}
                 >
                   <option value="Newest">Newest</option>
                   <option value="Oldest">Oldest</option>
@@ -163,7 +163,7 @@ export default function PortfolioPage({ onPageChange }) {
 
                   <div className="absolute left-2 top-2 z-20 sm:left-3 sm:top-3">
                     <span className="inline-flex max-w-[calc(100vw-110px)] rounded-full backdrop-blur-md px-2 py-1 text-[8px] font-bold uppercase tracking-[0.12em] sm:px-3 sm:py-1.5 sm:text-[9px]"
-                      style={{ background: 'rgba(0,4,12,0.3)', border: '1px solid rgba(255,255,255,0.06)', color: '#ffffff', boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                      style={{ background: 'rgba(0,4,12,0.3)', border: '1px solid rgba(255,255,255,0.06)', color: '#1A3344', boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
                       {project.category}
                     </span>
                   </div>
@@ -180,7 +180,7 @@ export default function PortfolioPage({ onPageChange }) {
                         className="flex h-14 w-14 scale-90 items-center justify-center rounded-full opacity-90 backdrop-blur-md transition-transform duration-[400ms] group-hover:scale-100"
                         style={{
                           background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
-                          color: '#ffffff',
+                          color: '#1A3344',
                           boxShadow: '0 4px 20px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.05)',
                           border: '1px solid rgba(255,255,255,0.06)',
                         }}>
@@ -202,18 +202,18 @@ export default function PortfolioPage({ onPageChange }) {
         </motion.div>
 
         <div className="mt-12 flex justify-center">
-          <p className="text-center text-sm font-light tracking-wider leading-relaxed max-w-3xl" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="text-center text-sm font-light tracking-wider leading-relaxed max-w-3xl" style={{ color: '#6A8A9A' }}>
             *This content is not available for AI training. All rights reserved*
           </p>
         </div>
 
         {visibleProjects.length === 0 && (
           <div className="glossy-card rounded-3xl border-2 border-dashed py-24 text-center" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>No projects match that filter.</p>
+            <p className="text-sm" style={{ color: '#6A8A9A' }}>No projects match that filter.</p>
             <button
               onClick={() => { setActiveCategory("All"); setSearchQuery(""); }}
               className="mt-4 cursor-pointer text-xs font-bold uppercase tracking-widest transition-colors"
-              style={{ color: '#ffffff' }}
+              style={{ color: '#1A3344' }}
             >
               Clear filters
             </button>
@@ -222,10 +222,10 @@ export default function PortfolioPage({ onPageChange }) {
 
         <div className="glossy-card mt-20 flex flex-col items-start justify-between gap-8 rounded-3xl p-7 md:flex-row md:items-center md:p-10">
           <div>
-            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] font-bold" style={{ color: '#ffffff' }}>
+            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] font-bold" style={{ color: '#1A3344' }}>
               Have something in mind?
             </p>
-            <h2 className="max-w-xl font-display text-3xl font-semibold tracking-[-0.02em] md:text-4xl" style={{ color: '#ffffff' }}>
+            <h2 className="max-w-xl font-display text-3xl font-semibold tracking-[-0.02em] md:text-4xl" style={{ color: '#1A3344' }}>
               Let's make the next frame count.
             </h2>
           </div>

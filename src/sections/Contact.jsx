@@ -30,26 +30,26 @@ export default function Contact() {
   };
 
   const inputStyle = {
-    background: 'rgba(2,8,20,0.15)',
-    border: '1px solid rgba(255,255,255,0.06)',
-    color: '#ffffff',
-    boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.02)',
+    background: 'rgba(255,255,255,0.50)',
+    border: '1px solid rgba(26,51,68,0.10)',
+    color: '#1A3344',
+    boxShadow: 'inset 0 2px 4px rgba(26,51,68,0.06), 0 1px 0 rgba(255,255,255,0.20)',
   };
 
-  const inputFocusClass = "focus:outline-none focus:border-[#ffffff] focus:ring-2 focus:ring-[#ffffff]/20 transition-all font-sans";
+  const inputFocusClass = "focus:outline-none focus:border-[#1299CA] focus:ring-2 focus:ring-[#1299CA]/20 transition-all font-sans";
 
   return (
     <section id="contact" className="relative py-24 overflow-hidden">
-      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-[140px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.04), transparent)' }} />
-      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[120px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.05), transparent)' }} />
+      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-[140px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(18,153,202,0.06), transparent)' }} />
+      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[120px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(90,172,160,0.05), transparent)' }} />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4" style={{ color: '#ffffff' }}>
+          <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4" style={{ color: '#1A3344' }}>
             Start Your Project
           </h2>
-          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: '#6A8A9A' }}>
             Connect with our producers to establish timeline targets.
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function Contact() {
             <GlassCard className="p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="name" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                  <label htmlFor="name" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#6A8A9A' }}>
                     Your Name
                   </label>
                   <input
@@ -77,7 +77,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="email" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                  <label htmlFor="email" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#6A8A9A' }}>
                     Email Address
                   </label>
                   <input
@@ -94,7 +94,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="projectType" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                  <label htmlFor="projectType" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#6A8A9A' }}>
                     Project Type
                   </label>
                   <select
@@ -103,7 +103,7 @@ export default function Contact() {
                     value={formData.projectType}
                     onChange={handleInputChange}
                     className={`w-full rounded-lg px-4 py-3 text-sm ${inputFocusClass}`}
-                    style={{ ...inputStyle, color: 'rgba(255,255,255,0.75)' }}
+                    style={{ ...inputStyle, color: '#6A8A9A' }}
                   >
                     <option value="Commercial Ads">Commercial Advertisements</option>
                     <option value="Motion Graphics">Motion Graphics / HUD</option>
@@ -114,7 +114,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="message" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                  <label htmlFor="message" className="font-display text-xs font-bold uppercase tracking-wider" style={{ color: '#6A8A9A' }}>
                     Project Details
                   </label>
                   <textarea
@@ -148,10 +148,10 @@ export default function Contact() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="absolute inset-0 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
-                    style={{ background: 'rgba(0,0,0,0.8)' }}
+                    style={{ background: 'rgba(200,235,245,0.92)' }}
                   >
-                    <div className="w-12 h-12 border-3 rounded-full animate-spin mb-4" style={{ borderColor: 'rgba(255,255,255,0.06)', borderTopColor: '#ffffff' }} />
-                    <span className="font-bold text-sm animate-pulse" style={{ color: '#ffffff' }}>Sending your message...</span>
+                    <div className="w-12 h-12 border-3 rounded-full animate-spin mb-4" style={{ borderColor: 'rgba(26,51,68,0.10)', borderTopColor: '#1299CA' }} />
+                    <span className="font-bold text-sm animate-pulse" style={{ color: '#1A3344' }}>Sending your message...</span>
                   </motion.div>
                 )}
                 {isSuccess && (
@@ -160,13 +160,13 @@ export default function Contact() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="absolute inset-0 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
-                    style={{ background: 'rgba(0,0,0,0.85)' }}
+                    style={{ background: 'rgba(200,235,245,0.95)' }}
                   >
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.08)', color: '#ffffff' }}>
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: 'rgba(18,153,202,0.10)', border: '1px solid rgba(18,153,202,0.15)', color: '#1299CA' }}>
                       <span className="text-xl">✓</span>
                     </div>
-                    <span className="font-bold uppercase tracking-wider text-sm" style={{ color: '#ffffff' }}>Message Sent!</span>
-                    <span className="text-xs mt-1.5 max-w-xs" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                    <span className="font-bold uppercase tracking-wider text-sm" style={{ color: '#1A3344' }}>Message Sent!</span>
+                    <span className="text-xs mt-1.5 max-w-xs" style={{ color: '#6A8A9A' }}>
                       A producer will get back to you within 12 hours.
                     </span>
                   </motion.div>
@@ -178,83 +178,83 @@ export default function Contact() {
           {/* Quick Links */}
           <div className="lg:col-span-5 space-y-6">
             <a href="https://wa.me/+91 9388121465" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
-              <GlassCard className="p-5 transition-all" glowColor="rgba(255,255,255,0.08)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(18,153,202,0.08)">
                 <div className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(180deg, rgba(255,255,255,0.06))',
-                      border: '1px solid rgba(255,255,255,0.08)',
-                      color: '#ffffff',
+                      background: 'linear-gradient(180deg, rgba(180,230,240,0.25), rgba(160,220,220,0.18))',
+                      border: '1px solid rgba(26,51,68,0.06)',
+                      color: '#1A3344',
                     }}>
                     <MessageSquare size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: 'rgba(255,255,255,0.65)' }}>Direct Dispatch</span>
-                    <h4 className="font-display font-bold text-sm group-hover:text-[#ffffff] transition-colors" style={{ color: '#ffffff' }}>Ping via WhatsApp</h4>
-                    <p className="text-[11px] mt-1 font-light" style={{ color: 'rgba(255,255,255,0.75)' }}>Start an instant dialogue regarding budget and timelines.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#6A8A9A' }}>Direct Dispatch</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-[#0D8090] transition-colors" style={{ color: '#1A3344' }}>Ping via WhatsApp</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#6A8A9A' }}>Start an instant dialogue regarding budget and timelines.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
             <a href="mailto:triplevisionary@protonmail.com" className="block group cursor-pointer">
-              <GlassCard className="p-5 transition-all" glowColor="rgba(255,255,255,0.08)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(18,153,202,0.08)">
                 <div className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(180deg, rgba(255,255,255,0.06))',
-                      border: '1px solid rgba(255,255,255,0.08)',
-                      color: '#ffffff',
+                      background: 'linear-gradient(180deg, rgba(180,230,240,0.25), rgba(160,220,220,0.18))',
+                      border: '1px solid rgba(26,51,68,0.06)',
+                      color: '#1A3344',
                       boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.03)',
                     }}>
                     <Mail size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: 'rgba(255,255,255,0.65)' }}>E-Mail</span>
-                    <h4 className="font-display font-bold text-sm group-hover:text-[#ffffff] transition-colors" style={{ color: '#ffffff' }}>triplevisionary@protonmail.com</h4>
-                    <p className="text-[11px] mt-1 font-light" style={{ color: 'rgba(255,255,255,0.75)' }}>Send story briefs or video assets directly.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#6A8A9A' }}>E-Mail</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-[#0D8090] transition-colors" style={{ color: '#1A3344' }}>triplevisionary@protonmail.com</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#6A8A9A' }}>Send story briefs or video assets directly.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
             <a href="tel:+919388121465" className="block group cursor-pointer">
-              <GlassCard className="p-5 transition-all" glowColor="rgba(255,255,255,0.08)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(18,153,202,0.08)">
                 <div className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(180deg, rgba(255,255,255,0.06))',
-                      border: '1px solid rgba(255,255,255,0.08)',
-                      color: '#ffffff',
+                      background: 'linear-gradient(180deg, rgba(180,230,240,0.25), rgba(160,220,220,0.18))',
+                      border: '1px solid rgba(26,51,68,0.06)',
+                      color: '#1A3344',
                       boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.03)',
                     }}>
                     <PhoneCall size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: 'rgba(255,255,255,0.65)' }}>Phone</span>
-                    <h4 className="font-display font-bold text-sm group-hover:text-[#ffffff] transition-colors" style={{ color: '#ffffff' }}>+91 93881 21465</h4>
-                    <p className="text-[11px] mt-1 font-light" style={{ color: 'rgba(255,255,255,0.75)' }}>Tap to call us directly.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#6A8A9A' }}>Phone</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-[#0D8090] transition-colors" style={{ color: '#1A3344' }}>+91 93881 21465</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#6A8A9A' }}>Tap to call us directly.</p>
                   </div>
                 </div>
               </GlassCard>
             </a>
 
             <a href="https://share.upscrolled.com/en/user/dd096cdb-b9f6-4897-a1c0-546f3b7ce20e/" target="_blank" className="block group cursor-pointer">
-              <GlassCard className="p-5 transition-all" glowColor="rgba(255,255,255,0.08)">
+              <GlassCard className="p-5 transition-all" glowColor="rgba(18,153,202,0.08)">
                 <div className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(180deg, rgba(255,255,255,0.06))',
-                      border: '1px solid rgba(255,255,255,0.08)',
-                      color: '#ffffff',
+                      background: 'linear-gradient(180deg, rgba(180,230,240,0.25), rgba(160,220,220,0.18))',
+                      border: '1px solid rgba(26,51,68,0.06)',
+                      color: '#1A3344',
                       boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.03)',
                     }}>
                     <ExternalLink size={20} />
                   </div>
                   <div>
-                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: 'rgba(255,255,255,0.65)' }}>Connect</span>
-                    <h4 className="font-display font-bold text-sm group-hover:text-[#ffffff] transition-colors" style={{ color: '#ffffff' }}>UPSCROLLED</h4>
-                    <p className="text-[11px] mt-1 font-light" style={{ color: 'rgba(255,255,255,0.75)' }}>Connect with us.</p>
+                    <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#6A8A9A' }}>Connect</span>
+                    <h4 className="font-display font-bold text-sm group-hover:text-[#0D8090] transition-colors" style={{ color: '#1A3344' }}>UPSCROLLED</h4>
+                    <p className="text-[11px] mt-1 font-light" style={{ color: '#6A8A9A' }}>Connect with us.</p>
                   </div>
                 </div>
               </GlassCard>

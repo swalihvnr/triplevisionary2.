@@ -32,10 +32,10 @@ const Asset = () => {
       <div className="max-w-6xl mx-auto">
         {/* Page Title */}
         <div className="mb-8">
-          <h1 className="text-4xl font-light tracking-wider" style={{ color: '#ffffff' }}>
-            ASSET <span className="font-bold" style={{ color: '#ffffff' }}>LIBRARY</span>
+          <h1 className="text-4xl font-light tracking-wider" style={{ color: '#1A3344' }}>
+            ASSET <span className="font-bold" style={{ color: '#1A3344' }}>LIBRARY</span>
           </h1>
-          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="text-sm mt-1" style={{ color: '#6A8A9A' }}>
             Browse and download production-ready assets by software.
           </p>
         </div>
@@ -49,12 +49,12 @@ const Asset = () => {
               className="px-5 py-2 text-sm font-semibold rounded-full transition-all duration-200 border"
               style={{
                 background: activeFilter === software
-                  ? 'rgba(255,255,255,0.12)'
-                  : 'rgba(2,8,20,0.15)',
-                borderColor: activeFilter === software ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.06)',
-                color: activeFilter === software ? '#fff' : 'rgba(255,255,255,0.75)',
-                boxShadow: activeFilter === software ? '0 2px 10px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
-                textShadow: activeFilter === software ? '0 1px 1px rgba(0,0,0,0.3)' : 'none',
+                  ? 'linear-gradient(180deg, #1299CA, #1088B8)'
+                  : 'rgba(255,255,255,0.40)',
+                borderColor: activeFilter === software ? 'rgba(18,153,202,0.30)' : 'rgba(26,51,68,0.08)',
+                color: activeFilter === software ? '#ffffff' : '#4A7080',
+                boxShadow: activeFilter === software ? 'inset 0 1px 0 rgba(255,255,255,0.30), 0 2px 10px rgba(18,153,202,0.25)' : 'none',
+                textShadow: activeFilter === software ? '0 1px 1px rgba(0,0,0,0.2)' : 'none',
               }}
             >
               {software}
@@ -73,28 +73,28 @@ const Asset = () => {
                   ref={(el) => (assetRefs.current[asset.id] = el)}
                   className="glossy-card p-5 transition-all duration-300 hover:-translate-y-1"
                   style={{
-                    borderColor: isSelected ? '#ffffff' : undefined,
-                    boxShadow: isSelected ? '0 0 0 2px #ffffff, 0 8px 30px rgba(255,255,255,0.08)' : undefined,
+                    borderColor: isSelected ? '#1299CA' : undefined,
+                    boxShadow: isSelected ? '0 0 0 2px #1299CA, 0 8px 30px rgba(18,153,202,0.15)' : undefined,
                   }}
                 >
                   <div className="relative z-10">
                     <div className="flex justify-between items-start mb-2">
-                      <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#ffffff' }}>{asset.software}</h2>
+                      <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#1A3344' }}>{asset.software}</h2>
                       <span className="text-xs rounded-full whitespace-nowrap font-bold"
-                        style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.75)', padding: '2px 8px' }}>
+                        style={{ background: 'rgba(255,255,255,0.40)', border: '1px solid rgba(26,51,68,0.06)', color: '#4A7080', padding: '2px 8px' }}>
                         {asset.year}
                       </span>
                     </div>
 
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xl font-mono truncate" style={{ color: '#ffffff' }}>{asset.name}</span>
+                      <span className="text-xl font-mono truncate" style={{ color: '#1A3344' }}>{asset.name}</span>
                       <span className="text-sm font-mono rounded-full font-bold"
-                        style={{ color: '#ffffff', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.06)', padding: '2px 8px' }}>
+                        style={{ color: '#1299CA', background: 'rgba(18,153,202,0.08)', border: '1px solid rgba(18,153,202,0.12)', padding: '2px 8px' }}>
                         {asset.extension}
                       </span>
                     </div>
 
-                    <div className="flex justify-between items-center mt-4 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+                    <div className="flex justify-between items-center mt-4 pt-3" style={{ borderTop: '1px solid rgba(26,51,68,0.06)' }}>
                       <div />
                       <a
                         href={asset.downloadLink}
@@ -113,8 +113,8 @@ const Asset = () => {
               );
             })
           ) : (
-            <div className="col-span-full text-center py-12" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              No assets found for <span className="font-bold" style={{ color: '#ffffff' }}>{activeFilter}</span>
+            <div className="col-span-full text-center py-12" style={{ color: '#6A8A9A' }}>
+              No assets found for <span className="font-bold" style={{ color: '#1A3344' }}>{activeFilter}</span>
             </div>
           )}
         </div>

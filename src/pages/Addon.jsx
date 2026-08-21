@@ -27,11 +27,11 @@ export default function Addon() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px flex-1" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06))' }} />
-            <span className="text-sm font-bold tracking-wider uppercase font-display" style={{ color: '#ffffff' }}>
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(90deg, transparent, rgba(26,51,68,0.08))' }} />
+            <span className="text-sm font-bold tracking-wider uppercase font-display" style={{ color: '#1A3344' }}>
               Addon & Plugins
             </span>
-            <div className="h-px flex-1" style={{ background: 'linear-gradient(270deg, transparent, rgba(255,255,255,0.06))' }} />
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(270deg, transparent, rgba(26,51,68,0.08))' }} />
           </div>
         </div>
 
@@ -46,10 +46,10 @@ export default function Addon() {
               <div className="relative w-full p-4">
                 <div className="relative rounded-2xl overflow-hidden">
                   <img src={file.thumbnail} alt={file.name} className="w-full h-auto max-h-[300px] object-contain" />
-                  <div className="absolute top-4 right-4 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-lg"
-                    style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)' }}>
+                  <div className="absolute top-4 right-4 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold shadow-lg"
+                    style={{ background: 'rgba(18,153,202,0.15)', border: '1px solid rgba(18,153,202,0.20)', color: '#1299CA' }}>
                     <span className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#1299CA' }}></span>
                       Ready
                     </span>
                   </div>
@@ -63,19 +63,19 @@ export default function Addon() {
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
                         style={{
-                          background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
-                          border: '1px solid rgba(255,255,255,0.06)',
-                          color: '#ffffff',
-                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
+                          background: 'linear-gradient(180deg, rgba(180,230,240,0.25), rgba(160,220,220,0.18))',
+                          border: '1px solid rgba(26,51,68,0.06)',
+                          color: '#1299CA',
+                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.20)',
                         }}>
                         <File className="w-5 h-5" />
                       </div>
-                      <h2 className="text-xl font-bold truncate" style={{ color: '#ffffff' }}>{file.name}</h2>
+                      <h2 className="text-xl font-bold truncate" style={{ color: '#1A3344' }}>{file.name}</h2>
                     </div>
                     <div className="flex flex-wrap items-center gap-3 ml-13 text-sm">
-                      <span style={{ color: 'rgba(255,255,255,0.75)' }}>{file.type}</span>
+                      <span style={{ color: '#6A8A9A' }}>{file.type}</span>
                       <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(255,255,255,0.06)' }}></span>
-                      <span style={{ color: 'rgba(255,255,255,0.75)' }}>{file.size}</span>
+                      <span style={{ color: '#6A8A9A' }}>{file.size}</span>
                     </div>
                   </div>
 
@@ -88,18 +88,18 @@ export default function Addon() {
                   </button>
                 </div>
 
-                <div className="mt-4 pt-4 flex flex-wrap items-center gap-4 text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-                  <div className="flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
-                    <Shield size={14} style={{ color: '#ffffff' }} />
+                <div className="mt-4 pt-4 flex flex-wrap items-center gap-4 text-xs" style={{ borderTop: '1px solid rgba(26,51,68,0.06)' }}>
+                  <div className="flex items-center gap-2" style={{ color: '#6A8A9A' }}>
+                    <Shield size={14} style={{ color: '#1299CA' }} />
                     <span>Secure</span>
                   </div>
-                  <div className="flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
-                    <Clock size={14} style={{ color: '#ffffff' }} />
+                  <div className="flex items-center gap-2" style={{ color: '#6A8A9A' }}>
+                    <Clock size={14} style={{ color: '#1299CA' }} />
                     <span>Updated</span>
                   </div>
-                  <div className="flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                  <div className="flex items-center gap-2" style={{ color: '#6A8A9A' }}>
                     <span className="px-2 py-0.5 rounded-full font-bold"
-                      style={{ background: 'rgba(255,255,255,0.06)', color: '#ffffff', border: '1px solid rgba(255,255,255,0.06)' }}>
+                      style={{ background: 'rgba(18,153,202,0.08)', color: '#1299CA', border: '1px solid rgba(18,153,202,0.12)' }}>
                       Python 3.8+
                     </span>
                   </div>
