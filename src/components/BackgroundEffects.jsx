@@ -116,29 +116,11 @@ function AeroBubble({ size, left, top, dur, delay }) {
 export default function BackgroundEffects() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Win7 Wallpaper as visible background */}
+      {/* Soft dark blue background */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('/assets/theme/win7-wallpaper.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 40%',
-          filter: 'brightness(0.55) saturate(1.2)',
-        }}
-      />
-
-      {/* Blue overlay gradient to tint the wallpaper */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            linear-gradient(180deg,
-              rgba(3,42,90,0.7) 0%,
-              rgba(5,50,110,0.5) 30%,
-              rgba(8,55,120,0.45) 60%,
-              rgba(3,35,75,0.75) 100%
-            )
-          `,
+          background: 'linear-gradient(160deg, #021d3e 0%, #032a5a 35%, #04326a 65%, #021d3e 100%)',
         }}
       />
 
