@@ -121,7 +121,7 @@ export default function BackgroundEffects() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: "url('/assets/Hero.jpg')",
-          filter: 'brightness(0.55) saturate(1.2)',
+          filter: 'brightness(0.90) saturate(1.2)',
         }}
       />
       {/* Subtle dark overlay for readability */}
