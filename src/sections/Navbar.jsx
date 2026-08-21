@@ -58,7 +58,7 @@ export default function Navbar({ currentPath, onPageChange }) {
           {/* Logo */}
           <a
             href="/show"
-            onClick={(e) => handleNavClick(e, "/home")}
+            onClick={(e) => handleNavClick(e, "/show")}
             className="flex-shrink-0 h-full flex items-center justify-center relative overflow-hidden"
             style={{
               width: 60,
