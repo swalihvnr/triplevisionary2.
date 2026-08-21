@@ -18,7 +18,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: #ffffff; }
-::selection { background: #00b8ff; color: #fff; }
+::selection { background: #22cffd; color: #fff; }
 
 /* ===== Aero Glass Panel (Se7enAero dark glass) ===== */
 .aero-glass {

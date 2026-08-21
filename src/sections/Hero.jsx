@@ -53,9 +53,11 @@ export default function Hero({ onPageChange }) {
               background: `linear-gradient(180deg,
                 rgba(255,255,255,0.04) 0%,
                 transparent 15%,
-                transparent 85%,
-                rgba(0,0,0,0.2) 100%
+                transparent 80%,
+                rgba(34,207,253,0.12) 95%,
+                rgba(34,207,253,0.2) 100%
               )`,
+              boxShadow: 'inset 0 -20px 40px -10px rgba(34,207,253,0.15)',
             }}
           />
         </motion.div>
