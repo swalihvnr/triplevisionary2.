@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     id: 3,
-    category: "Photo Manipulation",
+    category: "3D",
     image: "/assets/Projects/image2.jpg",
     year: "2025",
     featured: false,
