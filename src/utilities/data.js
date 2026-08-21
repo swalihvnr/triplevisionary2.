@@ -13,12 +13,8 @@ export const categories = [
   { name: "Video Edits", icon: Film },
   { name: "Motion Graphics", icon: Sparkles },
   { name: "3D", icon: Cuboid },
-  { name: "2D", icon: Clapperboard },
   { name: "VFX", icon: Sparkles },
   { name: "Photo Manipulation", icon: Image },
-  { name: "Graphic Designs", icon: Palette },
-  { name: "UI/UX", icon: MonitorSmartphone },
-  { name: "Color Grading", icon: Palette },
 ];
 
 export const projects = [
