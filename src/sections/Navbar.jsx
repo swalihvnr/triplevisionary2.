@@ -68,7 +68,7 @@ export default function Navbar({ currentPath, onPageChange }) {
                   key={item.name}
                   href={item.path}
                   onClick={(e) => handleNavClick(e, item.path)}
-                  className="relative flex-shrink-0 h-full flex items-center justify-center text-[11px] sm:text-[12px] font-bold tracking-wider transition-all duration-150 px-3 sm:px-4"
+                  className="relative h-full flex items-center justify-center text-[11px] sm:text-[12px] font-bold tracking-wider transition-all duration-150 px-3 sm:px-4 flex-1 md:flex-1 flex-shrink-0 md:flex-shrink"
                   style={{
                     borderRight: '1px solid #2c2c2e',
                     scrollSnapAlign: 'start',
