@@ -47,17 +47,17 @@ function AeroBubble({ size, left, top, dur, delay }) {
         className="absolute inset-0 rounded-full"
         style={{
           background: `radial-gradient(circle at 35% 30%,
-            rgba(180,240,255,0.08) 0%,
-            rgba(0,200,240,0.04) 30%,
-            rgba(0,140,200,0.02) 60%,
-            rgba(0,80,140,0.01) 80%,
+            rgba(200,245,255,0.25) 0%,
+            rgba(100,220,245,0.12) 30%,
+            rgba(50,180,220,0.06) 60%,
+            rgba(20,120,180,0.03) 80%,
             transparent 100%
           )`,
-          border: '1px solid rgba(0,220,240,0.08)',
+          border: '1px solid rgba(100,230,255,0.2)',
           boxShadow: `
-            inset 0 -${size * 0.15}px ${size * 0.3}px rgba(0,120,180,0.05),
-            inset 0 ${size * 0.1}px ${size * 0.2}px rgba(180,240,255,0.04),
-            0 0 ${size * 0.4}px rgba(0,180,220,0.04)
+            inset 0 -${size * 0.15}px ${size * 0.3}px rgba(50,180,220,0.1),
+            inset 0 ${size * 0.1}px ${size * 0.2}px rgba(200,245,255,0.1),
+            0 0 ${size * 0.4}px rgba(80,210,245,0.1)
           `,
         }}
       />
@@ -71,8 +71,8 @@ function AeroBubble({ size, left, top, dur, delay }) {
           width: highlightSize,
           height: highlightSize * 0.6,
           background: `radial-gradient(ellipse at 50% 50%,
-            rgba(255,255,255,0.25) 0%,
-            rgba(200,245,255,0.1) 40%,
+            rgba(255,255,255,0.5) 0%,
+            rgba(200,245,255,0.2) 40%,
             transparent 100%
           )`,
           transform: 'rotate(-15deg)',
@@ -88,7 +88,7 @@ function AeroBubble({ size, left, top, dur, delay }) {
           left: '28%',
           width: highlightSize * 0.4,
           height: highlightSize * 0.25,
-          background: 'radial-gradient(ellipse, rgba(255,255,255,0.35) 0%, transparent 100%)',
+          background: 'radial-gradient(ellipse, rgba(255,255,255,0.6) 0%, transparent 100%)',
           transform: 'rotate(-20deg)',
           filter: 'blur(1px)',
         }}
@@ -103,7 +103,7 @@ function AeroBubble({ size, left, top, dur, delay }) {
           width: innerGlow,
           height: innerGlow * 0.3,
           background: `radial-gradient(ellipse at 50% 80%,
-            rgba(0,200,240,0.06) 0%,
+            rgba(100,220,245,0.15) 0%,
             transparent 100%
           )`,
           filter: `blur(${size * 0.04}px)`,
@@ -121,14 +121,14 @@ export default function BackgroundEffects() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: "url('/assets/Hero.jpg')",
-          filter: 'brightness(0.90) saturate(1.2)',
+          filter: 'brightness(1) saturate(1.2)',
         }}
       />
       {/* Subtle dark overlay for readability */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(160deg, rgba(1,8,16,0.3) 0%, rgba(2,16,40,0.2) 50%, rgba(1,8,16,0.3) 100%)',
+          background: 'linear-gradient(160deg, rgba(1,8,16,0.1) 0%, rgba(2,16,40,0.05) 50%, rgba(1,8,16,0.1) 100%)',
         }}
       />
 
@@ -138,7 +138,7 @@ export default function BackgroundEffects() {
         style={{
           width: 700, height: 700,
           top: -200, right: -150,
-          background: 'radial-gradient(circle, rgba(0,200,240,0.08), rgba(0,100,180,0.03) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,200,240,0.15), rgba(0,100,180,0.06) 50%, transparent 70%)',
           animation: 'floatOrb 25s ease-in-out infinite',
         }}
       />
@@ -147,7 +147,7 @@ export default function BackgroundEffects() {
         style={{
           width: 500, height: 500,
           bottom: -150, left: -100,
-          background: 'radial-gradient(circle, rgba(0,220,240,0.07), rgba(0,80,160,0.02) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,220,240,0.12), rgba(0,80,160,0.04) 50%, transparent 70%)',
           animation: 'floatOrb 30s ease-in-out infinite reverse',
         }}
       />
@@ -156,7 +156,7 @@ export default function BackgroundEffects() {
         style={{
           width: 400, height: 400,
           top: '40%', left: '30%',
-          background: 'radial-gradient(circle, rgba(0,180,220,0.05), transparent 60%)',
+          background: 'radial-gradient(circle, rgba(0,180,220,0.1), transparent 60%)',
           animation: 'floatOrb 20s ease-in-out infinite',
         }}
       />
