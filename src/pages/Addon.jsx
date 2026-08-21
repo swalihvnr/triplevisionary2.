@@ -24,7 +24,6 @@ export default function Addon() {
   return (
     <div className="min-h-screen pt-20 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px flex-1" style={{ background: '#2c2c2e' }} />
@@ -35,21 +34,18 @@ export default function Addon() {
           </div>
         </div>
 
-        {/* File Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {files.map((file) => (
             <div
               key={file.id}
               className="glossy-card overflow-hidden transition-all duration-200 hover:-translate-y-1"
             >
-              {/* Thumbnail */}
               <div className="relative w-full p-4">
                 <div className="relative rounded-lg overflow-hidden">
                   <img src={file.thumbnail} alt={file.name} className="w-full h-auto max-h-[300px] object-contain" />
                 </div>
               </div>
 
-              {/* File Info */}
               <div className="p-6">
                 <div className="flex flex-col gap-4">
                   <div className="flex-1">
@@ -78,6 +74,7 @@ export default function Addon() {
                     <Download size={18} />
                     Download Now
                   </button>
+                </div>
               </div>
             </div>
           ))}
