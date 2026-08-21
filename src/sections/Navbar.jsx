@@ -32,39 +32,22 @@ export default function Navbar({ currentPath, onPageChange }) {
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full max-w-5xl rounded-xl overflow-hidden relative"
+        className="w-full max-w-5xl rounded-lg overflow-hidden relative"
         style={{
-          background: 'rgba(255, 255, 255, 0.08)',
-          border: '1px solid rgba(255,255,255,0.12)',
-          boxShadow: `
-            inset 0 1px 0 rgba(255,255,255,0.15),
-            inset 0 -1px 0 rgba(0,0,0,0.1),
-            0 4px 20px rgba(0,0,0,0.2)
-          `,
-          backdropFilter: 'blur(16px)',
-          WebkitBackdropFilter: 'blur(16px)',
+          background: '#161618',
+          border: '1px solid #38383a',
           transform: scrolled ? 'scale(0.985)' : 'scale(1)',
           transition: 'all 0.3s ease',
         }}
       >
-        {/* Glossy highlight strip across the top */}
-        <div
-          className="absolute top-0 left-0 right-0 pointer-events-none rounded-t-xl z-10"
-          style={{
-            height: '50%',
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.04) 40%, transparent 100%)',
-          }}
-        />
-
         <div className="flex items-center relative z-20" style={{ height: '48px' }}>
-          {/* Logo */}
           <a
             href="/show"
             onClick={(e) => handleNavClick(e, "/show")}
             className="flex-shrink-0 h-full flex items-center justify-center relative overflow-hidden"
             style={{
               width: 60,
-              borderRight: '1px solid rgba(255,255,255,0.06)',
+              borderRight: '1px solid #2c2c2e',
             }}
           >
             <img
@@ -74,7 +57,6 @@ export default function Navbar({ currentPath, onPageChange }) {
             />
           </a>
 
-          {/* Desktop Nav Items */}
           <div className="hidden md:flex flex-1 h-full">
             {navItems.map((item) => {
               const active = currentPath === item.path;
@@ -83,28 +65,23 @@ export default function Navbar({ currentPath, onPageChange }) {
                   key={item.name}
                   href={item.path}
                   onClick={(e) => handleNavClick(e, item.path)}
-                  className="relative flex-1 h-full flex items-center justify-center text-[12px] font-bold tracking-wider transition-all duration-200"
+                  className="relative flex-1 h-full flex items-center justify-center text-[12px] font-bold tracking-wider transition-all duration-150"
                   style={{
-                    borderRight: '1px solid rgba(255,255,255,0.04)',
+                    borderRight: '1px solid #2c2c2e',
                   }}
                 >
                   {active && (
                     <div className="absolute inset-0 z-0">
-                      {/* Glossy active fill */}
                       <div
                         className="absolute inset-0"
-                        style={{
-                          background: 'linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.18) 30%, rgba(255,255,255,0.08) 70%, rgba(0,0,0,0.04) 100%)',
-                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.50), inset 0 -1px 0 rgba(0,0,0,0.08)',
-                        }}
+                        style={{ background: '#1c1c1f' }}
                       />
-                      {/* Bottom glow line */}
                       <div
                         className="absolute left-[5%] right-[5%] pointer-events-none"
                         style={{
                           bottom: 0,
                           height: 2,
-                          background: 'linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.60) 50%, transparent 95%)',
+                          background: '#007aff',
                         }}
                       />
                     </div>
@@ -112,8 +89,7 @@ export default function Navbar({ currentPath, onPageChange }) {
                   <span
                     className="relative z-10"
                     style={{
-                      color: active ? '#ffffff' : 'rgba(255,255,255,0.65)',
-                      textShadow: active ? '0 1px 2px rgba(0,0,0,0.5)' : 'none',
+                      color: active ? '#ffffff' : '#a1a1a6',
                     }}
                   >
                     {item.name}
@@ -123,29 +99,25 @@ export default function Navbar({ currentPath, onPageChange }) {
             })}
           </div>
 
-          {/* Mobile */}
           <div className="md:hidden flex-1 flex items-center h-full">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="ml-auto mr-3 p-1.5 rounded-md transition-colors cursor-pointer"
-              style={{ color: 'rgba(255,255,255,0.75)' }}
+              style={{ color: '#a1a1a6' }}
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile dropdown */}
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden relative z-20 border-t"
             style={{
-              background: 'rgba(255, 255, 255, 0.1)',
-              backdropFilter: 'blur(16px)',
-              WebkitBackdropFilter: 'blur(16px)',
-              borderColor: 'rgba(255,255,255,0.08)',
+              background: '#161618',
+              borderColor: '#38383a',
             }}
           >
             {navItems.map((item) => {
@@ -157,13 +129,9 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="flex items-center px-5 py-3 text-[13px] font-bold tracking-wider border-b transition-all"
                     style={{
-                      borderColor: 'rgba(255,255,255,0.03)',
-                      color: active ? '#ffffff' : 'rgba(255,255,255,0.75)',
-                      background: active
-                        ? 'rgba(255,255,255,0.12)'
-                        : 'transparent',
-                      textShadow: active ? '0 1px 2px rgba(0,0,0,0.3)' : 'none',
-                      boxShadow: active ? 'inset 0 -2px 8px rgba(255,255,255,0.15)' : 'none',
+                      borderColor: '#2c2c2e',
+                      color: active ? '#ffffff' : '#a1a1a6',
+                      background: active ? '#1c1c1f' : 'transparent',
                     }}
                 >
                   {item.name}

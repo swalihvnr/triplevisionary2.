@@ -60,14 +60,11 @@ export default function PortfolioPage({ onPageChange }) {
 
   return (
     <div className="relative min-h-screen pt-20">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.04), transparent)' }} />
-
       <section>
-        {/* Filter Bar */}
-        <div className="relative z-20 mb-4 w-full rounded-2xl aero-glass">
+        <div className="relative z-20 mb-4 w-full aero-glass">
           <div className="flex flex-col gap-3 p-3 lg:flex-row lg:items-center lg:p-4">
             <div className="relative flex flex-1 items-center">
-              <button onClick={() => scroll("left")} className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-all aero-button"
+              <button onClick={() => scroll("left")} className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-lg transition-all aero-button"
                 style={{ padding: 0 }}>
                 <ChevronLeft size={16} />
               </button>
@@ -78,15 +75,11 @@ export default function PortfolioPage({ onPageChange }) {
                     <button
                       key={name}
                       onClick={() => setActiveCategory(name)}
-                      className="flex flex-shrink-0 cursor-pointer items-center gap-2 rounded-full px-3.5 py-2.5 text-[11px] font-semibold transition-all border"
+                      className="flex flex-shrink-0 cursor-pointer items-center gap-2 rounded-lg px-3.5 py-2.5 text-[11px] font-semibold transition-all border"
                       style={{
-                        background: isActive
-                          ? 'rgba(255,255,255,0.12)'
-                          : 'rgba(2,8,20,0.15)',
-                        borderColor: isActive ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.06)',
-                        color: isActive ? '#fff' : 'rgba(255,255,255,0.75)',
-                        boxShadow: isActive ? '0 2px 10px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
-                        textShadow: isActive ? '0 1px 1px rgba(0,0,0,0.3)' : 'none',
+                        background: isActive ? '#1c1c1f' : 'transparent',
+                        borderColor: isActive ? '#007aff' : '#38383a',
+                        color: isActive ? '#ffffff' : '#a1a1a6',
                       }}
                     >
                       <Icon size={13} strokeWidth={isActive ? 2.5 : 1.8} />
@@ -95,16 +88,16 @@ export default function PortfolioPage({ onPageChange }) {
                   );
                 })}
               </div>
-              <button onClick={() => scroll("right")} className="absolute right-0 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-all aero-button"
+              <button onClick={() => scroll("right")} className="absolute right-0 z-10 flex h-8 w-8 items-center justify-center rounded-lg transition-all aero-button"
                 style={{ padding: 0 }}>
                 <ChevronRight size={16} />
               </button>
             </div>
 
-            <div className="flex w-full flex-col items-center gap-2 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+            <div className="flex w-full flex-col items-center gap-2 pt-3 lg:w-auto lg:flex-row lg:border-l lg:border-t-0 lg:pl-3 lg:pt-0" style={{ borderTop: '1px solid #2c2c2e' }}>
               <div className="flex w-full items-center lg:w-auto">
-                <label className="flex w-full max-w-[320px] items-center gap-2 rounded-full px-3 lg:w-[260px]"
-                  style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.75)' }}>
+                <label className="flex w-full max-w-[320px] items-center gap-2 rounded-lg px-3 lg:w-[260px]"
+                  style={{ background: '#1c1c1f', border: '1px solid #38383a', color: '#a1a1a6' }}>
                   <Search size={14} className="flex-shrink-0" />
                   <input
                     value={searchQuery}
@@ -120,8 +113,8 @@ export default function PortfolioPage({ onPageChange }) {
                   value={sortOrder}
                   onChange={(event) => setSortOrder(event.target.value)}
                   aria-label="Sort projects"
-                  className="w-full max-w-[320px] cursor-pointer rounded-full px-4 py-2.5 text-[11px] outline-none lg:w-auto"
-                  style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.75)' }}
+                  className="w-full max-w-[320px] cursor-pointer rounded-lg px-4 py-2.5 text-[11px] outline-none lg:w-auto"
+                  style={{ background: '#1c1c1f', border: '1px solid #38383a', color: '#a1a1a6' }}
                 >
                   <option value="Newest">Newest</option>
                   <option value="Oldest">Oldest</option>
@@ -131,7 +124,6 @@ export default function PortfolioPage({ onPageChange }) {
           </div>
         </div>
 
-        {/* Projects Grid */}
         <motion.div layout className="mt-15 sm:mt-0 w-full columns-1 gap-0 sm:columns-2 md:columns-3 xl:columns-4">
           <AnimatePresence mode="popLayout">
             {visibleProjects.map((project, index) => (
@@ -144,13 +136,13 @@ export default function PortfolioPage({ onPageChange }) {
                 exit={{ opacity: 0, y: 12 }}
                 transition={{ duration: 0.45, delay: Math.min(index * 0.035, 0.2), ease: [0.22, 1, 0.36, 1] }}
                 onClick={() => openProject(project)}
-                className={`group mb-0 inline-block w-full break-inside-avoid overflow-hidden rounded-2xl ${project.type === "video" ? "cursor-pointer" : "cursor-default"}`}
+                className={`group mb-0 inline-block w-full break-inside-avoid overflow-hidden ${project.type === "video" ? "cursor-pointer" : "cursor-default"}`}
                 style={{
-                  border: '2px solid rgba(255,255,255,0.05)',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+                  borderRadius: 5,
+                  border: '1px solid #2c2c2e',
                 }}
               >
-                <div className="relative w-full overflow-hidden rounded-2xl">
+                <div className="relative w-full overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -162,27 +154,26 @@ export default function PortfolioPage({ onPageChange }) {
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100" />
 
                   <div className="absolute left-2 top-2 z-20 sm:left-3 sm:top-3">
-                    <span className="inline-flex max-w-[calc(100vw-110px)] rounded-full backdrop-blur-md px-2 py-1 text-[8px] font-bold uppercase tracking-[0.12em] sm:px-3 sm:py-1.5 sm:text-[9px]"
-                      style={{ background: 'rgba(0,4,12,0.3)', border: '1px solid rgba(255,255,255,0.06)', color: '#ffffff', boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                    <span className="inline-flex max-w-[calc(100vw-110px)] rounded-lg px-2 py-1 text-[8px] font-bold uppercase tracking-[0.12em] sm:px-3 sm:py-1.5 sm:text-[9px]"
+                      style={{ background: '#161618', border: '1px solid #38383a', color: '#ffffff' }}>
                       {project.category}
                     </span>
                   </div>
 
                   <div className="absolute right-2 top-2 z-20 sm:right-3 sm:top-3">
-                    <button onClick={(e) => handleAddonClick(e, project)} className="transition-all duration-300 hover:scale-110">
-                      <PackageOpen size={22} className={project.addon?.available ? "text-[#ffffff]" : "text-white/70"} />
+                    <button onClick={(e) => handleAddonClick(e, project)} className="transition-all duration-200 hover:scale-110">
+                      <PackageOpen size={22} className={project.addon?.available ? "text-[#007aff]" : "text-white/30"} />
                     </button>
                   </div>
 
                   {project.type === "video" && (
                     <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                       <div
-                        className="flex h-14 w-14 scale-90 items-center justify-center rounded-full opacity-90 backdrop-blur-md transition-transform duration-[400ms] group-hover:scale-100"
+                        className="flex h-14 w-14 scale-90 items-center justify-center rounded-lg opacity-90 transition-transform duration-[400ms] group-hover:scale-100"
                         style={{
-                          background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
+                          background: 'rgba(0,122,255,0.9)',
                           color: '#ffffff',
-                          boxShadow: '0 4px 20px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.05)',
-                          border: '1px solid rgba(255,255,255,0.06)',
+                          border: '1px solid rgba(0,122,255,0.5)',
                         }}>
                         <Play size={18} fill="currentColor" className="ml-0.5" />
                       </div>
@@ -202,36 +193,36 @@ export default function PortfolioPage({ onPageChange }) {
         </motion.div>
 
         <div className="mt-12 flex justify-center">
-          <p className="text-center text-sm font-light tracking-wider leading-relaxed max-w-3xl" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="text-center text-sm tracking-wider leading-relaxed max-w-3xl" style={{ color: '#68686f' }}>
             *This content is not available for AI training. All rights reserved*
           </p>
         </div>
 
         {visibleProjects.length === 0 && (
-          <div className="glossy-card rounded-3xl border-2 border-dashed py-24 text-center" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>No projects match that filter.</p>
+          <div className="glossy-card border-2 border-dashed py-24 text-center" style={{ borderColor: '#38383a' }}>
+            <p className="text-sm" style={{ color: '#a1a1a6' }}>No projects match that filter.</p>
             <button
               onClick={() => { setActiveCategory("All"); setSearchQuery(""); }}
               className="mt-4 cursor-pointer text-xs font-bold uppercase tracking-widest transition-colors"
-              style={{ color: '#ffffff' }}
+              style={{ color: '#007aff' }}
             >
               Clear filters
             </button>
           </div>
         )}
 
-        <div className="glossy-card mt-20 flex flex-col items-start justify-between gap-8 rounded-3xl p-7 md:flex-row md:items-center md:p-10">
+        <div className="glossy-card mt-20 flex flex-col items-start justify-between gap-8 p-7 md:flex-row md:items-center md:p-10">
           <div>
-            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] font-bold" style={{ color: '#ffffff' }}>
+            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] font-bold" style={{ color: '#007aff' }}>
               Have something in mind?
             </p>
             <h2 className="max-w-xl font-display text-3xl font-semibold tracking-[-0.02em] md:text-4xl" style={{ color: '#ffffff' }}>
-              Let's make the next frame count.
+              Let&apos;s make the next frame count.
             </h2>
           </div>
           <button
             onClick={() => onPageChange("/contact")}
-            className="aero-button-primary flex cursor-pointer items-center gap-3 rounded-full px-6 py-3.5 text-xs font-bold uppercase tracking-[0.14em] transition-transform hover:scale-[1.03]"
+            className="aero-button-primary flex cursor-pointer items-center gap-3 rounded-lg px-6 py-3.5 text-xs font-bold uppercase tracking-[0.14em] transition-transform hover:scale-[1.03]"
           >
             Work with us
             <ArrowUpRight size={16} />

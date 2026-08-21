@@ -29,8 +29,8 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="absolute inset-0 backdrop-blur-md"
-          style={{ background: 'rgba(0,0,0,0.7)' }}
+          className="absolute inset-0"
+          style={{ background: 'rgba(0,0,0,0.85)' }}
         />
 
         <motion.div
@@ -38,18 +38,22 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-4xl aero-glass overflow-hidden shadow-2xl z-10"
+          className="relative w-full max-w-4xl overflow-hidden z-10"
+          style={{
+            background: '#161618',
+            border: '1px solid #38383a',
+            borderRadius: 5,
+          }}
         >
-          {/* Top bar — titlebar */}
           <div className="flex items-center justify-between px-4 py-3"
             style={{
-              background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))',
-              borderBottom: '1px solid rgba(255,255,255,0.08)',
+              background: '#1c1c1f',
+              borderBottom: '1px solid #38383a',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: '#ffffff' }}>{videoTitle || 'Video'}</span>
-            <button onClick={onClose} className="p-1 w-7 h-7 rounded-full flex items-center justify-center transition-all cursor-pointer aero-button"
-              style={{ padding: 0 }}>
-              <X size={16} />
+            <span className="text-xs font-display font-bold" style={{ color: '#c7c7cc' }}>{videoTitle || 'Video'}</span>
+            <button onClick={onClose} className="p-1 w-7 h-7 rounded-lg flex items-center justify-center transition-all cursor-pointer"
+              style={{ background: '#38383a', color: '#a1a1a6' }}>
+              <X size={14} />
             </button>
           </div>
 
@@ -70,10 +74,10 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
 
           <div className="flex items-center justify-between px-4 py-2"
             style={{
-              background: 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
-              borderTop: '1px solid rgba(255,255,255,0.06)',
+              background: '#1c1c1f',
+              borderTop: '1px solid #38383a',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: 'rgba(255,255,255,0.65)' }}>TripleVisionary</span>
+            <span className="text-xs font-display font-bold" style={{ color: '#68686f' }}>TripleVisionary</span>
           </div>
         </motion.div>
       </div>
