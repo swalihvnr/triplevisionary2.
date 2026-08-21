@@ -27,11 +27,11 @@ export default function Addon() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px flex-1" style={{ background: 'linear-gradient(90deg, transparent, rgba(0,180,220,0.18))' }} />
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06))' }} />
             <span className="text-sm font-bold tracking-wider uppercase font-display" style={{ color: '#00e5ff' }}>
               Addon & Plugins
             </span>
-            <div className="h-px flex-1" style={{ background: 'linear-gradient(270deg, transparent, rgba(0,180,220,0.18))' }} />
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(270deg, transparent, rgba(255,255,255,0.06))' }} />
           </div>
         </div>
 
@@ -64,7 +64,7 @@ export default function Addon() {
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
                         style={{
                           background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
-                          border: '1px solid rgba(0,180,220,0.18)',
+                          border: '1px solid rgba(255,255,255,0.06)',
                           color: '#00e5ff',
                           boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
                         }}>
@@ -74,7 +74,7 @@ export default function Addon() {
                     </div>
                     <div className="flex flex-wrap items-center gap-3 ml-13 text-sm">
                       <span style={{ color: 'rgba(160,210,240,0.6)' }}>{file.type}</span>
-                      <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(0,180,220,0.15)' }}></span>
+                      <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(255,255,255,0.06)' }}></span>
                       <span style={{ color: 'rgba(160,210,240,0.6)' }}>{file.size}</span>
                     </div>
                   </div>
@@ -88,7 +88,7 @@ export default function Addon() {
                   </button>
                 </div>
 
-                <div className="mt-4 pt-4 flex flex-wrap items-center gap-4 text-xs" style={{ borderTop: '1px solid rgba(0,180,220,0.08)' }}>
+                <div className="mt-4 pt-4 flex flex-wrap items-center gap-4 text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                   <div className="flex items-center gap-2" style={{ color: 'rgba(160,210,240,0.6)' }}>
                     <Shield size={14} style={{ color: '#00e5ff' }} />
                     <span>Secure</span>
@@ -99,7 +99,7 @@ export default function Addon() {
                   </div>
                   <div className="flex items-center gap-2" style={{ color: 'rgba(160,210,240,0.6)' }}>
                     <span className="px-2 py-0.5 rounded-full font-bold"
-                      style={{ background: 'rgba(0,220,240,0.08)', color: '#00e5ff', border: '1px solid rgba(0,180,220,0.18)' }}>
+                      style={{ background: 'rgba(0,220,240,0.08)', color: '#00e5ff', border: '1px solid rgba(255,255,255,0.06)' }}>
                       Python 3.8+
                     </span>
                   </div>

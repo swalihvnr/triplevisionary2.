@@ -29,7 +29,7 @@ export default function Hero({ onPageChange }) {
           className="w-full max-w-5xl mx-auto overflow-hidden relative"
           style={{
             borderRadius: 10,
-            border: '1px solid rgba(0,180,220,0.2)',
+            border: '1px solid rgba(255,255,255,0.08)',
             boxShadow: `
               0 1px 0 rgba(255,255,255,0.08) inset,
               0 12px 40px rgba(0,0,0,0.6),
@@ -64,7 +64,7 @@ export default function Hero({ onPageChange }) {
           className="relative overflow-hidden"
           style={{
             borderRadius: 10,
-            border: '1px solid rgba(0,180,220,0.2)',
+            border: '1px solid rgba(255,255,255,0.08)',
             boxShadow: `
               0 1px 0 rgba(255,255,255,0.08) inset,
               0 12px 40px rgba(0,0,0,0.6),
@@ -143,8 +143,8 @@ export default function Hero({ onPageChange }) {
         <div
           className="relative overflow-hidden"
           style={{
-            borderTop: '1px solid rgba(0,180,220,0.12)',
-            borderBottom: '1px solid rgba(0,180,220,0.12)',
+            borderTop: '1px solid rgba(255,255,255,0.05)',
+            borderBottom: '1px solid rgba(255,255,255,0.05)',
             background: `linear-gradient(180deg,
               rgba(0,120,180,0.05) 0%,
               rgba(2,12,28,0.35) 30%,
@@ -176,7 +176,7 @@ export default function Hero({ onPageChange }) {
                     className="group flex-shrink-0 overflow-hidden cursor-pointer relative"
                     style={{
                       borderRadius: 8,
-                      border: '1px solid rgba(0,180,220,0.15)',
+                      border: '1px solid rgba(255,255,255,0.06)',
                       boxShadow: '0 1px 0 rgba(255,255,255,0.04) inset, 0 4px 16px rgba(0,0,0,0.4)',
                     }}
                   >

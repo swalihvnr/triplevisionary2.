@@ -35,8 +35,8 @@ export default function Testimonials() {
       id="testimonials"
       className="relative py-24 overflow-hidden"
       style={{
-        borderTop: '1px solid rgba(0,180,220,0.12)',
-        borderBottom: '1px solid rgba(0,180,220,0.12)',
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        borderBottom: '1px solid rgba(255,255,255,0.05)',
       }}
     >
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(0,220,240,0.04), transparent)' }} />
@@ -69,13 +69,13 @@ export default function Testimonials() {
                 className="p-6 transition-all cursor-pointer"
                 glowColor="rgba(0,220,240,0.1)"
               >
-                <div className="flex items-center justify-between pb-4 mb-4" style={{ borderBottom: '1px solid rgba(0,180,220,0.12)' }}>
+                <div className="flex items-center justify-between pb-4 mb-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                   <div className="flex items-center gap-3">
                     <div
                       className="w-10 h-10 rounded-full flex items-center justify-center font-display text-[10px] font-bold"
                       style={{
                         background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
-                        border: '1px solid rgba(0,180,220,0.2)',
+                        border: '1px solid rgba(255,255,255,0.08)',
                         color: '#00e5ff',
                         boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
                       }}
@@ -87,7 +87,7 @@ export default function Testimonials() {
                       <span className="text-[9px] block" style={{ color: 'rgba(160,210,240,0.55)' }}>{item.role}</span>
                     </div>
                   </div>
-                  <Quote size={16} style={{ color: 'rgba(0,180,220,0.2)' }} />
+                  <Quote size={16} style={{ color: 'rgba(255,255,255,0.08)' }} />
                 </div>
 
                 <div className="flex gap-1 mb-4" style={{ color: '#00e5ff' }}>
@@ -100,7 +100,7 @@ export default function Testimonials() {
                   "{item.review}"
                 </p>
 
-                <div className="mt-6 pt-3 flex items-center justify-between text-[9px] font-display" style={{ borderTop: '1px solid rgba(0,180,220,0.1)', color: 'rgba(160,210,240,0.55)' }}>
+                <div className="mt-6 pt-3 flex items-center justify-between text-[9px] font-display" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', color: 'rgba(160,210,240,0.55)' }}>
                   <span className="font-bold">Verified Review</span>
                   <span className="font-bold" style={{ color: '#00e5ff' }}>{item.company}</span>
                 </div>

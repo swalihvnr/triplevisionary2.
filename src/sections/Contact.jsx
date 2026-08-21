@@ -31,7 +31,7 @@ export default function Contact() {
 
   const inputStyle = {
     background: 'rgba(2,8,20,0.6)',
-    border: '1px solid rgba(0,180,220,0.18)',
+    border: '1px solid rgba(255,255,255,0.06)',
     color: '#ffffff',
     boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.02)',
   };
@@ -150,7 +150,7 @@ export default function Contact() {
                     className="absolute inset-0 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
                     style={{ background: 'rgba(0,0,0,0.8)' }}
                   >
-                    <div className="w-12 h-12 border-3 rounded-full animate-spin mb-4" style={{ borderColor: 'rgba(0,180,220,0.15)', borderTopColor: '#00e5ff' }} />
+                    <div className="w-12 h-12 border-3 rounded-full animate-spin mb-4" style={{ borderColor: 'rgba(255,255,255,0.06)', borderTopColor: '#00e5ff' }} />
                     <span className="font-bold text-sm animate-pulse" style={{ color: '#00e5ff' }}>Sending your message...</span>
                   </motion.div>
                 )}
@@ -162,7 +162,7 @@ export default function Contact() {
                     className="absolute inset-0 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-20"
                     style={{ background: 'rgba(0,0,0,0.85)' }}
                   >
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: 'rgba(0,220,240,0.1)', border: '1px solid rgba(0,180,220,0.2)', color: '#00e5ff' }}>
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: 'rgba(0,220,240,0.1)', border: '1px solid rgba(255,255,255,0.08)', color: '#00e5ff' }}>
                       <span className="text-xl">✓</span>
                     </div>
                     <span className="font-bold uppercase tracking-wider text-sm" style={{ color: '#ffffff' }}>Message Sent!</span>
@@ -183,7 +183,7 @@ export default function Contact() {
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
                       background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
-                      border: '1px solid rgba(0,180,220,0.2)',
+                      border: '1px solid rgba(255,255,255,0.08)',
                       color: '#00e5ff',
                     }}>
                     <MessageSquare size={20} />
@@ -203,7 +203,7 @@ export default function Contact() {
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
                       background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
-                      border: '1px solid rgba(0,180,220,0.2)',
+                      border: '1px solid rgba(255,255,255,0.08)',
                       color: '#00e5ff',
                       boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.03)',
                     }}>
@@ -224,7 +224,7 @@ export default function Contact() {
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
                       background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
-                      border: '1px solid rgba(0,180,220,0.2)',
+                      border: '1px solid rgba(255,255,255,0.08)',
                       color: '#00e5ff',
                       boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.03)',
                     }}>
@@ -245,7 +245,7 @@ export default function Contact() {
                   <div className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300"
                     style={{
                       background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
-                      border: '1px solid rgba(0,180,220,0.2)',
+                      border: '1px solid rgba(255,255,255,0.08)',
                       color: '#00e5ff',
                       boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.03)',
                     }}>

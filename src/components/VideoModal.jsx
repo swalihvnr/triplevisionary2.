@@ -44,7 +44,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           <div className="flex items-center justify-between px-4 py-3"
             style={{
               background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.55))',
-              borderBottom: '1px solid rgba(0,180,220,0.18)',
+              borderBottom: '1px solid rgba(255,255,255,0.06)',
             }}>
             <span className="text-xs font-display font-bold" style={{ color: '#ffffff' }}>{videoTitle || 'Video'}</span>
             <button onClick={onClose} className="p-1 w-7 h-7 rounded-full flex items-center justify-center transition-all cursor-pointer aero-button"
@@ -71,7 +71,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           <div className="flex items-center justify-between px-4 py-2"
             style={{
               background: 'linear-gradient(180deg, rgba(180,230,240,0.06), rgba(0,40,80,0.5))',
-              borderTop: '1px solid rgba(0,180,220,0.12)',
+              borderTop: '1px solid rgba(255,255,255,0.05)',
             }}>
             <span className="text-xs font-display font-bold" style={{ color: 'rgba(160,210,240,0.55)' }}>TripleVisionary</span>
           </div>

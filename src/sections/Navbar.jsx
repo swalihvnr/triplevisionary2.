@@ -35,7 +35,7 @@ export default function Navbar({ currentPath, onPageChange }) {
         className="w-full max-w-5xl rounded-xl overflow-hidden relative"
         style={{
           background: 'rgba(0, 4, 12, 0.7)',
-          border: '1px solid rgba(0, 160, 220, 0.2)',
+          border: '1px solid rgba(255,255,255,0.08)',
           boxShadow: `
             inset 0 1px 0 rgba(255,255,255,0.08),
             inset 0 -1px 0 rgba(0,0,0,0.35),
@@ -62,7 +62,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             className="flex-shrink-0 h-full flex items-center justify-center relative overflow-hidden"
             style={{
               width: 60,
-              borderRight: '1px solid rgba(0, 160, 220, 0.15)',
+              borderRight: '1px solid rgba(255,255,255,0.06)',
             }}
           >
             <img
@@ -83,7 +83,7 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="relative flex-1 h-full flex items-center justify-center text-[12px] font-bold tracking-wider transition-all duration-200"
                   style={{
-                    borderRight: '1px solid rgba(0, 160, 220, 0.1)',
+                    borderRight: '1px solid rgba(255,255,255,0.04)',
                   }}
                 >
                   {active && (
@@ -129,7 +129,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             className="md:hidden relative z-20 border-t"
             style={{
               background: 'rgba(0, 4, 12, 0.9)',
-              borderColor: 'rgba(0, 160, 220, 0.15)',
+              borderColor: 'rgba(255,255,255,0.06)',
             }}
           >
             {navItems.map((item) => {
@@ -141,7 +141,7 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="flex items-center px-5 py-3 text-[13px] font-bold tracking-wider border-b transition-all"
                   style={{
-                    borderColor: 'rgba(0, 160, 220, 0.08)',
+                    borderColor: 'rgba(255,255,255,0.03)',
                     color: active ? '#ffffff' : 'rgba(160,210,240,0.55)',
                     background: active
                       ? 'linear-gradient(90deg, #b2f6fc, #00f1f4, #00a8d6, #005a9e)'

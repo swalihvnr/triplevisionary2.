@@ -24,13 +24,13 @@ export default function Footer() {
       className="relative pt-16 pb-12 overflow-hidden"
       style={{
         background: 'rgba(0,4,12,0.9)',
-        borderTop: '1px solid rgba(0,180,220,0.12)',
+        borderTop: '1px solid rgba(255,255,255,0.05)',
       }}
     >
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Top Section: Brand */}
         <div className="flex flex-col items-center text-center mb-12 border-b pb-10"
-          style={{ borderColor: 'rgba(0,180,220,0.12)' }}>
+          style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-aero">
             TripleVisionary
           </h2>
@@ -38,7 +38,7 @@ export default function Footer() {
 
         {/* Services & Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b pb-10"
-          style={{ borderColor: 'rgba(0,180,220,0.12)' }}>
+          style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
           <div>
             <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: '#00e5ff' }}>
               Services
@@ -70,7 +70,7 @@ export default function Footer() {
 
         {/* Social Media */}
         <div className="flex flex-col items-center gap-6 mb-12 border-b pb-10"
-          style={{ borderColor: 'rgba(0,180,220,0.12)' }}>
+          style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
           <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em]" style={{ color: '#00e5ff' }}>
             Follow Us
           </h4>
@@ -86,7 +86,7 @@ export default function Footer() {
                 className="w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                 style={{
                   background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
-                  border: '1px solid rgba(0,180,220,0.2)',
+                  border: '1px solid rgba(255,255,255,0.08)',
                   color: 'rgba(160,210,240,0.6)',
                   boxShadow: '0 1px 3px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.03)',
                 }}

@@ -57,8 +57,8 @@ export default function Services() {
       id="services"
       className="relative py-24 overflow-hidden"
       style={{
-        borderTop: '1px solid rgba(0,180,220,0.12)',
-        borderBottom: '1px solid rgba(0,180,220,0.12)',
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        borderBottom: '1px solid rgba(255,255,255,0.05)',
       }}
     >
       <div className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(0,220,240,0.05), transparent)' }} />
@@ -104,7 +104,7 @@ export default function Services() {
                         className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300"
                         style={{
                           background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
-                          border: '1px solid rgba(0,180,220,0.2)',
+                          border: '1px solid rgba(255,255,255,0.08)',
                           color: '#00e5ff',
                           boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
                         }}

@@ -41,7 +41,7 @@ const Asset = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8 pb-4" style={{ borderBottom: '1px solid rgba(0,180,220,0.12)' }}>
+        <div className="flex flex-wrap gap-2 mb-8 pb-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
           {softwareList.map((software) => (
             <button
               key={software}
@@ -51,7 +51,7 @@ const Asset = () => {
                 background: activeFilter === software
                   ? 'linear-gradient(180deg, #5ec4f8 0%, #1d8fd4 50%, #0858a0 100%)'
                   : 'rgba(2,8,20,0.6)',
-                borderColor: activeFilter === software ? 'rgba(0,80,150,0.8)' : 'rgba(0,180,220,0.15)',
+                borderColor: activeFilter === software ? 'rgba(0,80,150,0.8)' : 'rgba(255,255,255,0.06)',
                 color: activeFilter === software ? '#fff' : 'rgba(160,210,240,0.6)',
                 boxShadow: activeFilter === software ? '0 2px 10px rgba(0,220,240,0.2), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
                 textShadow: activeFilter === software ? '0 1px 1px rgba(0,0,0,0.3)' : 'none',
@@ -81,7 +81,7 @@ const Asset = () => {
                     <div className="flex justify-between items-start mb-2">
                       <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#00e5ff' }}>{asset.software}</h2>
                       <span className="text-xs rounded-full whitespace-nowrap font-bold"
-                        style={{ background: 'rgba(2,8,20,0.6)', border: '1px solid rgba(0,180,220,0.15)', color: 'rgba(160,210,240,0.6)', padding: '2px 8px' }}>
+                        style={{ background: 'rgba(2,8,20,0.6)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(160,210,240,0.6)', padding: '2px 8px' }}>
                         {asset.year}
                       </span>
                     </div>
@@ -89,12 +89,12 @@ const Asset = () => {
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-xl font-mono truncate" style={{ color: '#ffffff' }}>{asset.name}</span>
                       <span className="text-sm font-mono rounded-full font-bold"
-                        style={{ color: '#00e5ff', background: 'rgba(0,220,240,0.08)', border: '1px solid rgba(0,180,220,0.18)', padding: '2px 8px' }}>
+                        style={{ color: '#00e5ff', background: 'rgba(0,220,240,0.08)', border: '1px solid rgba(255,255,255,0.06)', padding: '2px 8px' }}>
                         {asset.extension}
                       </span>
                     </div>
 
-                    <div className="flex justify-between items-center mt-4 pt-3" style={{ borderTop: '1px solid rgba(0,180,220,0.08)' }}>
+                    <div className="flex justify-between items-center mt-4 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                       <div />
                       <a
                         href={asset.downloadLink}
