@@ -28,7 +28,7 @@ export default function Addon() {
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px flex-1" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06))' }} />
-            <span className="text-sm font-bold tracking-wider uppercase font-display" style={{ color: '#00e5ff' }}>
+            <span className="text-sm font-bold tracking-wider uppercase font-display" style={{ color: '#ffffff' }}>
               Addon & Plugins
             </span>
             <div className="h-px flex-1" style={{ background: 'linear-gradient(270deg, transparent, rgba(255,255,255,0.06))' }} />
@@ -47,7 +47,7 @@ export default function Addon() {
                 <div className="relative rounded-2xl overflow-hidden">
                   <img src={file.thumbnail} alt={file.name} className="w-full h-auto max-h-[300px] object-contain" />
                   <div className="absolute top-4 right-4 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-lg"
-                    style={{ background: 'linear-gradient(180deg, #5ec4f8, #0858a0)', border: '1px solid rgba(0,80,150,0.8)' }}>
+                    style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)' }}>
                     <span className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                       Ready
@@ -65,7 +65,7 @@ export default function Addon() {
                         style={{
                           background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
                           border: '1px solid rgba(255,255,255,0.06)',
-                          color: '#00e5ff',
+                          color: '#ffffff',
                           boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
                         }}>
                         <File className="w-5 h-5" />
@@ -73,9 +73,9 @@ export default function Addon() {
                       <h2 className="text-xl font-bold truncate" style={{ color: '#ffffff' }}>{file.name}</h2>
                     </div>
                     <div className="flex flex-wrap items-center gap-3 ml-13 text-sm">
-                      <span style={{ color: 'rgba(160,210,240,0.6)' }}>{file.type}</span>
+                      <span style={{ color: 'rgba(255,255,255,0.75)' }}>{file.type}</span>
                       <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(255,255,255,0.06)' }}></span>
-                      <span style={{ color: 'rgba(160,210,240,0.6)' }}>{file.size}</span>
+                      <span style={{ color: 'rgba(255,255,255,0.75)' }}>{file.size}</span>
                     </div>
                   </div>
 
@@ -89,17 +89,17 @@ export default function Addon() {
                 </div>
 
                 <div className="mt-4 pt-4 flex flex-wrap items-center gap-4 text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-                  <div className="flex items-center gap-2" style={{ color: 'rgba(160,210,240,0.6)' }}>
-                    <Shield size={14} style={{ color: '#00e5ff' }} />
+                  <div className="flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                    <Shield size={14} style={{ color: '#ffffff' }} />
                     <span>Secure</span>
                   </div>
-                  <div className="flex items-center gap-2" style={{ color: 'rgba(160,210,240,0.6)' }}>
-                    <Clock size={14} style={{ color: '#00e5ff' }} />
+                  <div className="flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                    <Clock size={14} style={{ color: '#ffffff' }} />
                     <span>Updated</span>
                   </div>
-                  <div className="flex items-center gap-2" style={{ color: 'rgba(160,210,240,0.6)' }}>
+                  <div className="flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
                     <span className="px-2 py-0.5 rounded-full font-bold"
-                      style={{ background: 'rgba(0,220,240,0.08)', color: '#00e5ff', border: '1px solid rgba(255,255,255,0.06)' }}>
+                      style={{ background: 'rgba(255,255,255,0.06)', color: '#ffffff', border: '1px solid rgba(255,255,255,0.06)' }}>
                       Python 3.8+
                     </span>
                   </div>

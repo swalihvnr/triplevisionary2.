@@ -30,7 +30,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           exit={{ opacity: 0 }}
           onClick={onClose}
           className="absolute inset-0 backdrop-blur-md"
-          style={{ background: 'rgba(0,4,12,0.92)' }}
+          style={{ background: 'rgba(0,0,0,0.7)' }}
         />
 
         <motion.div
@@ -43,8 +43,8 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           {/* Top bar — titlebar */}
           <div className="flex items-center justify-between px-4 py-3"
             style={{
-              background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.55))',
-              borderBottom: '1px solid rgba(255,255,255,0.06)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))',
+              borderBottom: '1px solid rgba(255,255,255,0.08)',
             }}>
             <span className="text-xs font-display font-bold" style={{ color: '#ffffff' }}>{videoTitle || 'Video'}</span>
             <button onClick={onClose} className="p-1 w-7 h-7 rounded-full flex items-center justify-center transition-all cursor-pointer aero-button"
@@ -70,10 +70,10 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
 
           <div className="flex items-center justify-between px-4 py-2"
             style={{
-              background: 'linear-gradient(180deg, rgba(180,230,240,0.06), rgba(0,40,80,0.5))',
-              borderTop: '1px solid rgba(255,255,255,0.05)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
+              borderTop: '1px solid rgba(255,255,255,0.06)',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: 'rgba(160,210,240,0.55)' }}>TripleVisionary</span>
+            <span className="text-xs font-display font-bold" style={{ color: 'rgba(255,255,255,0.65)' }}>TripleVisionary</span>
           </div>
         </motion.div>
       </div>

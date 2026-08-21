@@ -34,23 +34,25 @@ export default function Navbar({ currentPath, onPageChange }) {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="w-full max-w-5xl rounded-xl overflow-hidden relative"
         style={{
-          background: 'rgba(0, 4, 12, 0.25)',
-          border: '1px solid rgba(255,255,255,0.08)',
+          background: 'rgba(255, 255, 255, 0.08)',
+          border: '1px solid rgba(255,255,255,0.12)',
           boxShadow: `
-            inset 0 1px 0 rgba(255,255,255,0.08),
-            inset 0 -1px 0 rgba(0,0,0,0.35),
-            0 4px 20px rgba(0,0,0,0.5)
+            inset 0 1px 0 rgba(255,255,255,0.15),
+            inset 0 -1px 0 rgba(0,0,0,0.1),
+            0 4px 20px rgba(0,0,0,0.2)
           `,
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
           transform: scrolled ? 'scale(0.985)' : 'scale(1)',
           transition: 'all 0.3s ease',
         }}
       >
-        {/* Aero glossy highlight strip across the top */}
+        {/* Glossy highlight strip across the top */}
         <div
           className="absolute top-0 left-0 right-0 pointer-events-none rounded-t-xl z-10"
           style={{
             height: '50%',
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(180,220,240,0.03) 30%, transparent 100%)',
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.04) 40%, transparent 100%)',
           }}
         />
 
@@ -90,15 +92,15 @@ export default function Navbar({ currentPath, onPageChange }) {
                     <div
                       className="absolute inset-0 z-0"
                       style={{
-                        background: 'linear-gradient(180deg, #b2f6fc 0%, #00f1f4 15%, #00a8d6 50%, #005a9e 85%, #003a7a 100%)',
-                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -1px 0 rgba(0,0,0,0.25)',
+                        background: 'linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.04) 100%)',
+                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 0 rgba(0,0,0,0.1)',
                       }}
                     />
                   )}
                   <span
                     className="relative z-10"
                     style={{
-                      color: active ? '#ffffff' : 'rgba(160,210,240,0.55)',
+                      color: active ? '#ffffff' : 'rgba(255,255,255,0.65)',
                       textShadow: active ? '0 1px 2px rgba(0,0,0,0.5)' : 'none',
                     }}
                   >
@@ -114,7 +116,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="ml-auto mr-3 p-1.5 rounded-md transition-colors cursor-pointer"
-              style={{ color: 'rgba(160,210,240,0.6)' }}
+              style={{ color: 'rgba(255,255,255,0.75)' }}
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -128,8 +130,10 @@ export default function Navbar({ currentPath, onPageChange }) {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden relative z-20 border-t"
             style={{
-              background: 'rgba(0, 4, 12, 0.3)',
-              borderColor: 'rgba(255,255,255,0.06)',
+              background: 'rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(16px)',
+              WebkitBackdropFilter: 'blur(16px)',
+              borderColor: 'rgba(255,255,255,0.08)',
             }}
           >
             {navItems.map((item) => {
@@ -141,12 +145,12 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="flex items-center px-5 py-3 text-[13px] font-bold tracking-wider border-b transition-all"
                   style={{
-                    borderColor: 'rgba(255,255,255,0.03)',
-                    color: active ? '#ffffff' : 'rgba(160,210,240,0.55)',
+                    borderColor: 'rgba(255,255,255,0.05)',
+                    color: active ? '#ffffff' : 'rgba(255,255,255,0.75)',
                     background: active
-                      ? 'linear-gradient(90deg, #b2f6fc, #00f1f4, #00a8d6, #005a9e)'
+                      ? 'rgba(255,255,255,0.12)'
                       : 'transparent',
-                    textShadow: active ? '0 1px 2px rgba(0,0,0,0.5)' : 'none',
+                    textShadow: active ? '0 1px 2px rgba(0,0,0,0.3)' : 'none',
                   }}
                 >
                   {item.name}

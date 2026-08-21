@@ -33,9 +33,9 @@ const Asset = () => {
         {/* Page Title */}
         <div className="mb-8">
           <h1 className="text-4xl font-light tracking-wider" style={{ color: '#ffffff' }}>
-            ASSET <span className="font-bold" style={{ color: '#00e5ff' }}>LIBRARY</span>
+            ASSET <span className="font-bold" style={{ color: '#ffffff' }}>LIBRARY</span>
           </h1>
-          <p className="text-sm mt-1" style={{ color: 'rgba(160,210,240,0.6)' }}>
+          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Browse and download production-ready assets by software.
           </p>
         </div>
@@ -49,11 +49,11 @@ const Asset = () => {
               className="px-5 py-2 text-sm font-semibold rounded-full transition-all duration-200 border"
               style={{
                 background: activeFilter === software
-                  ? 'linear-gradient(180deg, #5ec4f8 0%, #1d8fd4 50%, #0858a0 100%)'
+                  ? 'rgba(255,255,255,0.12)'
                   : 'rgba(2,8,20,0.15)',
-                borderColor: activeFilter === software ? 'rgba(0,80,150,0.8)' : 'rgba(255,255,255,0.06)',
-                color: activeFilter === software ? '#fff' : 'rgba(160,210,240,0.6)',
-                boxShadow: activeFilter === software ? '0 2px 10px rgba(0,220,240,0.2), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
+                borderColor: activeFilter === software ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.06)',
+                color: activeFilter === software ? '#fff' : 'rgba(255,255,255,0.75)',
+                boxShadow: activeFilter === software ? '0 2px 10px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
                 textShadow: activeFilter === software ? '0 1px 1px rgba(0,0,0,0.3)' : 'none',
               }}
             >
@@ -73,15 +73,15 @@ const Asset = () => {
                   ref={(el) => (assetRefs.current[asset.id] = el)}
                   className="glossy-card p-5 transition-all duration-300 hover:-translate-y-1"
                   style={{
-                    borderColor: isSelected ? '#00e5ff' : undefined,
-                    boxShadow: isSelected ? '0 0 0 2px #00e5ff, 0 8px 30px rgba(0,220,240,0.1)' : undefined,
+                    borderColor: isSelected ? '#ffffff' : undefined,
+                    boxShadow: isSelected ? '0 0 0 2px #ffffff, 0 8px 30px rgba(255,255,255,0.08)' : undefined,
                   }}
                 >
                   <div className="relative z-10">
                     <div className="flex justify-between items-start mb-2">
-                      <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#00e5ff' }}>{asset.software}</h2>
+                      <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#ffffff' }}>{asset.software}</h2>
                       <span className="text-xs rounded-full whitespace-nowrap font-bold"
-                        style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(160,210,240,0.6)', padding: '2px 8px' }}>
+                        style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.75)', padding: '2px 8px' }}>
                         {asset.year}
                       </span>
                     </div>
@@ -89,7 +89,7 @@ const Asset = () => {
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-xl font-mono truncate" style={{ color: '#ffffff' }}>{asset.name}</span>
                       <span className="text-sm font-mono rounded-full font-bold"
-                        style={{ color: '#00e5ff', background: 'rgba(0,220,240,0.08)', border: '1px solid rgba(255,255,255,0.06)', padding: '2px 8px' }}>
+                        style={{ color: '#ffffff', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.06)', padding: '2px 8px' }}>
                         {asset.extension}
                       </span>
                     </div>
@@ -113,8 +113,8 @@ const Asset = () => {
               );
             })
           ) : (
-            <div className="col-span-full text-center py-12" style={{ color: 'rgba(160,210,240,0.6)' }}>
-              No assets found for <span className="font-bold" style={{ color: '#00e5ff' }}>{activeFilter}</span>
+            <div className="col-span-full text-center py-12" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              No assets found for <span className="font-bold" style={{ color: '#ffffff' }}>{activeFilter}</span>
             </div>
           )}
         </div>

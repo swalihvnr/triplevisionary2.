@@ -42,17 +42,15 @@ export default function Hero({ onPageChange }) {
             alt="TripleVisionary Banner"
             className="w-full max-h-[550px] object-cover"
           />
-          {/* Aero glass gloss overlay on the banner */}
+          {/* Glass gloss overlay on the banner */}
           <div className="absolute inset-0 pointer-events-none"
             style={{
               background: `linear-gradient(180deg,
-                rgba(255,255,255,0.04) 0%,
+                rgba(255,255,255,0.06) 0%,
                 transparent 15%,
-                transparent 80%,
-                rgba(34,207,253,0.12) 95%,
-                rgba(34,207,253,0.2) 100%
+                transparent 85%,
+                rgba(255,255,255,0.04) 100%
               )`,
-              boxShadow: 'inset 0 -20px 40px -10px rgba(34,207,253,0.15)',
             }}
           />
         </motion.div>
@@ -80,32 +78,32 @@ export default function Hero({ onPageChange }) {
               filter: 'brightness(0.35) saturate(1.2)',
             }}
           />
-          {/* Aero glass overlay */}
+          {/* Glass overlay */}
           <div className="absolute inset-0"
             style={{
               background: `linear-gradient(180deg,
-                rgba(0,180,220,0.04) 0%,
-                rgba(0,60,120,0.06) 5%,
-                rgba(2,8,20,0.35) 15%,
-                rgba(1,8,18,0.45) 100%
+                rgba(255,255,255,0.03) 0%,
+                rgba(255,255,255,0.02) 5%,
+                rgba(0,0,0,0.15) 15%,
+                rgba(0,0,0,0.25) 100%
               )`,
               backdropFilter: 'none',
             }}
           />
-          {/* Aero glossy highlight */}
+          {/* Glossy highlight */}
           <div className="absolute top-0 left-0 right-0 h-[40%] pointer-events-none"
             style={{
               background: `linear-gradient(180deg,
-                rgba(255,255,255,0.06) 0%,
-                rgba(180,230,240,0.02) 40%,
+                rgba(255,255,255,0.1) 0%,
+                rgba(255,255,255,0.03) 40%,
                 transparent 100%
               )`,
             }}
           />
-          {/* Blue glow orb behind text */}
+          {/* Soft glow behind text */}
           <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
             style={{
-              background: 'radial-gradient(circle, rgba(0,200,240,0.1), transparent 60%)',
+              background: 'radial-gradient(circle, rgba(255,255,255,0.05), transparent 60%)',
               filter: 'blur(60px)',
             }}
           />
@@ -117,7 +115,7 @@ export default function Hero({ onPageChange }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight leading-[1.1] mb-6 text-white"
-                style={{ textShadow: '0 2px 20px rgba(0,0,0,0.6), 0 0 60px rgba(0,200,240,0.1)' }}
+                style={{ textShadow: '0 2px 20px rgba(0,0,0,0.6), 0 0 60px rgba(255,255,255,0.08)' }}
               >
                 TripleVisionary <br className="sm:hidden" />
                 <span className="text-gradient-aero">Multidisciplinary</span> <br className="sm:hidden" />
@@ -143,28 +141,29 @@ export default function Hero({ onPageChange }) {
         <div
           className="relative overflow-hidden"
           style={{
-            borderTop: '1px solid rgba(255,255,255,0.05)',
-            borderBottom: '1px solid rgba(255,255,255,0.05)',
+            borderTop: '1px solid rgba(255,255,255,0.06)',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
             background: `linear-gradient(180deg,
-              rgba(0,120,180,0.05) 0%,
-              rgba(2,12,28,0.35) 30%,
-              rgba(1,8,20,0.4) 100%
+              rgba(255,255,255,0.04) 0%,
+              rgba(255,255,255,0.02) 30%,
+              rgba(255,255,255,0.01) 100%
             )`,
-            backdropFilter: 'none',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
           }}
         >
-          {/* Aero gloss on marquee strip */}
+          {/* Gloss on marquee strip */}
           <div className="absolute top-0 left-0 right-0 h-[50%] pointer-events-none"
             style={{
-              background: 'linear-gradient(180deg, rgba(255,255,255,0.04), transparent)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.08), transparent)',
             }}
           />
 
           {/* Left & Right Fades */}
           <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 sm:w-24 md:w-32 lg:w-40"
-            style={{ background: 'linear-gradient(90deg, rgba(1,8,18,0.9), transparent)' }} />
+            style={{ background: 'linear-gradient(90deg, rgba(1,8,18,0.6), transparent)' }} />
           <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-16 sm:w-24 md:w-32 lg:w-40"
-            style={{ background: 'linear-gradient(270deg, rgba(1,8,18,0.9), transparent)' }} />
+            style={{ background: 'linear-gradient(270deg, rgba(1,8,18,0.6), transparent)' }} />
 
           <div className="relative z-10 py-4">
             <div className="marquee">

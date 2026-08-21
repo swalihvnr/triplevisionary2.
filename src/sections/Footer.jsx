@@ -23,8 +23,8 @@ export default function Footer() {
     <footer
       className="relative pt-16 pb-12 overflow-hidden"
       style={{
-        background: 'rgba(0,4,12,0.3)',
-        borderTop: '1px solid rgba(255,255,255,0.05)',
+        background: 'rgba(255,255,255,0.03)',
+        borderTop: '1px solid rgba(255,255,255,0.06)',
       }}
     >
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b pb-10"
           style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
           <div>
-            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: '#00e5ff' }}>
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: '#ffffff' }}>
               Services
             </h4>
             <div className="grid grid-cols-2 gap-2">
@@ -49,8 +49,8 @@ export default function Footer() {
                   key={service.name}
                   href={service.href}
                   onClick={(e) => handleLinkClick(e, service.href)}
-                  className="text-xs hover:text-[#00e5ff] transition-colors font-medium py-1"
-                  style={{ color: 'rgba(160,210,240,0.6)' }}
+                  className="text-xs hover:text-[#ffffff] transition-colors font-medium py-1"
+                  style={{ color: 'rgba(255,255,255,0.75)' }}
                 >
                   {service.name}
                 </a>
@@ -59,10 +59,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: '#00e5ff' }}>
+            <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em] mb-4" style={{ color: '#ffffff' }}>
               Contact
             </h4>
-            <span className="text-sm" style={{ color: 'rgba(160,210,240,0.6)' }}>
+            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
               triplevisionary@protonmail.com
             </span>
           </div>
@@ -71,7 +71,7 @@ export default function Footer() {
         {/* Social Media */}
         <div className="flex flex-col items-center gap-6 mb-12 border-b pb-10"
           style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
-          <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em]" style={{ color: '#00e5ff' }}>
+          <h4 className="font-display text-xs font-bold uppercase tracking-[0.15em]" style={{ color: '#ffffff' }}>
             Follow Us
           </h4>
           <div className="flex items-center gap-8">
@@ -85,17 +85,17 @@ export default function Footer() {
                 href={href}
                 className="w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                 style={{
-                  background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
+                  background: 'linear-gradient(180deg, rgba(255,255,255,0.06))',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  color: 'rgba(160,210,240,0.6)',
+                  color: 'rgba(255,255,255,0.75)',
                   boxShadow: '0 1px 3px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.03)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#00e5ff';
-                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,220,240,0.15), inset 0 1px 0 rgba(255,255,255,0.03)';
+                  e.currentTarget.style.color = '#ffffff';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.03)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = 'rgba(160,210,240,0.6)';
+                  e.currentTarget.style.color = 'rgba(255,255,255,0.75)';
                   e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.03)';
                 }}
                 aria-label={label}
@@ -108,7 +108,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs" style={{ color: 'rgba(160,210,240,0.5)' }}>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
           <span>&copy; {new Date().getFullYear()} TripleVisionary. All rights reserved.</span>
         </div>
       </div>
