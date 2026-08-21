@@ -206,48 +206,7 @@ export default function Hero({ onPageChange }) {
           </div>
         </div>
 
-        {/* Anti-AI Badge — Aero glass orb */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="fixed bottom-4 right-4 z-50 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8"
-        >
-          <div
-            className="flex items-center gap-2 md:gap-3 rounded-full px-3 py-2 md:px-4 md:py-2.5"
-            style={{
-              background: `linear-gradient(180deg,
-                rgba(120,180,240,0.15) 0%,
-                rgba(40,90,160,0.2) 30%,
-                rgba(15,45,90,0.55) 60%,
-                rgba(8,30,65,0.6) 100%
-              )`,
-              border: '1px solid rgba(120,180,240,0.35)',
-              boxShadow: `
-                0 1px 0 rgba(255,255,255,0.15) inset,
-                0 4px 20px rgba(0,0,0,0.4)
-              `,
-              backdropFilter: 'blur(16px)',
-            }}
-          >
-            <div className="relative flex-shrink-0">
-              <div className="absolute inset-0.5 rounded-full"
-                style={{ background: 'rgba(60,180,245,0.25)', filter: 'blur(6px)' }} />
-              <img
-                src="/assets/fukk-ai.png"
-                alt="Anti AI"
-                className="relative z-10 h-8 w-8 rounded-full object-cover md:h-10 md:w-10 lg:h-12 lg:w-12"
-                style={{ border: '2px solid rgba(120,180,240,0.4)' }}
-              />
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-gradient-aero text-[11px] md:text-sm lg:text-base font-extrabold whitespace-nowrap">
-                We are free from AI generated imaginary
-              </span>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
 
       <VideoModal
