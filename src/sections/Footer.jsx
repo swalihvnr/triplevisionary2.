@@ -23,7 +23,7 @@ export default function Footer() {
     <footer
       className="relative pt-16 pb-12 overflow-hidden"
       style={{
-        background: 'rgba(0,4,12,0.9)',
+        background: 'rgba(0,4,12,0.3)',
         borderTop: '1px solid rgba(255,255,255,0.05)',
       }}
     >

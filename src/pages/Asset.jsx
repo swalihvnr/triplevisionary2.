@@ -50,7 +50,7 @@ const Asset = () => {
               style={{
                 background: activeFilter === software
                   ? 'linear-gradient(180deg, #5ec4f8 0%, #1d8fd4 50%, #0858a0 100%)'
-                  : 'rgba(2,8,20,0.6)',
+                  : 'rgba(2,8,20,0.15)',
                 borderColor: activeFilter === software ? 'rgba(0,80,150,0.8)' : 'rgba(255,255,255,0.06)',
                 color: activeFilter === software ? '#fff' : 'rgba(160,210,240,0.6)',
                 boxShadow: activeFilter === software ? '0 2px 10px rgba(0,220,240,0.2), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
@@ -81,7 +81,7 @@ const Asset = () => {
                     <div className="flex justify-between items-start mb-2">
                       <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#00e5ff' }}>{asset.software}</h2>
                       <span className="text-xs rounded-full whitespace-nowrap font-bold"
-                        style={{ background: 'rgba(2,8,20,0.6)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(160,210,240,0.6)', padding: '2px 8px' }}>
+                        style={{ background: 'rgba(2,8,20,0.15)', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(160,210,240,0.6)', padding: '2px 8px' }}>
                         {asset.year}
                       </span>
                     </div>

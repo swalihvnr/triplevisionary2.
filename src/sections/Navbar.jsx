@@ -34,7 +34,7 @@ export default function Navbar({ currentPath, onPageChange }) {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="w-full max-w-5xl rounded-xl overflow-hidden relative"
         style={{
-          background: 'rgba(0, 4, 12, 0.7)',
+          background: 'rgba(0, 4, 12, 0.25)',
           border: '1px solid rgba(255,255,255,0.08)',
           boxShadow: `
             inset 0 1px 0 rgba(255,255,255,0.08),
@@ -128,7 +128,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden relative z-20 border-t"
             style={{
-              background: 'rgba(0, 4, 12, 0.9)',
+              background: 'rgba(0, 4, 12, 0.3)',
               borderColor: 'rgba(255,255,255,0.06)',
             }}
           >

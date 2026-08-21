@@ -86,8 +86,8 @@ export default function Hero({ onPageChange }) {
               background: `linear-gradient(180deg,
                 rgba(0,180,220,0.04) 0%,
                 rgba(0,60,120,0.06) 5%,
-                rgba(2,8,20,0.55) 15%,
-                rgba(1,8,18,0.65) 100%
+                rgba(2,8,20,0.35) 15%,
+                rgba(1,8,18,0.45) 100%
               )`,
               backdropFilter: 'none',
             }}
