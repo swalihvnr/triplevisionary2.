@@ -13,15 +13,45 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
-    setTimeout(() => {
+
+    const text = [
+      `*New Contact Form Submission*`,
+      ``,
+      `*Name:* ${formData.name}`,
+      `*Email:* ${formData.email}`,
+      `*Project Type:* ${formData.projectType}`,
+      `*Message:* ${formData.message}`,
+    ].join("\n");
+
+    try {
+      const res = await fetch(
+        `https://api.telegram.org/bot8821211350:AAG9F0oVjSQxUUtNsmTRt04RKaDurrWOXnI/sendMessage`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: "5084905731",
+            text,
+            parse_mode: "Markdown",
+          }),
+        }
+      );
+
+      if (res.ok) {
+        setIsSuccess(true);
+        setFormData({ name: "", email: "", projectType: "Commercial Ads", message: "" });
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch {
+      alert("Network error. Please try again.");
+    } finally {
       setIsSending(false);
-      setIsSuccess(true);
-      setFormData({ name: "", email: "", projectType: "Commercial Ads", message: "" });
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 2500);
+    }
   };
 
   const handleInputChange = (e) => {
