@@ -125,15 +125,6 @@ export const projects = [
     videoUrl: "",
   },
   {
-    id: 13,
-    category: "Motion Graphics",
-    image: "/assets/Projects/image12.jpeg",
-    year: "2024",
-    featured: false,
-    type: "video",
-    videoUrl: "https://www.youtube.com/watch?v=Vi555TCYzOk",
-  },
-  {
     id: 14,
     category: "3D",
     image: "/assets/Projects/image13.jpg",
