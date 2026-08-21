@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Search, Play, ArrowUpRight, PackageOpen, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, Play, PackageOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { projects, categories } from "../utilities/data";
 import VideoModal from "../components/VideoModal";
 
@@ -201,12 +201,6 @@ export default function PortfolioPage({ onPageChange }) {
           </AnimatePresence>
         </motion.div>
 
-        <div className="mt-12 flex justify-center">
-          <p className="text-center text-sm font-light tracking-wider leading-relaxed max-w-3xl" style={{ color: 'rgba(160,210,240,0.6)' }}>
-            *This content is not available for AI training. All rights reserved*
-          </p>
-        </div>
-
         {visibleProjects.length === 0 && (
           <div className="glossy-card rounded-3xl border-2 border-dashed py-24 text-center" style={{ borderColor: 'rgba(0,180,220,0.15)' }}>
             <p className="text-sm" style={{ color: 'rgba(160,210,240,0.6)' }}>No projects match that filter.</p>
@@ -220,23 +214,6 @@ export default function PortfolioPage({ onPageChange }) {
           </div>
         )}
 
-        <div className="glossy-card mt-20 flex flex-col items-start justify-between gap-8 rounded-3xl p-7 md:flex-row md:items-center md:p-10">
-          <div>
-            <p className="mb-3 font-display text-[10px] uppercase tracking-[0.2em] font-bold" style={{ color: '#00e5ff' }}>
-              Have something in mind?
-            </p>
-            <h2 className="max-w-xl font-display text-3xl font-semibold tracking-[-0.02em] md:text-4xl" style={{ color: '#ffffff' }}>
-              Let's make the next frame count.
-            </h2>
-          </div>
-          <button
-            onClick={() => onPageChange("/contact")}
-            className="aero-button-primary flex cursor-pointer items-center gap-3 rounded-full px-6 py-3.5 text-xs font-bold uppercase tracking-[0.14em] transition-transform hover:scale-[1.03]"
-          >
-            Work with us
-            <ArrowUpRight size={16} />
-          </button>
-        </div>
       </section>
 
       <VideoModal
