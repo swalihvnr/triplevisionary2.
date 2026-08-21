@@ -25,8 +25,7 @@ export default function Footer() {
       className="relative pt-16 pb-12 overflow-hidden"
       style={{
         background: 'rgba(3,15,35,0.85)',
-        backdropFilter: 'blur(20px) saturate(1.4)',
-        WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
+
         borderTop: '1px solid rgba(120,180,240,0.2)',
       }}
     >

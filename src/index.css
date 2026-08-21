@@ -22,16 +22,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: #ffffff; }
 
 /* ===== Aero Glass Panel (Win7 Window) ===== */
 .aero-glass {
-  background: linear-gradient(180deg,
-    rgba(180,210,240,0.12) 0%,
-    rgba(100,160,220,0.08) 2%,
-    rgba(20,60,110,0.55) 3%,
-    rgba(12,45,85,0.6) 50%,
-    rgba(8,35,70,0.65) 100%
-  );
-  backdrop-filter: blur(24px) saturate(1.6);
-  -webkit-backdrop-filter: blur(24px) saturate(1.6);
-  border: 1px solid rgba(120,180,240,0.35);
+  background: rgba(8, 24, 52, 0.45);
+  border: 1px solid rgba(60, 127, 177, 0.4);
   border-radius: 8px;
   box-shadow:
     0 0 1px 0 rgba(255,255,255,0.15) inset,
@@ -62,14 +54,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: #ffffff; }
 
 /* ===== Buttons ===== */
 .aero-button {
-  background: linear-gradient(180deg,
-    rgba(160,210,250,0.2) 0%,
-    rgba(60,120,200,0.3) 40%,
-    rgba(20,60,120,0.6) 60%,
-    rgba(10,40,85,0.7) 100%
-  );
+  background: rgba(8, 24, 52, 0.5);
   color: #fff;
-  border: 1px solid rgba(120,180,240,0.4);
+  border: 1px solid rgba(60, 127, 177, 0.4);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.15) inset,
     0 -1px 0 rgba(0,0,0,0.3) inset,
@@ -90,34 +77,28 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: #ffffff; }
   border-radius: 5px 5px 0 0;
 }
 .aero-button:hover {
-  background: linear-gradient(180deg,
-    rgba(180,220,255,0.25) 0%,
-    rgba(80,140,220,0.35) 40%,
-    rgba(30,80,150,0.65) 60%,
-    rgba(20,55,100,0.75) 100%
-  );
+  background: rgba(15, 40, 75, 0.6);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.2) inset,
     0 -1px 0 rgba(0,0,0,0.3) inset,
     0 4px 16px rgba(42,175,242,0.3);
-  border-color: rgba(140,200,255,0.5);
+  border-color: rgba(60, 127, 177, 0.5);
 }
 
-/* ===== Primary Blue Button (Aero accent) ===== */
+/* ===== Primary Blue Button (minimize button blue) ===== */
 .aero-button-primary {
   background: linear-gradient(180deg,
-    #5ec4f8 0%,
-    #3aabe8 20%,
-    #1d8fd4 50%,
-    #0f6fb5 80%,
-    #0858a0 100%
+    #3cd6fd 0%,
+    #22cffd 20%,
+    #3c7fb1 80%,
+    #2a5f8a 100%
   );
   color: #fff;
-  border: 1px solid rgba(8,60,140,0.8);
+  border: 1px solid #3c7fb1;
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.35) inset,
+    0 1px 0 rgba(255,255,255,0.3) inset,
     0 -1px 0 rgba(0,0,0,0.2) inset,
-    0 4px 14px rgba(30,140,220,0.5);
+    0 4px 14px rgba(34,207,253,0.4);
   border-radius: 5px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
   transition: all 0.15s ease;
@@ -134,30 +115,21 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: #ffffff; }
 }
 .aero-button-primary:hover {
   background: linear-gradient(180deg,
-    #70d0ff 0%,
-    #4ab8f0 20%,
-    #2d9ee0 50%,
-    #1980c0 80%,
-    #0c68aa 100%
+    #5ae0ff 0%,
+    #3cd6fd 20%,
+    #4a8fc1 80%,
+    #3a6f9a 100%
   );
   box-shadow:
     0 1px 0 rgba(255,255,255,0.4) inset,
     0 -1px 0 rgba(0,0,0,0.2) inset,
-    0 6px 24px rgba(40,160,240,0.6);
+    0 6px 24px rgba(34,207,253,0.5);
 }
 
 /* ===== Glossy Card ===== */
 .glossy-card {
-  background: linear-gradient(180deg,
-    rgba(180,210,240,0.1) 0%,
-    rgba(80,140,210,0.06) 2%,
-    rgba(15,50,95,0.55) 4%,
-    rgba(10,40,80,0.6) 50%,
-    rgba(6,30,65,0.65) 100%
-  );
-  backdrop-filter: blur(20px) saturate(1.4);
-  -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  border: 1px solid rgba(120,180,240,0.25);
+  background: rgba(8, 24, 52, 0.4);
+  border: 1px solid rgba(60, 127, 177, 0.35);
   border-radius: 10px;
   box-shadow:
     0 1px 0 rgba(255,255,255,0.12) inset,
@@ -185,12 +157,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: rgba(3,42,90,0.6); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(100,180,240,0.25), rgba(30,80,150,0.4));
+  background: linear-gradient(180deg, rgba(60,127,177,0.3), rgba(30,80,150,0.4));
   border: 2px solid rgba(3,42,90,0.6);
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, rgba(100,180,240,0.4), rgba(30,80,150,0.6));
+  background: linear-gradient(180deg, rgba(60,127,177,0.5), rgba(30,80,150,0.6));
 }
 
 .scrollbar-hide { scrollbar-width: none; }

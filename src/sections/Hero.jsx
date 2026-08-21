@@ -92,7 +92,7 @@ export default function Hero({ onPageChange }) {
                 rgba(5,25,55,0.5) 15%,
                 rgba(3,18,40,0.6) 100%
               )`,
-              backdropFilter: 'blur(2px)',
+              backdropFilter: 'none',
             }}
           />
           {/* Aero glossy highlight */}
@@ -153,7 +153,7 @@ export default function Hero({ onPageChange }) {
               rgba(15,45,85,0.3) 30%,
               rgba(10,35,70,0.35) 100%
             )`,
-            backdropFilter: 'blur(8px)',
+            backdropFilter: 'none',
           }}
         >
           {/* Aero gloss on marquee strip */}
