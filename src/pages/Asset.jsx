@@ -28,7 +28,7 @@ const Asset = () => {
   }, [selectedAssetId]);
 
   return (
-    <div className="min-h-screen py-6 md:py-10 px-4">
+    <div className="min-h-screen pt-20 pb-10 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Page Title */}
         <div className="mb-8">

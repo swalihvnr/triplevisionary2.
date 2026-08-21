@@ -7,7 +7,7 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative pt-20">
       <Contact />
     </div>
   );

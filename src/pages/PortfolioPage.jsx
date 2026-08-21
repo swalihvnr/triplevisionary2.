@@ -59,12 +59,12 @@ export default function PortfolioPage({ onPageChange }) {
   };
 
   return (
-    <div className="relative min-h-screen md:pt-10">
+    <div className="relative min-h-screen pt-20">
       <div className="pointer-events-none absolute left-1/2 top-0 h-[560px] w-[900px] -translate-x-1/2 rounded-full blur-[140px]" style={{ background: 'radial-gradient(circle, rgba(0,220,240,0.04), transparent)' }} />
 
       <section>
         {/* Filter Bar */}
-        <div className="sticky top-[60px] z-30 mb-4 w-full rounded-2xl aero-glass">
+        <div className="relative z-20 mb-4 w-full rounded-2xl aero-glass">
           <div className="flex flex-col gap-3 p-3 lg:flex-row lg:items-center lg:p-4">
             <div className="relative flex flex-1 items-center">
               <button onClick={() => scroll("left")} className="absolute left-0 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-all aero-button"
@@ -168,7 +168,7 @@ export default function PortfolioPage({ onPageChange }) {
                     </span>
                   </div>
 
-                  <div className="absolute right-2 top-2 z-30 sm:right-3 sm:top-3">
+                  <div className="absolute right-2 top-2 z-20 sm:right-3 sm:top-3">
                     <button onClick={(e) => handleAddonClick(e, project)} className="transition-all duration-300 hover:scale-110">
                       <PackageOpen size={22} className={project.addon?.available ? "text-[#00e5ff]" : "text-white/70"} />
                     </button>

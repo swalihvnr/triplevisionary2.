@@ -9,7 +9,7 @@ export default function ServicesPage({ onPageChange }) {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative pt-20">
       <Services />
 
       <div className="container mx-auto px-6 max-w-3xl mt-16 relative z-10 text-center">

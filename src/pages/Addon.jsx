@@ -22,7 +22,7 @@ const downloadFile = (url) => {
 
 export default function Addon() {
   return (
-    <div className="min-h-screen py-16 px-4">
+    <div className="min-h-screen pt-20 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-12">
