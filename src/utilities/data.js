@@ -29,7 +29,7 @@ export const projects = [
   },
   {
     id: 2,
-    category: "Graphic Designs",
+    category: "Photo Manipulation",
     image: "/assets/Projects/y2kweeknd.png",
     year: "2026",
     featured: false,
@@ -72,7 +72,7 @@ export const projects = [
   },
   {
     id: 7,
-    category: "Graphic Designs",
+    category: "Photo Manipulation",
     image: "/assets/Projects/image6.png",
     year: "2024",
     featured: false,
@@ -162,7 +162,7 @@ export const projects = [
   },
   {
     id: 18,
-    category: "Graphic Designs",
+    category: "Photo Manipulation",
     image: "/assets/Projects/image17.jpg",
      year: "2026",
     featured: false,
