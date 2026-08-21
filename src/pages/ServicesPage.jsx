@@ -14,10 +14,10 @@ export default function ServicesPage({ onPageChange }) {
 
       <div className="container mx-auto px-6 max-w-3xl mt-16 relative z-10 text-center">
         <GlassCard className="p-8 text-center" glowColor="rgba(255,255,255,0.08)">
-          <h3 className="font-display font-bold text-xl md:text-2xl mb-3" style={{ color: '#1A3344' }}>
+          <h3 className="font-display font-bold text-xl md:text-2xl mb-3" style={{ color: '#ffffff' }}>
             Need a tailored post-production package?
           </h3>
-          <p className="text-xs max-w-md mx-auto mb-6 font-light" style={{ color: '#6A8A9A' }}>
+          <p className="text-xs max-w-md mx-auto mb-6 font-light" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Deploy our processing nodes for your specific commercial ad, social video, or 3D asset pipeline.
           </p>
           <button

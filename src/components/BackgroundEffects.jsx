@@ -132,13 +132,13 @@ export default function BackgroundEffects() {
         }}
       />
 
-      {/* Large soft teal-aqua glow orbs — Frutiger Aero signature */}
+      {/* Large soft cyan glow orbs */}
       <div
         className="absolute rounded-full"
         style={{
           width: 700, height: 700,
           top: -200, right: -150,
-          background: 'radial-gradient(circle, rgba(18,153,202,0.12), rgba(90,172,160,0.06) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(255,255,255,0.1), rgba(255,255,255,0.04) 50%, transparent 70%)',
           animation: 'floatOrb 25s ease-in-out infinite',
         }}
       />
@@ -147,7 +147,7 @@ export default function BackgroundEffects() {
         style={{
           width: 500, height: 500,
           bottom: -150, left: -100,
-          background: 'radial-gradient(circle, rgba(90,172,160,0.10), rgba(18,153,202,0.04) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,220,240,0.12), rgba(255,255,255,0.03) 50%, transparent 70%)',
           animation: 'floatOrb 30s ease-in-out infinite reverse',
         }}
       />
@@ -156,7 +156,7 @@ export default function BackgroundEffects() {
         style={{
           width: 400, height: 400,
           top: '40%', left: '30%',
-          background: 'radial-gradient(circle, rgba(18,153,202,0.08), transparent 60%)',
+          background: 'radial-gradient(circle, rgba(0,180,220,0.1), transparent 60%)',
           animation: 'floatOrb 20s ease-in-out infinite',
         }}
       />
@@ -166,9 +166,9 @@ export default function BackgroundEffects() {
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(ellipse at 20% 30%, rgba(18,153,202,0.04) 0%, transparent 40%),
-            radial-gradient(ellipse at 70% 60%, rgba(90,172,160,0.03) 0%, transparent 35%),
-            radial-gradient(ellipse at 50% 80%, rgba(18,153,202,0.02) 0%, transparent 30%)
+            radial-gradient(ellipse at 20% 30%, rgba(0,220,240,0.03) 0%, transparent 40%),
+            radial-gradient(ellipse at 70% 60%, rgba(255,255,255,0.02) 0%, transparent 35%),
+            radial-gradient(ellipse at 50% 80%, rgba(0,240,255,0.02) 0%, transparent 30%)
           `,
           animation: 'waterCaustic 8s ease-in-out infinite',
         }}

@@ -43,10 +43,10 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           {/* Top bar — titlebar */}
           <div className="flex items-center justify-between px-4 py-3"
             style={{
-              background: 'linear-gradient(180deg, rgba(200,235,245,0.95), rgba(195,235,235,0.92))',
-              borderBottom: '1px solid rgba(26,51,68,0.08)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))',
+              borderBottom: '1px solid rgba(255,255,255,0.08)',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: '#1A3344' }}>{videoTitle || 'Video'}</span>
+            <span className="text-xs font-display font-bold" style={{ color: '#ffffff' }}>{videoTitle || 'Video'}</span>
             <button onClick={onClose} className="p-1 w-7 h-7 rounded-full flex items-center justify-center transition-all cursor-pointer aero-button"
               style={{ padding: 0 }}>
               <X size={16} />
@@ -70,10 +70,10 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
 
           <div className="flex items-center justify-between px-4 py-2"
             style={{
-              background: 'linear-gradient(180deg, rgba(200,235,245,0.92), rgba(195,235,235,0.88))',
-              borderTop: '1px solid rgba(26,51,68,0.06)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
+              borderTop: '1px solid rgba(255,255,255,0.06)',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: '#6A8A9A' }}>TripleVisionary</span>
+            <span className="text-xs font-display font-bold" style={{ color: 'rgba(255,255,255,0.65)' }}>TripleVisionary</span>
           </div>
         </motion.div>
       </div>

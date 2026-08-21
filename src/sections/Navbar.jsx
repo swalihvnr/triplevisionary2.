@@ -34,13 +34,12 @@ export default function Navbar({ currentPath, onPageChange }) {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="w-full max-w-5xl rounded-xl overflow-hidden relative"
         style={{
-          background: 'linear-gradient(180deg, rgba(200,235,245,0.92) 0%, rgba(195,235,235,0.90) 40%, rgba(190,235,215,0.88) 100%)',
-          border: '1px solid rgba(26,51,68,0.10)',
+          background: 'rgba(255, 255, 255, 0.08)',
+          border: '1px solid rgba(255,255,255,0.12)',
           boxShadow: `
-            inset 0 1px 0 rgba(255,255,255,0.40),
-            0 0 30px rgba(18,153,202,0.10),
-            0 4px 24px rgba(26,51,68,0.08),
-            0 8px 36px rgba(0,0,0,0.06)
+            inset 0 1px 0 rgba(255,255,255,0.15),
+            inset 0 -1px 0 rgba(0,0,0,0.1),
+            0 4px 20px rgba(0,0,0,0.2)
           `,
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
@@ -53,7 +52,7 @@ export default function Navbar({ currentPath, onPageChange }) {
           className="absolute top-0 left-0 right-0 pointer-events-none rounded-t-xl z-10"
           style={{
             height: '50%',
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.10) 40%, transparent 100%)',
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.04) 40%, transparent 100%)',
           }}
         />
 
@@ -65,7 +64,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             className="flex-shrink-0 h-full flex items-center justify-center relative overflow-hidden"
             style={{
               width: 60,
-              borderRight: '1px solid rgba(26,51,68,0.08)',
+              borderRight: '1px solid rgba(255,255,255,0.06)',
             }}
           >
             <img
@@ -86,23 +85,23 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="relative flex-1 h-full flex items-center justify-center text-[12px] font-bold tracking-wider transition-all duration-200"
                   style={{
-                    borderRight: '1px solid rgba(26,51,68,0.05)',
+                    borderRight: '1px solid rgba(255,255,255,0.04)',
                   }}
                 >
                   {active && (
                     <div
                       className="absolute inset-0 z-0"
                       style={{
-                        background: 'linear-gradient(180deg, #1299CA 0%, #1088B8 50%, #0E7AAA 100%)',
-                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.30), inset 0 -1px 0 rgba(0,0,0,0.15)',
+                        background: 'linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.04) 100%)',
+                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 0 rgba(0,0,0,0.1)',
                       }}
                     />
                   )}
                   <span
                     className="relative z-10"
                     style={{
-                      color: active ? '#ffffff' : '#4A7080',
-                      textShadow: active ? '0 1px 2px rgba(0,0,0,0.2)' : 'none',
+                      color: active ? '#ffffff' : 'rgba(255,255,255,0.65)',
+                      textShadow: active ? '0 1px 2px rgba(0,0,0,0.5)' : 'none',
                     }}
                   >
                     {item.name}
@@ -117,7 +116,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="ml-auto mr-3 p-1.5 rounded-md transition-colors cursor-pointer"
-              style={{ color: '#4A7080' }}
+              style={{ color: 'rgba(255,255,255,0.75)' }}
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -131,10 +130,10 @@ export default function Navbar({ currentPath, onPageChange }) {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden relative z-20 border-t"
             style={{
-              background: 'linear-gradient(180deg, rgba(200,235,245,0.95) 0%, rgba(195,235,235,0.93) 100%)',
+              background: 'rgba(255, 255, 255, 0.1)',
               backdropFilter: 'blur(16px)',
               WebkitBackdropFilter: 'blur(16px)',
-              borderColor: 'rgba(26,51,68,0.08)',
+              borderColor: 'rgba(255,255,255,0.08)',
             }}
           >
             {navItems.map((item) => {
@@ -146,12 +145,12 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="flex items-center px-5 py-3 text-[13px] font-bold tracking-wider border-b transition-all"
                   style={{
-                    borderColor: 'rgba(26,51,68,0.06)',
-                    color: active ? '#ffffff' : '#4A7080',
+                    borderColor: 'rgba(255,255,255,0.05)',
+                    color: active ? '#ffffff' : 'rgba(255,255,255,0.75)',
                     background: active
-                      ? 'linear-gradient(180deg, #1299CA, #1088B8)'
+                      ? 'rgba(255,255,255,0.12)'
                       : 'transparent',
-                    textShadow: active ? '0 1px 2px rgba(0,0,0,0.2)' : 'none',
+                    textShadow: active ? '0 1px 2px rgba(0,0,0,0.3)' : 'none',
                   }}
                 >
                   {item.name}
