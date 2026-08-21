@@ -89,13 +89,36 @@ export default function Navbar({ currentPath, onPageChange }) {
                   }}
                 >
                   {active && (
-                    <div
-                      className="absolute inset-0 z-0"
-                      style={{
-                        background: 'linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.04) 100%)',
-                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 0 rgba(0,0,0,0.1)',
-                      }}
-                    />
+                    <div className="absolute inset-0 z-0">
+                      {/* Active tab fill */}
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          background: 'linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.04) 100%)',
+                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 0 rgba(0,0,0,0.1)',
+                        }}
+                      />
+                      {/* Glow bar effect — soft glow below the tab */}
+                      <div
+                        className="absolute left-0 right-0 pointer-events-none"
+                        style={{
+                          bottom: -8,
+                          height: 16,
+                          background: 'radial-gradient(ellipse 80% 100% at 50% 0%, rgba(255,255,255,0.30), rgba(255,255,255,0.08) 40%, transparent 70%)',
+                          filter: 'blur(4px)',
+                        }}
+                      />
+                      {/* Bottom glow line */}
+                      <div
+                        className="absolute left-[10%] right-[10%] pointer-events-none"
+                        style={{
+                          bottom: 0,
+                          height: 2,
+                          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.50), transparent)',
+                          filter: 'blur(1px)',
+                        }}
+                      />
+                    </div>
                   )}
                   <span
                     className="relative z-10"
@@ -144,14 +167,15 @@ export default function Navbar({ currentPath, onPageChange }) {
                   href={item.path}
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="flex items-center px-5 py-3 text-[13px] font-bold tracking-wider border-b transition-all"
-                  style={{
-                    borderColor: 'rgba(255,255,255,0.05)',
-                    color: active ? '#ffffff' : 'rgba(255,255,255,0.75)',
-                    background: active
-                      ? 'rgba(255,255,255,0.12)'
-                      : 'transparent',
-                    textShadow: active ? '0 1px 2px rgba(0,0,0,0.3)' : 'none',
-                  }}
+                    style={{
+                      borderColor: 'rgba(255,255,255,0.03)',
+                      color: active ? '#ffffff' : 'rgba(255,255,255,0.75)',
+                      background: active
+                        ? 'rgba(255,255,255,0.12)'
+                        : 'transparent',
+                      textShadow: active ? '0 1px 2px rgba(0,0,0,0.3)' : 'none',
+                      boxShadow: active ? 'inset 0 -2px 8px rgba(255,255,255,0.15)' : 'none',
+                    }}
                 >
                   {item.name}
                 </a>
