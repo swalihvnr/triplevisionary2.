@@ -1,4 +1,4 @@
-import { Download, File, Shield, Clock } from "lucide-react";
+import { Download, File } from "lucide-react";
 
 const files = [
   {
@@ -46,13 +46,6 @@ export default function Addon() {
               <div className="relative w-full p-4">
                 <div className="relative rounded-lg overflow-hidden">
                   <img src={file.thumbnail} alt={file.name} className="w-full h-auto max-h-[300px] object-contain" />
-                  <div className="absolute top-4 right-4 px-3 py-1.5 rounded-lg text-xs font-bold text-white"
-                    style={{ background: '#161618', border: '1px solid #38383a' }}>
-                    <span className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#007aff' }}></span>
-                      Ready
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -85,24 +78,6 @@ export default function Addon() {
                     <Download size={18} />
                     Download Now
                   </button>
-                </div>
-
-                <div className="mt-4 pt-4 flex flex-wrap items-center gap-4 text-xs" style={{ borderTop: '1px solid #2c2c2e' }}>
-                  <div className="flex items-center gap-2" style={{ color: '#a1a1a6' }}>
-                    <Shield size={14} style={{ color: '#007aff' }} />
-                    <span>Secure</span>
-                  </div>
-                  <div className="flex items-center gap-2" style={{ color: '#a1a1a6' }}>
-                    <Clock size={14} style={{ color: '#007aff' }} />
-                    <span>Updated</span>
-                  </div>
-                  <div className="flex items-center gap-2" style={{ color: '#a1a1a6' }}>
-                    <span className="px-2 py-0.5 rounded-lg font-bold"
-                      style={{ background: '#1c1c1f', color: '#007aff', border: '1px solid #38383a' }}>
-                      Python 3.8+
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           ))}
