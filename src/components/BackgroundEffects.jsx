@@ -116,11 +116,19 @@ function AeroBubble({ size, left, top, dur, delay }) {
 export default function BackgroundEffects() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Very dark base background */}
+      {/* Full-page background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: "url('/assets/Hero.jpg')",
+          filter: 'brightness(0.25) saturate(1.2)',
+        }}
+      />
+      {/* Dark overlay for readability */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(160deg, #010810 0%, #021028 35%, #031840 65%, #010810 100%)',
+          background: 'linear-gradient(160deg, rgba(1,8,16,0.6) 0%, rgba(2,16,40,0.5) 50%, rgba(1,8,16,0.6) 100%)',
         }}
       />
 
