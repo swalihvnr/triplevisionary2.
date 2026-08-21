@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
 import Logo from "../assets/Logo/Logo.png";
 
 const navItems = [
@@ -13,7 +12,8 @@ const navItems = [
 
 export default function Navbar({ currentPath, onPageChange }) {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const scrollRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
@@ -22,7 +22,6 @@ export default function Navbar({ currentPath, onPageChange }) {
 
   const handleNavClick = (e, path) => {
     e.preventDefault();
-    setMobileOpen(false);
     onPageChange(path);
   };
 
@@ -57,7 +56,11 @@ export default function Navbar({ currentPath, onPageChange }) {
             />
           </a>
 
-          <div className="hidden md:flex flex-1 h-full">
+          <div
+            ref={scrollRef}
+            className="flex flex-1 h-full overflow-x-auto scrollbar-hide"
+            style={{ scrollSnapType: 'x mandatory' }}
+          >
             {navItems.map((item) => {
               const active = currentPath === item.path;
               return (
@@ -65,9 +68,10 @@ export default function Navbar({ currentPath, onPageChange }) {
                   key={item.name}
                   href={item.path}
                   onClick={(e) => handleNavClick(e, item.path)}
-                  className="relative flex-1 h-full flex items-center justify-center text-[12px] font-bold tracking-wider transition-all duration-150"
+                  className="relative flex-shrink-0 h-full flex items-center justify-center text-[11px] sm:text-[12px] font-bold tracking-wider transition-all duration-150 px-3 sm:px-4"
                   style={{
                     borderRight: '1px solid #2c2c2e',
+                    scrollSnapAlign: 'start',
                   }}
                 >
                   {active && (
@@ -87,7 +91,7 @@ export default function Navbar({ currentPath, onPageChange }) {
                     </div>
                   )}
                   <span
-                    className="relative z-10"
+                    className="relative z-10 whitespace-nowrap"
                     style={{
                       color: active ? '#ffffff' : '#a1a1a6',
                     }}
@@ -98,48 +102,7 @@ export default function Navbar({ currentPath, onPageChange }) {
               );
             })}
           </div>
-
-          <div className="md:hidden flex-1 flex items-center h-full">
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="ml-auto mr-3 p-1.5 rounded-md transition-colors cursor-pointer"
-              style={{ color: '#a1a1a6' }}
-            >
-              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
         </div>
-
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="md:hidden relative z-20 border-t"
-            style={{
-              background: '#161618',
-              borderColor: '#38383a',
-            }}
-          >
-            {navItems.map((item) => {
-              const active = currentPath === item.path;
-              return (
-                <a
-                  key={item.name}
-                  href={item.path}
-                  onClick={(e) => handleNavClick(e, item.path)}
-                  className="flex items-center px-5 py-3 text-[13px] font-bold tracking-wider border-b transition-all"
-                    style={{
-                      borderColor: '#2c2c2e',
-                      color: active ? '#ffffff' : '#a1a1a6',
-                      background: active ? '#1c1c1f' : 'transparent',
-                    }}
-                >
-                  {item.name}
-                </a>
-              );
-            })}
-          </motion.div>
-        )}
       </motion.nav>
     </header>
   );
