@@ -7,7 +7,6 @@ import {
   MonitorSmartphone,
   Sparkles,
 } from "lucide-react";
-// import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const categories = [
   { name: "All", icon: Clapperboard },

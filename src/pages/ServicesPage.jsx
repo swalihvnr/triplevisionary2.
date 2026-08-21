@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Services from '../sections/Services';
 import GlassCard from '../components/GlassCard';
 import { ArrowRight } from 'lucide-react';

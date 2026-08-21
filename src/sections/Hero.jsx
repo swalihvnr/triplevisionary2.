@@ -1,11 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
-import VideoModal from "../components/VideoModal";
 
 export default function Hero({ onPageChange }) {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   const projectImages = [
     "/assets/Projects/image1.jpg",
     "/assets/Projects/image2.jpg",
@@ -211,12 +206,6 @@ export default function Hero({ onPageChange }) {
 
       </div>
 
-      <VideoModal
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        videoUrl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        videoTitle="TripleVisionary Showreel 2026"
-      />
     </section>
   );
 }

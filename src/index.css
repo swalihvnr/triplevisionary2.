@@ -183,19 +183,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: #ffffff; }
   75% { transform: translate(40px, 30px) scale(1.02); }
 }
 
-@keyframes floatBubble {
-  0% { transform: translateY(0) translateX(0); }
-  25% { transform: translateY(-15px) translateX(8px); }
-  50% { transform: translateY(-5px) translateX(-5px); }
-  75% { transform: translateY(-25px) translateX(3px); }
-  100% { transform: translateY(0) translateX(0); }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
 @keyframes waterCaustic {
   0%, 100% { opacity: 0.03; transform: scale(1) rotate(0deg); }
   50% { opacity: 0.06; transform: scale(1.1) rotate(3deg); }

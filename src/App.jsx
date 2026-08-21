@@ -50,7 +50,6 @@ export default function App() {
         return <Addon onPageChange={handlePageChange} />;
       case '/assets':
         return <Asset onPageChange={handlePageChange} />;
-      case '/process':
       case '/show':
         return <PortfolioPage onPageChange={handlePageChange} />;
       case '/services':

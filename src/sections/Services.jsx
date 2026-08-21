@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Film, Palette, Box, MonitorPlay, Workflow } from 'lucide-react';
 import GlassCard from '../components/GlassCard';
@@ -8,37 +7,31 @@ const servicesList = [
     title: "Video Edits",
     icon: Film,
     desc: "Cinematic film editing, color grading, pacing, and narrative assembly.",
-    techSpecs: ["DaVinci Resolve Studio", "Premiere Pro", "Kdenlive"],
   },
   {
     title: "Motion Graphics",
     icon: Workflow,
     desc: "Vector animations, complex HUD interfaces, branding in motion.",
-    techSpecs: ["After Effects", "Vector Keyframes", "Lottie / WebGL"],
   },
   {
     title: "2D",
     icon: Palette,
     desc: "Traditional keyframed characters, whiteboard presentations, and flat vector layouts.",
-    techSpecs: ["Toon Boom Harmony", "Storyboarding", "24fps Cel"],
   },
   {
     title: "3D",
     icon: Box,
     desc: "Modeling, rigging, texturing, character design, and photorealistic environments.",
-    techSpecs: ["Blender", "Houdini", "Octane Render"],
   },
   {
     title: "VFX",
     icon: MonitorPlay,
     desc: "Modern and old school visual effects. Without AI generated imaginary.",
-    techSpecs: ["After Effects", "Blender", "Natron"],
   },
   {
     title: "Graphic Designing",
     icon: MonitorPlay,
     desc: "100% human made graphic designs. Experts in all graphic aesthetics.",
-    techSpecs: ["Photoshop", "Illustrator", "GIMP", "Inkscape"],
   },
 ];
 

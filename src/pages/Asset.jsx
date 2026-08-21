@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { assetData, softwareList } from "../utilities/data";
 
 const Asset = () => {
@@ -26,19 +26,6 @@ const Asset = () => {
       assetRefs.current[selectedAssetId]?.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 100);
   }, [selectedAssetId]);
-
-  const handleDownload = (link, fileName) => {
-    if (link === "#") {
-      alert(`Download simulation: ${fileName}`);
-      return;
-    }
-    const anchor = document.createElement("a");
-    anchor.href = link;
-    anchor.download = fileName;
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-  };
 
   return (
     <div className="min-h-screen py-6 md:py-10 px-4">

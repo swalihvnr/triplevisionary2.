@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, PhoneCall, Mail, MessageSquare, ExternalLink } from "lucide-react";
 import GlassCard from "../components/GlassCard";
