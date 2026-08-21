@@ -121,14 +121,14 @@ export default function BackgroundEffects() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: "url('/assets/Hero.jpg')",
-          filter: 'brightness(0.25) saturate(1.2)',
+          filter: 'brightness(0.55) saturate(1.2)',
         }}
       />
-      {/* Dark overlay for readability */}
+      {/* Subtle dark overlay for readability */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(160deg, rgba(1,8,16,0.6) 0%, rgba(2,16,40,0.5) 50%, rgba(1,8,16,0.6) 100%)',
+          background: 'linear-gradient(160deg, rgba(1,8,16,0.3) 0%, rgba(2,16,40,0.2) 50%, rgba(1,8,16,0.3) 100%)',
         }}
       />
 
