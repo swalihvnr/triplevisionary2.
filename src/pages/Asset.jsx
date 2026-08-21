@@ -46,15 +46,15 @@ const Asset = () => {
         {/* Page Title */}
         <div className="mb-8">
           <h1 className="text-4xl font-light tracking-wider" style={{ color: '#ffffff' }}>
-            ASSET <span className="font-bold" style={{ color: '#3cb8f5' }}>LIBRARY</span>
+            ASSET <span className="font-bold" style={{ color: '#00e5ff' }}>LIBRARY</span>
           </h1>
-          <p className="text-sm mt-1" style={{ color: 'rgba(170,200,240,0.7)' }}>
+          <p className="text-sm mt-1" style={{ color: 'rgba(160,210,240,0.6)' }}>
             Browse and download production-ready assets by software.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8 pb-4" style={{ borderBottom: '1px solid rgba(120,180,240,0.2)' }}>
+        <div className="flex flex-wrap gap-2 mb-8 pb-4" style={{ borderBottom: '1px solid rgba(0,180,220,0.12)' }}>
           {softwareList.map((software) => (
             <button
               key={software}
@@ -63,10 +63,10 @@ const Asset = () => {
               style={{
                 background: activeFilter === software
                   ? 'linear-gradient(180deg, #5ec4f8 0%, #1d8fd4 50%, #0858a0 100%)'
-                  : 'rgba(10,30,60,0.5)',
-                borderColor: activeFilter === software ? 'rgba(8,60,140,0.8)' : 'rgba(120,180,240,0.25)',
-                color: activeFilter === software ? '#fff' : 'rgba(170,200,240,0.7)',
-                boxShadow: activeFilter === software ? '0 2px 10px rgba(60,184,245,0.3), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
+                  : 'rgba(2,8,20,0.6)',
+                borderColor: activeFilter === software ? 'rgba(0,80,150,0.8)' : 'rgba(0,180,220,0.15)',
+                color: activeFilter === software ? '#fff' : 'rgba(160,210,240,0.6)',
+                boxShadow: activeFilter === software ? '0 2px 10px rgba(0,220,240,0.2), inset 0 1px 0 rgba(255,255,255,0.15)' : 'none',
                 textShadow: activeFilter === software ? '0 1px 1px rgba(0,0,0,0.3)' : 'none',
               }}
             >
@@ -86,15 +86,15 @@ const Asset = () => {
                   ref={(el) => (assetRefs.current[asset.id] = el)}
                   className="glossy-card p-5 transition-all duration-300 hover:-translate-y-1"
                   style={{
-                    borderColor: isSelected ? '#3cb8f5' : undefined,
-                    boxShadow: isSelected ? '0 0 0 2px #3cb8f5, 0 8px 30px rgba(60,184,245,0.15)' : undefined,
+                    borderColor: isSelected ? '#00e5ff' : undefined,
+                    boxShadow: isSelected ? '0 0 0 2px #00e5ff, 0 8px 30px rgba(0,220,240,0.1)' : undefined,
                   }}
                 >
                   <div className="relative z-10">
                     <div className="flex justify-between items-start mb-2">
-                      <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#3cb8f5' }}>{asset.software}</h2>
+                      <h2 className="text-lg font-bold truncate pr-2" style={{ color: '#00e5ff' }}>{asset.software}</h2>
                       <span className="text-xs rounded-full whitespace-nowrap font-bold"
-                        style={{ background: 'rgba(10,30,60,0.5)', border: '1px solid rgba(120,180,240,0.25)', color: 'rgba(170,200,240,0.7)', padding: '2px 8px' }}>
+                        style={{ background: 'rgba(2,8,20,0.6)', border: '1px solid rgba(0,180,220,0.15)', color: 'rgba(160,210,240,0.6)', padding: '2px 8px' }}>
                         {asset.year}
                       </span>
                     </div>
@@ -102,12 +102,12 @@ const Asset = () => {
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-xl font-mono truncate" style={{ color: '#ffffff' }}>{asset.name}</span>
                       <span className="text-sm font-mono rounded-full font-bold"
-                        style={{ color: '#3cb8f5', background: 'rgba(60,184,245,0.1)', border: '1px solid rgba(120,180,240,0.3)', padding: '2px 8px' }}>
+                        style={{ color: '#00e5ff', background: 'rgba(0,220,240,0.08)', border: '1px solid rgba(0,180,220,0.18)', padding: '2px 8px' }}>
                         {asset.extension}
                       </span>
                     </div>
 
-                    <div className="flex justify-between items-center mt-4 pt-3" style={{ borderTop: '1px solid rgba(120,180,240,0.15)' }}>
+                    <div className="flex justify-between items-center mt-4 pt-3" style={{ borderTop: '1px solid rgba(0,180,220,0.08)' }}>
                       <div />
                       <a
                         href={asset.downloadLink}
@@ -126,8 +126,8 @@ const Asset = () => {
               );
             })
           ) : (
-            <div className="col-span-full text-center py-12" style={{ color: 'rgba(170,200,240,0.7)' }}>
-              No assets found for <span className="font-bold" style={{ color: '#3cb8f5' }}>{activeFilter}</span>
+            <div className="col-span-full text-center py-12" style={{ color: 'rgba(160,210,240,0.6)' }}>
+              No assets found for <span className="font-bold" style={{ color: '#00e5ff' }}>{activeFilter}</span>
             </div>
           )}
         </div>

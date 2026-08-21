@@ -34,12 +34,12 @@ export default function Navbar({ currentPath, onPageChange }) {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="w-full max-w-5xl rounded-xl overflow-hidden relative"
         style={{
-          background: 'rgba(8, 24, 52, 0.45)',
-          border: '1px solid rgba(60, 127, 177, 0.4)',
+          background: 'rgba(0, 4, 12, 0.7)',
+          border: '1px solid rgba(0, 160, 220, 0.2)',
           boxShadow: `
-            inset 0 1px 0 rgba(255,255,255,0.18),
-            inset 0 -1px 0 rgba(0,0,0,0.25),
-            0 4px 20px rgba(0,0,0,0.4)
+            inset 0 1px 0 rgba(255,255,255,0.08),
+            inset 0 -1px 0 rgba(0,0,0,0.35),
+            0 4px 20px rgba(0,0,0,0.5)
           `,
           transform: scrolled ? 'scale(0.985)' : 'scale(1)',
           transition: 'all 0.3s ease',
@@ -50,7 +50,7 @@ export default function Navbar({ currentPath, onPageChange }) {
           className="absolute top-0 left-0 right-0 pointer-events-none rounded-t-xl z-10"
           style={{
             height: '50%',
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(200,225,255,0.1) 30%, transparent 100%)',
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(180,220,240,0.03) 30%, transparent 100%)',
           }}
         />
 
@@ -62,7 +62,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             className="flex-shrink-0 h-full flex items-center justify-center relative overflow-hidden"
             style={{
               width: 60,
-              borderRight: '1px solid rgba(60, 127, 177, 0.3)',
+              borderRight: '1px solid rgba(0, 160, 220, 0.15)',
             }}
           >
             <img
@@ -83,23 +83,23 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="relative flex-1 h-full flex items-center justify-center text-[12px] font-bold tracking-wider transition-all duration-200"
                   style={{
-                    borderRight: '1px solid rgba(60, 127, 177, 0.2)',
+                    borderRight: '1px solid rgba(0, 160, 220, 0.1)',
                   }}
                 >
                   {active && (
                     <div
                       className="absolute inset-0 z-0"
                       style={{
-                        background: 'linear-gradient(180deg, #3cd6fd 0%, #22cffd 20%, #3c7fb1 80%, #2a5f8a 100%)',
-                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 0 rgba(0,0,0,0.2)',
+                        background: 'linear-gradient(180deg, #b2f6fc 0%, #00f1f4 15%, #00a8d6 50%, #005a9e 85%, #003a7a 100%)',
+                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -1px 0 rgba(0,0,0,0.25)',
                       }}
                     />
                   )}
                   <span
                     className="relative z-10"
                     style={{
-                      color: active ? '#ffffff' : 'rgba(170,200,240,0.7)',
-                      textShadow: active ? '0 1px 2px rgba(0,0,0,0.4)' : 'none',
+                      color: active ? '#ffffff' : 'rgba(160,210,240,0.55)',
+                      textShadow: active ? '0 1px 2px rgba(0,0,0,0.5)' : 'none',
                     }}
                   >
                     {item.name}
@@ -114,7 +114,7 @@ export default function Navbar({ currentPath, onPageChange }) {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="ml-auto mr-3 p-1.5 rounded-md transition-colors cursor-pointer"
-              style={{ color: 'rgba(170,200,240,0.8)' }}
+              style={{ color: 'rgba(160,210,240,0.6)' }}
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -128,8 +128,8 @@ export default function Navbar({ currentPath, onPageChange }) {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden relative z-20 border-t"
             style={{
-              background: 'rgba(8, 24, 52, 0.8)',
-              borderColor: 'rgba(60, 127, 177, 0.3)',
+              background: 'rgba(0, 4, 12, 0.9)',
+              borderColor: 'rgba(0, 160, 220, 0.15)',
             }}
           >
             {navItems.map((item) => {
@@ -141,12 +141,12 @@ export default function Navbar({ currentPath, onPageChange }) {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="flex items-center px-5 py-3 text-[13px] font-bold tracking-wider border-b transition-all"
                   style={{
-                    borderColor: 'rgba(60, 127, 177, 0.15)',
-                    color: active ? '#ffffff' : 'rgba(170,200,240,0.7)',
+                    borderColor: 'rgba(0, 160, 220, 0.08)',
+                    color: active ? '#ffffff' : 'rgba(160,210,240,0.55)',
                     background: active
-                      ? 'linear-gradient(90deg, #3cd6fd, #22cffd, #3c7fb1)'
+                      ? 'linear-gradient(90deg, #b2f6fc, #00f1f4, #00a8d6, #005a9e)'
                       : 'transparent',
-                    textShadow: active ? '0 1px 2px rgba(0,0,0,0.4)' : 'none',
+                    textShadow: active ? '0 1px 2px rgba(0,0,0,0.5)' : 'none',
                   }}
                 >
                   {item.name}

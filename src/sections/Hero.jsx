@@ -34,11 +34,11 @@ export default function Hero({ onPageChange }) {
           className="w-full max-w-5xl mx-auto overflow-hidden relative"
           style={{
             borderRadius: 10,
-            border: '1px solid rgba(120,180,240,0.3)',
+            border: '1px solid rgba(0,180,220,0.2)',
             boxShadow: `
-              0 1px 0 rgba(255,255,255,0.15) inset,
-              0 12px 40px rgba(0,0,0,0.5),
-              0 4px 12px rgba(0,0,0,0.3)
+              0 1px 0 rgba(255,255,255,0.08) inset,
+              0 12px 40px rgba(0,0,0,0.6),
+              0 4px 12px rgba(0,0,0,0.4)
             `,
           }}
         >
@@ -51,10 +51,10 @@ export default function Hero({ onPageChange }) {
           <div className="absolute inset-0 pointer-events-none"
             style={{
               background: `linear-gradient(180deg,
-                rgba(255,255,255,0.08) 0%,
+                rgba(255,255,255,0.04) 0%,
                 transparent 15%,
                 transparent 85%,
-                rgba(0,0,0,0.15) 100%
+                rgba(0,0,0,0.2) 100%
               )`,
             }}
           />
@@ -67,11 +67,11 @@ export default function Hero({ onPageChange }) {
           className="relative overflow-hidden"
           style={{
             borderRadius: 10,
-            border: '1px solid rgba(120,180,240,0.3)',
+            border: '1px solid rgba(0,180,220,0.2)',
             boxShadow: `
-              0 1px 0 rgba(255,255,255,0.15) inset,
-              0 12px 40px rgba(0,0,0,0.5),
-              0 4px 12px rgba(0,0,0,0.3)
+              0 1px 0 rgba(255,255,255,0.08) inset,
+              0 12px 40px rgba(0,0,0,0.6),
+              0 4px 12px rgba(0,0,0,0.4)
             `,
           }}
         >
@@ -80,17 +80,17 @@ export default function Hero({ onPageChange }) {
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: "url('/assets/Hero.jpg')",
-              filter: 'brightness(0.4) saturate(1.3)',
+              filter: 'brightness(0.35) saturate(1.2)',
             }}
           />
           {/* Aero glass overlay */}
           <div className="absolute inset-0"
             style={{
               background: `linear-gradient(180deg,
-                rgba(150,200,240,0.08) 0%,
-                rgba(50,100,170,0.1) 5%,
-                rgba(5,25,55,0.5) 15%,
-                rgba(3,18,40,0.6) 100%
+                rgba(0,180,220,0.04) 0%,
+                rgba(0,60,120,0.06) 5%,
+                rgba(2,8,20,0.55) 15%,
+                rgba(1,8,18,0.65) 100%
               )`,
               backdropFilter: 'none',
             }}
@@ -99,8 +99,8 @@ export default function Hero({ onPageChange }) {
           <div className="absolute top-0 left-0 right-0 h-[40%] pointer-events-none"
             style={{
               background: `linear-gradient(180deg,
-                rgba(255,255,255,0.1) 0%,
-                rgba(180,210,240,0.04) 40%,
+                rgba(255,255,255,0.06) 0%,
+                rgba(180,230,240,0.02) 40%,
                 transparent 100%
               )`,
             }}
@@ -108,7 +108,7 @@ export default function Hero({ onPageChange }) {
           {/* Blue glow orb behind text */}
           <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
             style={{
-              background: 'radial-gradient(circle, rgba(40,140,220,0.15), transparent 60%)',
+              background: 'radial-gradient(circle, rgba(0,200,240,0.1), transparent 60%)',
               filter: 'blur(60px)',
             }}
           />
@@ -120,7 +120,7 @@ export default function Hero({ onPageChange }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight leading-[1.1] mb-6 text-white"
-                style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 0 60px rgba(40,140,220,0.15)' }}
+                style={{ textShadow: '0 2px 20px rgba(0,0,0,0.6), 0 0 60px rgba(0,200,240,0.1)' }}
               >
                 TripleVisionary <br className="sm:hidden" />
                 <span className="text-gradient-aero">Multidisciplinary</span> <br className="sm:hidden" />
@@ -132,7 +132,7 @@ export default function Hero({ onPageChange }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-base md:text-lg leading-relaxed mb-8 max-w-xl font-light"
-                style={{ color: 'rgba(180,210,240,0.8)', textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}
+                style={{ color: 'rgba(160,210,240,0.7)', textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}
               >
                 Ideas into visual masterpieces — video production, motion graphics, vfx and 3D animation
               </motion.p>
@@ -146,12 +146,12 @@ export default function Hero({ onPageChange }) {
         <div
           className="relative overflow-hidden"
           style={{
-            borderTop: '1px solid rgba(120,180,240,0.2)',
-            borderBottom: '1px solid rgba(120,180,240,0.2)',
+            borderTop: '1px solid rgba(0,180,220,0.12)',
+            borderBottom: '1px solid rgba(0,180,220,0.12)',
             background: `linear-gradient(180deg,
-              rgba(80,140,210,0.08) 0%,
-              rgba(15,45,85,0.3) 30%,
-              rgba(10,35,70,0.35) 100%
+              rgba(0,120,180,0.05) 0%,
+              rgba(2,12,28,0.35) 30%,
+              rgba(1,8,20,0.4) 100%
             )`,
             backdropFilter: 'none',
           }}
@@ -159,15 +159,15 @@ export default function Hero({ onPageChange }) {
           {/* Aero gloss on marquee strip */}
           <div className="absolute top-0 left-0 right-0 h-[50%] pointer-events-none"
             style={{
-              background: 'linear-gradient(180deg, rgba(255,255,255,0.06), transparent)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.04), transparent)',
             }}
           />
 
           {/* Left & Right Fades */}
           <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 sm:w-24 md:w-32 lg:w-40"
-            style={{ background: 'linear-gradient(90deg, rgba(3,42,90,0.9), transparent)' }} />
+            style={{ background: 'linear-gradient(90deg, rgba(1,8,18,0.9), transparent)' }} />
           <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-16 sm:w-24 md:w-32 lg:w-40"
-            style={{ background: 'linear-gradient(270deg, rgba(3,42,90,0.9), transparent)' }} />
+            style={{ background: 'linear-gradient(270deg, rgba(1,8,18,0.9), transparent)' }} />
 
           <div className="relative z-10 py-4">
             <div className="marquee">
@@ -179,8 +179,8 @@ export default function Hero({ onPageChange }) {
                     className="group flex-shrink-0 overflow-hidden cursor-pointer relative"
                     style={{
                       borderRadius: 8,
-                      border: '1px solid rgba(120,180,240,0.25)',
-                      boxShadow: '0 1px 0 rgba(255,255,255,0.1) inset, 0 4px 16px rgba(0,0,0,0.3)',
+                      border: '1px solid rgba(0,180,220,0.15)',
+                      boxShadow: '0 1px 0 rgba(255,255,255,0.04) inset, 0 4px 16px rgba(0,0,0,0.4)',
                     }}
                   >
                     <img

@@ -47,17 +47,17 @@ function AeroBubble({ size, left, top, dur, delay }) {
         className="absolute inset-0 rounded-full"
         style={{
           background: `radial-gradient(circle at 35% 30%,
-            rgba(180,220,255,0.12) 0%,
-            rgba(80,160,230,0.06) 30%,
-            rgba(40,100,180,0.03) 60%,
-            rgba(20,60,120,0.02) 80%,
+            rgba(180,240,255,0.08) 0%,
+            rgba(0,200,240,0.04) 30%,
+            rgba(0,140,200,0.02) 60%,
+            rgba(0,80,140,0.01) 80%,
             transparent 100%
           )`,
-          border: '1px solid rgba(160,210,255,0.12)',
+          border: '1px solid rgba(0,220,240,0.08)',
           boxShadow: `
-            inset 0 -${size * 0.15}px ${size * 0.3}px rgba(20,80,160,0.08),
-            inset 0 ${size * 0.1}px ${size * 0.2}px rgba(180,220,255,0.06),
-            0 0 ${size * 0.4}px rgba(60,150,230,0.06)
+            inset 0 -${size * 0.15}px ${size * 0.3}px rgba(0,120,180,0.05),
+            inset 0 ${size * 0.1}px ${size * 0.2}px rgba(180,240,255,0.04),
+            0 0 ${size * 0.4}px rgba(0,180,220,0.04)
           `,
         }}
       />
@@ -71,8 +71,8 @@ function AeroBubble({ size, left, top, dur, delay }) {
           width: highlightSize,
           height: highlightSize * 0.6,
           background: `radial-gradient(ellipse at 50% 50%,
-            rgba(255,255,255,0.35) 0%,
-            rgba(200,230,255,0.15) 40%,
+            rgba(255,255,255,0.25) 0%,
+            rgba(200,245,255,0.1) 40%,
             transparent 100%
           )`,
           transform: 'rotate(-15deg)',
@@ -88,7 +88,7 @@ function AeroBubble({ size, left, top, dur, delay }) {
           left: '28%',
           width: highlightSize * 0.4,
           height: highlightSize * 0.25,
-          background: 'radial-gradient(ellipse, rgba(255,255,255,0.5) 0%, transparent 100%)',
+          background: 'radial-gradient(ellipse, rgba(255,255,255,0.35) 0%, transparent 100%)',
           transform: 'rotate(-20deg)',
           filter: 'blur(1px)',
         }}
@@ -103,7 +103,7 @@ function AeroBubble({ size, left, top, dur, delay }) {
           width: innerGlow,
           height: innerGlow * 0.3,
           background: `radial-gradient(ellipse at 50% 80%,
-            rgba(80,180,240,0.1) 0%,
+            rgba(0,200,240,0.06) 0%,
             transparent 100%
           )`,
           filter: `blur(${size * 0.04}px)`,
@@ -116,21 +116,21 @@ function AeroBubble({ size, left, top, dur, delay }) {
 export default function BackgroundEffects() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Soft dark blue background */}
+      {/* Very dark base background */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(160deg, #021d3e 0%, #032a5a 35%, #04326a 65%, #021d3e 100%)',
+          background: 'linear-gradient(160deg, #010810 0%, #021028 35%, #031840 65%, #010810 100%)',
         }}
       />
 
-      {/* Large soft blue glow orbs (behind glass) */}
+      {/* Large soft cyan glow orbs */}
       <div
         className="absolute rounded-full"
         style={{
           width: 700, height: 700,
           top: -200, right: -150,
-          background: 'radial-gradient(circle, rgba(40,140,220,0.12), rgba(20,80,160,0.04) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,200,240,0.08), rgba(0,100,180,0.03) 50%, transparent 70%)',
           animation: 'floatOrb 25s ease-in-out infinite',
         }}
       />
@@ -139,7 +139,7 @@ export default function BackgroundEffects() {
         style={{
           width: 500, height: 500,
           bottom: -150, left: -100,
-          background: 'radial-gradient(circle, rgba(60,170,240,0.1), rgba(30,100,180,0.03) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,220,240,0.07), rgba(0,80,160,0.02) 50%, transparent 70%)',
           animation: 'floatOrb 30s ease-in-out infinite reverse',
         }}
       />
@@ -148,7 +148,7 @@ export default function BackgroundEffects() {
         style={{
           width: 400, height: 400,
           top: '40%', left: '30%',
-          background: 'radial-gradient(circle, rgba(50,160,230,0.08), transparent 60%)',
+          background: 'radial-gradient(circle, rgba(0,180,220,0.05), transparent 60%)',
           animation: 'floatOrb 20s ease-in-out infinite',
         }}
       />
@@ -158,9 +158,9 @@ export default function BackgroundEffects() {
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(ellipse at 20% 30%, rgba(80,180,240,0.04) 0%, transparent 40%),
-            radial-gradient(ellipse at 70% 60%, rgba(60,150,220,0.03) 0%, transparent 35%),
-            radial-gradient(ellipse at 50% 80%, rgba(100,200,255,0.03) 0%, transparent 30%)
+            radial-gradient(ellipse at 20% 30%, rgba(0,220,240,0.03) 0%, transparent 40%),
+            radial-gradient(ellipse at 70% 60%, rgba(0,180,220,0.02) 0%, transparent 35%),
+            radial-gradient(ellipse at 50% 80%, rgba(0,240,255,0.02) 0%, transparent 30%)
           `,
           animation: 'waterCaustic 8s ease-in-out infinite',
         }}

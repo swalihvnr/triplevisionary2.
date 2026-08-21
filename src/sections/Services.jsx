@@ -64,26 +64,26 @@ export default function Services() {
       id="services"
       className="relative py-24 overflow-hidden"
       style={{
-        borderTop: '1px solid rgba(120,180,240,0.2)',
-        borderBottom: '1px solid rgba(120,180,240,0.2)',
+        borderTop: '1px solid rgba(0,180,220,0.12)',
+        borderBottom: '1px solid rgba(0,180,220,0.12)',
       }}
     >
-      <div className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(60,184,245,0.08), transparent)' }} />
-      <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] rounded-full blur-[80px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(60,184,245,0.1), transparent)' }} />
+      <div className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(0,220,240,0.05), transparent)' }} />
+      <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] rounded-full blur-[80px] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(0,220,240,0.06), transparent)' }} />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#3cb8f5', boxShadow: '0 0 8px rgba(60,184,245,0.5)' }} />
-            <span className="text-[10px] font-display tracking-[0.2em] uppercase font-bold" style={{ color: '#3cb8f5' }}>
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#00e5ff', boxShadow: '0 0 8px rgba(0,229,255,0.5)' }} />
+            <span className="text-[10px] font-display tracking-[0.2em] uppercase font-bold" style={{ color: '#00e5ff' }}>
               What We Do
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold font-display tracking-tight mb-4" style={{ color: '#ffffff' }}>
             Our Production Services
           </h2>
-          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: 'rgba(170,200,240,0.7)' }}>
+          <p className="text-sm md:text-base max-w-xl font-light" style={{ color: 'rgba(160,210,240,0.6)' }}>
             Elite execution across all facets of post-production, animation, and CGI media workflows.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function Services() {
               <motion.div key={service.title} variants={cardVariants} className="group">
                 <GlassCard
                   className="relative overflow-hidden rounded-2xl h-full p-6 transition-all duration-500 cursor-pointer flex flex-col justify-between"
-                  glowColor="rgba(60,184,245,0.12)"
+                  glowColor="rgba(0,220,240,0.1)"
                 >
                   <div className="relative z-10">
                     {/* Icon */}
@@ -110,10 +110,10 @@ export default function Services() {
                       <div
                         className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300"
                         style={{
-                          background: 'linear-gradient(180deg, rgba(180,210,240,0.12), rgba(20,60,110,0.55))',
-                          border: '1px solid rgba(120,180,240,0.3)',
-                          color: '#3cb8f5',
-                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.08)',
+                          background: 'linear-gradient(180deg, rgba(180,230,240,0.08), rgba(0,40,80,0.5))',
+                          border: '1px solid rgba(0,180,220,0.2)',
+                          color: '#00e5ff',
+                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
                         }}
                       >
                         <IconComponent size={22} />
@@ -121,7 +121,7 @@ export default function Services() {
                       <h3 className="text-lg font-bold font-display mb-2" style={{ color: '#ffffff' }}>
                         {service.title}
                       </h3>
-                      <p className="text-xs leading-relaxed font-light" style={{ color: 'rgba(170,200,240,0.7)' }}>
+                      <p className="text-xs leading-relaxed font-light" style={{ color: 'rgba(160,210,240,0.6)' }}>
                         {service.desc}
                       </p>
                     </div>

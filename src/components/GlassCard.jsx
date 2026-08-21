@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function GlassCard({ children, className = '', hoverGlow = true, glowColor = 'rgba(80,180,240,0.15)', ...props }) {
+export default function GlassCard({ children, className = '', hoverGlow = true, glowColor = 'rgba(0,220,240,0.1)', ...props }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -11,12 +11,12 @@ export default function GlassCard({ children, className = '', hoverGlow = true, 
       style={{
         transform: isHovered ? 'translateY(-3px)' : 'translateY(0)',
         boxShadow: isHovered
-          ? `0 1px 0 rgba(255,255,255,0.15) inset,
-             0 16px 48px rgba(0,0,0,0.45),
-             0 4px 12px rgba(0,0,0,0.3),
-             0 0 20px rgba(60,160,230,0.08)`
+          ? `0 1px 0 rgba(255,255,255,0.06) inset,
+             0 16px 48px rgba(0,0,0,0.5),
+             0 4px 12px rgba(0,0,0,0.35),
+             0 0 20px rgba(0,200,240,0.06)`
           : undefined,
-        borderColor: isHovered ? 'rgba(140,200,255,0.35)' : undefined,
+        borderColor: isHovered ? 'rgba(0,200,240,0.25)' : undefined,
       }}
       {...props}
     >
