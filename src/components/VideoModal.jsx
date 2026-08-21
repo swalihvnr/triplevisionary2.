@@ -1,8 +1,10 @@
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
+export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle, mediaType, image }) {
   if (!isOpen) return null;
+
+  const isImage = mediaType === 'image';
 
   const isMp4 = videoUrl && (
     videoUrl.endsWith('.mp4') ||
@@ -30,7 +32,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
           exit={{ opacity: 0 }}
           onClick={onClose}
           className="absolute inset-0"
-          style={{ background: 'rgba(0,0,0,0.85)' }}
+          style={{ background: 'rgba(0,0,0,0.9)' }}
         />
 
         <motion.div
@@ -50,25 +52,35 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle }) {
               background: '#1c1c1f',
               borderBottom: '1px solid #38383a',
             }}>
-            <span className="text-xs font-display font-bold" style={{ color: '#c7c7cc' }}>{videoTitle || 'Video'}</span>
+            <span className="text-xs font-display font-bold" style={{ color: '#c7c7cc' }}>{videoTitle || 'Media'}</span>
             <button onClick={onClose} className="p-1 w-7 h-7 rounded-lg flex items-center justify-center transition-all cursor-pointer"
               style={{ background: '#38383a', color: '#a1a1a6' }}>
               <X size={14} />
             </button>
           </div>
 
-          <div className="aspect-video bg-black relative">
-            {isMp4 ? (
-              <video src={videoUrl} controls autoPlay className="w-full h-full" />
-            ) : (
-              <iframe
-                src={embedUrl}
-                title={videoTitle || "Video Feed"}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="w-full h-full"
+          <div className="bg-black relative flex items-center justify-center">
+            {isImage ? (
+              <img
+                src={image}
+                alt={videoTitle || 'Image'}
+                className="w-full max-h-[80vh] object-contain"
               />
+            ) : isMp4 ? (
+              <div className="aspect-video w-full">
+                <video src={videoUrl} controls autoPlay className="w-full h-full" />
+              </div>
+            ) : (
+              <div className="aspect-video w-full">
+                <iframe
+                  src={embedUrl}
+                  title={videoTitle || "Video Feed"}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
             )}
           </div>
 

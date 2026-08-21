@@ -8,7 +8,7 @@ export default function PortfolioPage({ onPageChange }) {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("Newest");
-  const [modal, setModal] = useState({ isOpen: false, url: "", title: "" });
+  const [modal, setModal] = useState({ isOpen: false, url: "", title: "", mediaType: "video", image: "" });
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -54,8 +54,11 @@ export default function PortfolioPage({ onPageChange }) {
   }, [activeCategory, searchQuery, sortOrder]);
 
   const openProject = (project) => {
-    if (project.type !== "video" || !project.videoUrl) return;
-    setModal({ isOpen: true, url: project.videoUrl, title: project.title });
+    if (project.type === "video" && project.videoUrl) {
+      setModal({ isOpen: true, url: project.videoUrl, title: project.title, mediaType: "video", image: "" });
+    } else {
+      setModal({ isOpen: true, url: "", title: project.title, mediaType: "image", image: project.image });
+    }
   };
 
   return (
@@ -136,7 +139,7 @@ export default function PortfolioPage({ onPageChange }) {
                 exit={{ opacity: 0, y: 12 }}
                 transition={{ duration: 0.45, delay: Math.min(index * 0.035, 0.2), ease: [0.22, 1, 0.36, 1] }}
                 onClick={() => openProject(project)}
-                className={`group mb-0 inline-block w-full break-inside-avoid overflow-hidden ${project.type === "video" ? "cursor-pointer" : "cursor-default"}`}
+                className="group mb-0 inline-block w-full break-inside-avoid overflow-hidden cursor-pointer"
                 style={{
                   borderRadius: 5,
                   border: '1px solid #2c2c2e',
@@ -235,6 +238,8 @@ export default function PortfolioPage({ onPageChange }) {
         onClose={() => setModal((current) => ({ ...current, isOpen: false }))}
         videoUrl={modal.url}
         videoTitle={modal.title}
+        mediaType={modal.mediaType}
+        image={modal.image}
       />
     </div>
   );
