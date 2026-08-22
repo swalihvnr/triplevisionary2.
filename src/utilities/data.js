@@ -260,6 +260,14 @@ export const assetData = [
     year: "2026",
     downloadLink: "https://t.me/triplevisionaryarchive/13",
   },
+  {
+    id: "b2",
+    name: "mouse scroll 3d animation (sequence)",
+    extension: ".png",
+    software: "Blender",
+    year: "2026",
+    downloadLink: "https://t.me/triplevisionaryarchive/15",
+  },
 ];
 
 export const softwareList = [
