@@ -7,7 +7,7 @@ import VideoModal from "../components/VideoModal";
 export default function PortfolioPage({ onPageChange }) {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortOrder, setSortOrder] = useState("Newest");
+  const [sortOrder, setSortOrder] = useState("Shuffle");
   const [modal, setModal] = useState({ isOpen: false, url: "", title: "", mediaType: "video", image: "" });
   const scrollRef = useRef(null);
 
@@ -48,6 +48,14 @@ export default function PortfolioPage({ onPageChange }) {
       const matchesSearch = !query || project.title.toLowerCase().includes(query) || project.subtitle.toLowerCase().includes(query) || project.category.toLowerCase().includes(query);
       return matchesCategory && matchesSearch;
     });
+    if (sortOrder === "Shuffle") {
+      const shuffled = [...filtered];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
     return [...filtered].sort((a, b) =>
       sortOrder === "Oldest" ? a.year.localeCompare(b.year) : b.year.localeCompare(a.year),
     );
@@ -119,6 +127,7 @@ export default function PortfolioPage({ onPageChange }) {
                   className="w-full max-w-[320px] cursor-pointer rounded-lg px-4 py-2.5 text-[11px] outline-none lg:w-auto"
                   style={{ background: '#1c1c1f', border: '1px solid #38383a', color: '#a1a1a6' }}
                 >
+                  <option value="Shuffle">Shuffle</option>
                   <option value="Newest">Newest</option>
                   <option value="Oldest">Oldest</option>
                 </select>
