@@ -262,7 +262,7 @@ export const assetData = [
     extension: ".blend",
     software: "Blender",
     year: "2026",
-    downloadLink: "https://t.me/triplevisionaryarchive/13",
+    downloadLink: "https://tg.telegramdownloader.net/282419/day-1.rar?hash=0144e7",
   },
   {
     id: "b2",
