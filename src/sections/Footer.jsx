@@ -76,22 +76,24 @@ export default function Footer() {
               { icon: FaWhatsapp, href: "https://wa.me/+91 9388121465", label: "WhatsApp" },
               { icon: FaInstagram, href: "https://www.instagram.com/triplevisionary?igsh=MWF1c21zaWdnd2Vpbg==", label: "Instagram" },
               { icon: FaYoutube, href: "https://www.youtube.com/@triplevisionary", label: "YouTube" },
-              { href: "https://share.upscrolled.com/en/user/dd096cdb-b9f6-4897-a1c0-546f3b7ce20e/", label: "Upscrolled", blue: true },
-            ].map((              { icon: Icon, href, label, blue }) => (
+              { href: "https://upscrolled.com/@triplevisionary", label: "Upscrolled" },
+            ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
                 href={href}
                 className="w-11 h-11 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                 style={{
-                  background: blue ? '#007aff' : '#1c1c1f',
-                  border: `1px solid ${blue ? '#007aff' : '#38383a'}`,
-                  color: '#ffffff',
+                  background: '#1c1c1f',
+                  border: '1px solid #38383a',
+                  color: '#a1a1a6',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = blue ? '#4099ff' : '#48484a';
+                  e.currentTarget.style.color = '#ffffff';
+                  e.currentTarget.style.borderColor = '#48484a';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = blue ? '#007aff' : '#38383a';
+                  e.currentTarget.style.color = '#a1a1a6';
+                  e.currentTarget.style.borderColor = '#38383a';
                 }}
                 aria-label={label}
                 target="_blank"
