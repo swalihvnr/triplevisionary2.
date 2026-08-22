@@ -247,6 +247,10 @@ export const projects = [
     featured: false,
     type: "video",
     videoUrl: "https://youtube.com/shorts/ZfTV7cZ3MIM?si=g1q3cZbocjeX_Cqj",
+    addon: {
+      available: true,
+      assetId: "b2",
+    },
   },
 ];
 
