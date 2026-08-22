@@ -76,6 +76,7 @@ export default function Footer() {
               { icon: FaWhatsapp, href: "https://wa.me/+91 9388121465", label: "WhatsApp" },
               { icon: FaInstagram, href: "https://www.instagram.com/triplevisionary?igsh=MWF1c21zaWdnd2Vpbg==", label: "Instagram" },
               { icon: FaYoutube, href: "https://www.youtube.com/@triplevisionary", label: "YouTube" },
+              { href: "https://upscrolled.com/@triplevisionary", label: "Upscrolled" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
@@ -97,7 +98,7 @@ export default function Footer() {
                 aria-label={label}
                 target="_blank"
               >
-                <Icon size={20} />
+                {Icon ? <Icon size={20} /> : <img src="/assets/upscrolled.svg" alt={label} className="w-5 h-5 object-contain" style={{ filter: 'brightness(0) invert(0.65)' }} />}
               </a>
             ))}
           </div>
