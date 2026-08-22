@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, PhoneCall, Mail, MessageSquare, ExternalLink } from "lucide-react";
+import { Send, PhoneCall, Mail, MessageSquare } from "lucide-react";
 import GlassCard from "../components/GlassCard";
 
 export default function Contact() {
@@ -268,7 +268,7 @@ export default function Contact() {
                       border: '1px solid #38383a',
                       color: '#007aff',
                     }}>
-                    <ExternalLink size={18} />
+                    <img src="/assets/upscrolled.svg" alt="Upscrolled" className="w-5 h-5 object-contain" style={{ objectPosition: '60% 30%' }} />
                   </div>
                   <div>
                     <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#68686f' }}>Connect</span>
