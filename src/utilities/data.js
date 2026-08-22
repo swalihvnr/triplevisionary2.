@@ -246,7 +246,7 @@ export const projects = [
     year: "2026",
     featured: false,
     type: "video",
-    videoUrl: "https://youtube.com/shorts/ZfTV7cZ3MIM?si=jZlUQYSWnv_ls_8h",
+    videoUrl: "https://youtube.com/shorts/ZfTV7cZ3MIM?si=g1q3cZbocjeX_Cqj",
   },
 ];
 
