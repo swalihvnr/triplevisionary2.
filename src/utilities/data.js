@@ -77,7 +77,7 @@ export const projects = [
   },
   {
     id: 9,
-    category: "VFX",
+    category: "Motion Graphics",
     image: "/assets/Projects/image8.jpeg",
     year: "2024",
     featured: false,
