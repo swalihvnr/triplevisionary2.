@@ -285,7 +285,6 @@ export const softwareList = [
   ".fbx",
   ".obj",
   ".png",
-  "PNG Sequence",
   ".exr",
   ".jpeg",
   ".tiff",
