@@ -8,11 +8,12 @@ import {
   Sparkles,
   Wand2,
 } from "lucide-react";
+import MotionGraphicsIcon from "../components/MotionGraphicsIcon";
 
 export const categories = [
   { name: "All", icon: Clapperboard },
   { name: "Video Edits", icon: Film },
-  { name: "Motion Graphics", icon: Sparkles },
+  { name: "Motion Graphics", icon: MotionGraphicsIcon },
   { name: "3D", icon: Cuboid },
   { name: "VFX", icon: Wand2 },
   { name: "Photo Manipulation", icon: Image },
