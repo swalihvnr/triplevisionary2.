@@ -6,6 +6,7 @@ import {
   Palette,
   MonitorSmartphone,
   Sparkles,
+  Wand2,
 } from "lucide-react";
 
 export const categories = [
@@ -13,7 +14,7 @@ export const categories = [
   { name: "Video Edits", icon: Film },
   { name: "Motion Graphics", icon: Sparkles },
   { name: "3D", icon: Cuboid },
-  { name: "VFX", icon: Sparkles },
+  { name: "VFX", icon: Wand2 },
   { name: "Photo Manipulation", icon: Image },
 ];
 
