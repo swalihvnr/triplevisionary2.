@@ -195,6 +195,15 @@ export const projects = [
     featured: false,
     type: "image",
   },
+  {
+    id: 25,
+    category: "Motion Graphics",
+    image: "/assets/Projects/video_2026-08-22_07-32-56.jpg",
+    year: "2026",
+    featured: false,
+    type: "video",
+    videoUrl: "/assets/Projects/video_2026-08-22_07-32-56.mp4",
+  },
 ];
 
 export const assetData = [
