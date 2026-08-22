@@ -127,7 +127,7 @@ export default function PortfolioPage({ onPageChange }) {
           </div>
         </div>
 
-        <motion.div layout className="mt-15 sm:mt-0 w-full columns-1 gap-0 sm:columns-2 md:columns-3 xl:columns-4">
+        <motion.div layout className="mt-15 sm:mt-0 w-full columns-1 gap-0 sm:columns-2 md:columns-3">
           <AnimatePresence mode="popLayout">
             {visibleProjects.map((project, index) => (
               <motion.article
