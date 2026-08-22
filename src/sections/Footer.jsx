@@ -76,7 +76,7 @@ export default function Footer() {
               { icon: FaWhatsapp, href: "https://wa.me/+91 9388121465", label: "WhatsApp" },
               { icon: FaInstagram, href: "https://www.instagram.com/triplevisionary?igsh=MWF1c21zaWdnd2Vpbg==", label: "Instagram" },
               { icon: FaYoutube, href: "https://www.youtube.com/@triplevisionary", label: "YouTube" },
-              { href: "https://upscrolled.com/@triplevisionary", label: "Upscrolled" },
+              { href: "https://share.upscrolled.com/en/user/dd096cdb-b9f6-4897-a1c0-546f3b7ce20e/", label: "Upscrolled" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
