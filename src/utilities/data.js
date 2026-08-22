@@ -38,7 +38,7 @@ export const projects = [
   {
     id: 3,
     category: "3D",
-    image: "/assets/Projects/image2.jpg",
+    image: "/assets/Projects/machu.png",
     year: "2025",
     featured: false,
     type: "image",
