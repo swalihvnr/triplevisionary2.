@@ -204,6 +204,14 @@ export const projects = [
     type: "video",
     videoUrl: "/assets/Projects/video_2026-08-22_07-32-56.mp4",
   },
+  {
+    id: 26,
+    category: "3D",
+    image: "/assets/Projects/photo_2026-08-22_08-02-51.jpg",
+    year: "2026",
+    featured: false,
+    type: "image",
+  },
 ];
 
 export const assetData = [
