@@ -98,7 +98,7 @@ export default function Footer() {
                 aria-label={label}
                 target="_blank"
               >
-                {Icon ? <Icon size={20} /> : <img src="/assets/upscrolled.svg" alt={label} className="w-5 h-5 object-contain" />}
+                {Icon ? <Icon size={20} /> : <img src="/assets/upscrolled.svg" alt={label} className="w-7 h-7 object-contain opacity-60" />}
               </a>
             ))}
           </div>
