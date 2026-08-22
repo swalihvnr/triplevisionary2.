@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Search, Play, ArrowUpRight, PackageOpen, ChevronLeft, ChevronRight } from "lucide-react";
-import { projects, categories } from "../utilities/data";
+import { projects, categories, assetData } from "../utilities/data";
 import VideoModal from "../components/VideoModal";
 
 export default function PortfolioPage({ onPageChange }) {
@@ -165,7 +165,7 @@ export default function PortfolioPage({ onPageChange }) {
 
                   <div className="absolute right-2 top-2 z-20 sm:right-3 sm:top-3">
                     <button onClick={(e) => handleAddonClick(e, project)} className="transition-all duration-200 hover:scale-110">
-                      <PackageOpen size={22} className={project.addon?.available ? "text-[#007aff]" : "text-white/30"} />
+                      <PackageOpen size={22} className={project.addon?.available && assetData.find(a => a.id === project.addon.assetId) ? "text-[#007aff]" : "text-white/30"} />
                     </button>
                   </div>
 
