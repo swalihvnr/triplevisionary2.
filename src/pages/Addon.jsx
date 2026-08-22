@@ -126,11 +126,10 @@ export default function Addon() {
                   {file.bundledFile && (
                     <button
                       onClick={() => downloadFile(file.bundledFile)}
-                      className="w-full font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
+                      className="aero-button-primary w-full font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
                       style={{
                         background: '#1c1c1f',
-                        border: '1px solid #38383a',
-                        color: '#a1a1a6',
+                        border: '1px solid #007aff',
                       }}
                     >
                       <Download size={18} />
