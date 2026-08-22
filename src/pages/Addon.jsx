@@ -28,7 +28,8 @@ const files = [
     size: "2 KB",
     file: "/assets/downloads/vse_multi_audio.zip",
     bundledFile: "https://tg.telegramdownloader.net/282402/vse_multi_audio_bundled.zip?hash=780a7d",
-    bundledNote: "Bundled with FFmpeg/FFprobe",
+    bundledNote: "Bundled with FFmpeg/FFprobe (179 MB)",
+    bundledSize: "179 MB",
     thumbnail: "",
     category: "Blender",
   },
@@ -128,8 +129,9 @@ export default function Addon() {
                       onClick={() => downloadFile(file.bundledFile)}
                       className="aero-button-primary w-full font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
                       style={{
-                        background: '#1c1c1f',
+                        background: '#007aff',
                         border: '1px solid #007aff',
+                        color: '#ffffff',
                       }}
                     >
                       <Download size={18} />
