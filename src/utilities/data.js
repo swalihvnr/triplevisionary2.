@@ -147,6 +147,14 @@ export const projects = [
     type: "image",
     // videoUrl: "https://youtu.be/M4fPpJ7GrEA",
   },
+  {
+    id: 19,
+    category: "3D",
+    image: "/assets/Projects/cyberpunk-bkd.jpg",
+    year: "2026",
+    featured: false,
+    type: "image",
+  },
 ];
 
 export const assetData = [
