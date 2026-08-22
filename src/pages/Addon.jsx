@@ -1,4 +1,15 @@
+import { useState } from "react";
 import { Download, File } from "lucide-react";
+
+const addonCategories = [
+  "All",
+  "Blender",
+  "After Effects",
+  "Kdenlive",
+  "Natron",
+  "GIMP",
+  "Fusion",
+];
 
 const files = [
   {
@@ -8,6 +19,7 @@ const files = [
     size: "16 KB",
     file: "/assets/downloads/color_solution.py",
     thumbnail: "/assets/downloads/color-solution-thumbnail.png",
+    category: "Blender",
   },
 ];
 
@@ -21,6 +33,12 @@ const downloadFile = (url) => {
 };
 
 export default function Addon() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredFiles = files.filter(
+    (file) => activeCategory === "All" || file.category === activeCategory
+  );
+
   return (
     <div className="min-h-screen pt-20 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -34,8 +52,25 @@ export default function Addon() {
           </div>
         </div>
 
+        <div className="flex flex-wrap gap-2 mb-8 justify-center">
+          {addonCategories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className="px-4 py-2 rounded-lg text-xs font-bold tracking-wider transition-all border cursor-pointer"
+              style={{
+                background: activeCategory === cat ? '#1c1c1f' : 'transparent',
+                borderColor: activeCategory === cat ? '#007aff' : '#38383a',
+                color: activeCategory === cat ? '#ffffff' : '#a1a1a6',
+              }}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {files.map((file) => (
+          {filteredFiles.map((file) => (
             <div
               key={file.id}
               className="glossy-card overflow-hidden transition-all duration-200 hover:-translate-y-1"
@@ -79,6 +114,12 @@ export default function Addon() {
             </div>
           ))}
         </div>
+
+        {filteredFiles.length === 0 && (
+          <div className="text-center py-16">
+            <p className="text-sm" style={{ color: '#68686f' }}>No addons in this category yet.</p>
+          </div>
+        )}
       </div>
     </div>
   );
