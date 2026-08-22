@@ -212,6 +212,14 @@ export const projects = [
     featured: false,
     type: "image",
   },
+  {
+    id: 27,
+    category: "3D",
+    image: "/assets/Projects/photo_2026-08-22_08-03-57.jpg",
+    year: "2026",
+    featured: false,
+    type: "image",
+  },
 ];
 
 export const assetData = [
