@@ -29,7 +29,6 @@ const files = [
     file: "/assets/downloads/vse_multi_audio.zip",
     bundledFile: "https://tg.telegramdownloader.net/282402/vse_multi_audio_bundled.zip?hash=780a7d",
     bundledNote: "Bundled with FFmpeg/FFprobe (179 MB)",
-    bundledSize: "179 MB",
     thumbnail: "",
     category: "Blender",
   },

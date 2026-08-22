@@ -3,9 +3,6 @@ import {
   Cuboid,
   Film,
   Image,
-  Palette,
-  MonitorSmartphone,
-  Sparkles,
   Wand2,
 } from "lucide-react";
 import MotionGraphicsIcon from "../components/MotionGraphicsIcon";
@@ -27,7 +24,6 @@ export const projects = [
     year: "2026",
     featured: true,
     type: "image",
-    // videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: 3,
@@ -36,7 +32,6 @@ export const projects = [
     year: "2025",
     featured: false,
     type: "image",
-    // videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: 4,
@@ -58,7 +53,6 @@ export const projects = [
     year: "2024",
     featured: false,
     type: "image",
-    // videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: 8,
@@ -112,7 +106,6 @@ export const projects = [
     year: "2025",
     featured: false,
     type: "image",
-    // videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: 16,
@@ -130,7 +123,6 @@ export const projects = [
      year: "2026",
     featured: false,
     type: "image",
-    // videoUrl: "https://youtu.be/M4fPpJ7GrEA",
   },
   {
     id: 18,
@@ -139,7 +131,6 @@ export const projects = [
      year: "2026",
     featured: false,
     type: "image",
-    // videoUrl: "https://youtu.be/M4fPpJ7GrEA",
   },
   {
     id: 19,

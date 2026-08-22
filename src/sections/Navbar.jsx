@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Logo from "../assets/Logo/Logo.png";
 
@@ -12,7 +12,6 @@ const navItems = [
 
 export default function Navbar({ currentPath, onPageChange }) {
   const [scrolled, setScrolled] = useState(false);
-  const scrollRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -57,7 +56,6 @@ export default function Navbar({ currentPath, onPageChange }) {
           </a>
 
           <div
-            ref={scrollRef}
             className="flex flex-1 h-full overflow-x-auto scrollbar-hide"
             style={{ scrollSnapType: 'x mandatory' }}
           >
