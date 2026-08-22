@@ -239,6 +239,15 @@ export const projects = [
     type: "video",
     videoUrl: "https://youtu.be/OwNN34SDUj8?si=AyPiYNj_QmSCkdqr",
   },
+  {
+    id: 31,
+    category: "Motion Graphics",
+    image: "/assets/Projects/yt-ZfTV7cZ3MIM.jpg",
+    year: "2026",
+    featured: false,
+    type: "video",
+    videoUrl: "https://youtube.com/shorts/ZfTV7cZ3MIM?si=jZlUQYSWnv_ls_8h",
+  },
 ];
 
 export const assetData = [
