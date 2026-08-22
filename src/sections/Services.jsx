@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Film, Palette, Box, MonitorPlay, Workflow } from 'lucide-react';
+import { Film, Box, MonitorPlay, Workflow } from 'lucide-react';
 import GlassCard from '../components/GlassCard';
 
 const servicesList = [
@@ -14,11 +14,6 @@ const servicesList = [
     desc: "Vector animations, complex HUD interfaces, branding in motion.",
   },
   {
-    title: "2D",
-    icon: Palette,
-    desc: "Traditional keyframed characters, whiteboard presentations, and flat vector layouts.",
-  },
-  {
     title: "3D",
     icon: Box,
     desc: "Modeling, rigging, texturing, character design, and photorealistic environments.",
@@ -27,11 +22,6 @@ const servicesList = [
     title: "VFX",
     icon: MonitorPlay,
     desc: "Modern and old school visual effects. Without AI generated imaginary.",
-  },
-  {
-    title: "Graphic Designing",
-    icon: MonitorPlay,
-    desc: "100% human made graphic designs. Experts in all graphic aesthetics.",
   },
 ];
 
