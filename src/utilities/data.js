@@ -270,7 +270,7 @@ export const assetData = [
     extension: ".png",
     software: "PNG Sequence",
     year: "2026",
-    downloadLink: "https://t.me/triplevisionaryarchive/15",
+    downloadLink: "https://tg.telegramdownloader.net/282425/mouse-scroll-(png-sequence-).rar?hash=416d2d",
   },
 ];
 
