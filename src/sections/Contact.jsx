@@ -268,7 +268,7 @@ export default function Contact() {
                       border: '1px solid #38383a',
                       color: '#007aff',
                     }}>
-                    <img src="/assets/upscrolled.svg" alt="Upscrolled" className="w-5 h-5 object-contain" style={{ objectPosition: '60% 30%' }} />
+                    <img src="/assets/upscrolled.svg" alt="Upscrolled" className="w-5 h-5 object-contain" style={{ objectPosition: '60% 30%', filter: 'brightness(0) saturate(100%) invert(53%) sepia(85%) saturate(5842%) hue-rotate(199deg) brightness(97%) contrast(96%)' }} />
                   </div>
                   <div>
                     <span className="block text-[9px] font-display uppercase font-bold" style={{ color: '#68686f' }}>Connect</span>
