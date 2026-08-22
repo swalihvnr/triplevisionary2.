@@ -155,6 +155,30 @@ export const projects = [
     featured: false,
     type: "image",
   },
+  {
+    id: 20,
+    category: "Photo Manipulation",
+    image: "/assets/Projects/photo_2026-08-22_07-23-02.jpg",
+    year: "2026",
+    featured: false,
+    type: "image",
+  },
+  {
+    id: 21,
+    category: "Photo Manipulation",
+    image: "/assets/Projects/photo_2026-08-22_07-23-04.jpg",
+    year: "2026",
+    featured: false,
+    type: "image",
+  },
+  {
+    id: 22,
+    category: "Photo Manipulation",
+    image: "/assets/Projects/photo_2026-08-22_07-23-06.jpg",
+    year: "2026",
+    featured: false,
+    type: "image",
+  },
 ];
 
 export const assetData = [
