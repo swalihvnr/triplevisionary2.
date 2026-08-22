@@ -58,15 +58,6 @@ export const projects = [
     // videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
-    id: 5,
-    category: "3D",
-    image: "/assets/Projects/image4.jpg",
-    year: "2025",
-    featured: false,
-    type: "image",
-    // videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
     id: 7,
     category: "Photo Manipulation",
     image: "/assets/Projects/image6.png",
