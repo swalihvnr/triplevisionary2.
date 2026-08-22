@@ -14,6 +14,8 @@ export default function VideoModal({ isOpen, onClose, videoUrl, videoTitle, medi
 
   const getEmbedUrl = (url) => {
     if (!url) return '';
+    const ytShortsMatch = url.match(/youtube\.com\/shorts\/([^"?&\s]+)/i);
+    if (ytShortsMatch) return `https://www.youtube.com/embed/${ytShortsMatch[1]}?autoplay=1&rel=0`;
     const ytMatch = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i);
     if (ytMatch) return `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&rel=0`;
     const vimeoMatch = url.match(/(?:vimeo\.com\/|player\.vimeo\.com\/video\/)([0-9]+)/i);
