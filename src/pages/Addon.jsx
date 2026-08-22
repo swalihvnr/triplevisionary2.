@@ -126,15 +126,16 @@ export default function Addon() {
                   {file.bundledFile && (
                     <button
                       onClick={() => downloadFile(file.bundledFile)}
-                      className="aero-button-primary w-full font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
+                      className="aero-button-primary w-full font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer text-center"
                       style={{
                         background: '#007aff',
                         border: '1px solid #007aff',
                         color: '#ffffff',
+                        fontSize: 'clamp(11px, 2.5vw, 14px)',
                       }}
                     >
-                      <Download size={18} />
-                      {file.bundledNote || "Download Bundled"}
+                      <Download size={18} className="flex-shrink-0" />
+                      <span className="leading-tight">{file.bundledNote || "Download Bundled"}</span>
                     </button>
                   )}
                 </div>
