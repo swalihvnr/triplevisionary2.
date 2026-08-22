@@ -64,10 +64,6 @@ export const projects = [
     year: "2025",
     featured: false,
     type: "image",
-    addon: {
-      available: true,
-      assetId: "b2",
-    },
     // videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
