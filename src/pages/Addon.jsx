@@ -21,6 +21,17 @@ const files = [
     thumbnail: "/assets/downloads/color-solution-thumbnail.png",
     category: "Blender",
   },
+  {
+    id: 2,
+    name: "vse_multi_audio",
+    type: "ZIP File",
+    size: "2 KB",
+    file: "/assets/downloads/vse_multi_audio.zip",
+    bundledFile: "https://tg.telegramdownloader.net/282402/vse_multi_audio_bundled.zip?hash=780a7d",
+    bundledNote: "Bundled with FFmpeg/FFprobe",
+    thumbnail: "",
+    category: "Blender",
+  },
 ];
 
 const downloadFile = (url) => {
@@ -75,11 +86,13 @@ export default function Addon() {
               key={file.id}
               className="glossy-card overflow-hidden transition-all duration-200 hover:-translate-y-1"
             >
-              <div className="relative w-full p-4">
-                <div className="relative rounded-lg overflow-hidden">
-                  <img src={file.thumbnail} alt={file.name} className="w-full h-auto max-h-[300px] object-contain" />
+              {file.thumbnail && (
+                <div className="relative w-full p-4">
+                  <div className="relative rounded-lg overflow-hidden">
+                    <img src={file.thumbnail} alt={file.name} className="w-full h-auto max-h-[300px] object-contain" />
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="p-6">
                 <div className="flex flex-col gap-4">
@@ -109,6 +122,21 @@ export default function Addon() {
                     <Download size={18} />
                     Download Now
                   </button>
+
+                  {file.bundledFile && (
+                    <button
+                      onClick={() => downloadFile(file.bundledFile)}
+                      className="w-full font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
+                      style={{
+                        background: '#1c1c1f',
+                        border: '1px solid #38383a',
+                        color: '#a1a1a6',
+                      }}
+                    >
+                      <Download size={18} />
+                      {file.bundledNote || "Download Bundled"}
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
